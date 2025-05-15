@@ -1,0 +1,303 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: end;
+  margin-top: 10px;
+  padding: 10px 0 0 0;
+}
+
+.sub-heder {
+  align-items: center;
+}
+
+.sec-heder {
+  display: flex;
+  justify-content: end;
+}
+
+ul li {
+  padding: 0px 10px;
+  font-weight: 600;
+  font-family: math;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.907);
+}
+
+.images {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.images .clean {
+  position: absolute;
+  top: 15%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 55%;
+  color: rgba(255, 174, 0, 0.802);
+}
+
+.clean {
+  h4 {
+    font-size: 22px;
+    font-family: webkit-body;
+  }
+
+  h1 {
+    font-family: math;
+    font-size: 47px;
+    font-weight: 600;
+  }
+}
+
+.popular a {
+  width: max-content;
+  padding: 10px;
+  background-color: yellow;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Share Tech", sans-serif;
+}
+
+.popular a:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 0);
+}
+
+.col-4:hover .img1 {
+  display: none
+}
+
+.col-4:hover .img11 {
+  display: block;
+  width: 100%;
+  height: 288px;
+}
+
+.img11 {
+  display: none;
+}
+
+.gallery_style {
+  overflow: hidden;
+  position: relative;
+  width: 33.33%;
+  padding: 10px;
+  box-shadow: "0 4px 8px rgba(0, 0, 0, 0.2)";
+  transition: all 0.5s ease;
+}
+
+.gallery_style:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+
+  .overlay {
+    display: block;
+    transition: all 0.5s ease;
+  }
+}
+
+.gallery_style img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.showmo {
+  margin: 20px 0;
+  padding: 5px 10px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.services {
+  width: 47%;
+}
+
+.sec-ser {
+  width: 70%;
+}
+
+.sub-ser {
+  width: 30%;
+}
+
+.ser:hover {
+  color: #ff8600;
+}
+
+.fea {
+  width: 37%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  margin-right: 15px;
+}
+
+.sec-fea {
+  width: 20%;
+
+  i {
+    font-size: 36px;
+  }
+}
+
+.sub-fea {
+  width: 80%;
+}
+
+.foot {
+  width: 33.33%;
+  padding: 80px 0px;
+
+  h1 {
+    color: #ff8600;
+    font-size: 50px;
+  }
+
+  h3 {
+    font-family: math;
+    padding: 10px 0 0 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.59);
+    font-size: 20px;
+    font-family: sans-serif;
+    display: 'flex';
+    justify-content: center;
+  }
+
+  h2 {
+    button {
+      font-weight: 700;
+      font-size: 18px;
+      font-family: monospace;
+      border: 3px solid;
+    }
+  }
+
+  h4 {
+    display: flex;
+    justify-content: center;
+    color: #ffc107;
+    font-size: 40px;
+    font-family: ui-monospace;
+  }
+}
+
+.footer {
+  padding: 15px;
+  width: 25%;
+
+  h4 {
+    color: white;
+    font-family: math;
+    font-size: 28px;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 18px;
+  }
+}
+
+.form-control {
+  border-radius: 10px 0px 0px 10px !important;
+}
+
+.last {
+  display: flex;
+}
+
+.btn-primary {
+  color: black;
+  background-color: white;
+  font-size: 26px;
+  padding: 0 10px;
+  border: 2px solid black;
+}
+
+@media(max-width : 1440px) {}
+
+@media (max-width :992px) {
+  .sec-heder {
+    display: none;
+  }
+
+  .clean {
+    width: 40%;
+
+    h4 {
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 35px;
+    }
+  }
+}
+
+@media (max-width : 768px) {
+  
+
+  .clean {
+    h4 {
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 25px;
+    }
+  }
+}
