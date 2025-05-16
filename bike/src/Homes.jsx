@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Slide from '../src/Slide.png'
+import Footer from './Footer';
 import Heding from './Heding';
 import Im1 from '../src/Im1.webp'
 import Im2 from '../src/Im2.jpg'
@@ -71,9 +72,9 @@ function Homes() {
             {/* ================*****************=================== */}
 
             <div className="popular container-xl mb-4">
-                <h1 style={{ fontWeight: '700', fontSize: '48px', fontFamily: 'serif', padding: '20px 0' }}>Popular Categories</h1>
+                <h1 style={{}}>Popular Categories</h1>
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-lg-6 col-md-6 col-sm-8 col-8 py-3" style={{ margin: 'auto' }}>
                         <div className="row row-gap-3" style={{ position: 'relative' }} >
                             <img src={Im1} alt="" style={{ width: '100%', transition: 'all 0.6s ease' }} />
                             <a href="" style={{ position: 'absolute', bottom: '41%', left: '5%' }}>Mountain Bikes</a>
@@ -81,7 +82,7 @@ function Homes() {
                             <img src={Im2} alt="" style={{ width: '100%', transition: 'all 0.6s ease' }} />
                         </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-lg-6 col-md-6 col-sm-8 col-8 " style={{ margin: 'auto' }}>
                         <div className="row row-gap-3">
                             <div className="col-12" style={{ position: 'relative' }}>
                                 <img src={Im3} alt="" style={{ width: '100%' }} />
@@ -126,11 +127,10 @@ function Homes() {
 
             {/* ================*****************=================== */}
 
-            <div className="container-xl mt-5">
-                <h4 style={{ fontFamily: 'math' }}>Featured Bicycles</h4>
-                <h2 style={{ fontFamily: 'math', fontSize: '56px', fontWeight: 'bold' }}>Our Most <br /> Advanced Lineup</h2>
+            <div className="ourmost container-xl mt-5">
+                <h1>Our Most <br /> Advanced Lineup</h1>
                 <div className="row my-5">
-                    <div className="col-4">
+                    <div className="imgg col-xl-4 col-md-4 col-sm-6">
                         <Card style={{ width: '100%', position: 'relative' }}>
                             <Card.Img className='img1' src={Imm1} />
                             <Card.Img className='img11' src={Imm11} />
@@ -148,7 +148,7 @@ function Homes() {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="col-4">
+                    <div className="imgg col-xl-4 col-md-4 col-sm-6">
                         <Card style={{ width: '100%' }}>
                             <Card.Img className='img1' src={Imm2} />
                             <Card.Img className='img11' src={Imm12} />
@@ -165,7 +165,7 @@ function Homes() {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="col-4">
+                    <div className="imgg col-xl-4   col-sm-6">
                         <Card style={{ width: '100%' }}>
                             <Card.Img className='img1' src={Imm3} />
                             <Card.Img className='img11' src={Imm13} />
@@ -190,9 +190,9 @@ function Homes() {
 
             {/* ================*****************=================== */}
 
-            <div className="container-xxl py-5" style={{ backgroundColor: 'black' }}>
+            <div className="onzo container-xxl py-lg-5 py-2" style={{ backgroundColor: 'black' }}>
                 <h4 style={{ justifyContent: 'center', display: 'flex', fontFamily: 'webkit-body', color: 'red' }}>PRODUCT GALLERY</h4>
-                <h1 style={{ padding: '15px 0 ', justifyContent: 'center', display: 'flex', fontFamily: 'math', color: 'white', fontSize: '60px', fontWeight: '700' }}>ONZO IN ACTION</h1>
+                <h1>ONZO IN ACTION</h1>
 
 
                 <div className="container-xl" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-around", }}>
@@ -211,7 +211,7 @@ function Homes() {
                     <div className="gallery_style" >
                         <img src={G5} alt="Dish 5" className="img-container" />
                     </div>
-                    <div className="gallery_style"  >
+                    <div className="gallery_style" >
                         <img src={G6} alt="Dish 6" className="img-container" />
                     </div>
 
@@ -249,11 +249,13 @@ function Homes() {
 
             {/* ================*****************=================== */}
 
-            <div className="container-xxl" style={{ margin: '20px 0', overflow: 'hidden', padding: '0px', position: 'relative' }}>
-                <div className="container-xl">
-                    <h1 style={{ padding: '15px 0 ', justifyContent: 'center', display: 'flex', fontFamily: 'math', fontSize: '60px', fontWeight: '700' }}>FEATURES</h1>
+            <div className="ffea container-xxl" style={{ overflow: 'hidden', padding: '0px', position: 'relative' }}>
+                <div className="feat container-xl">
+                    <h1>FEATURES</h1>
                 </div>
-                <div className="container-xl" style={{ display: 'flex', zIndex: '5' }}>
+                {/* <img src={F1} alt="" style={{ width: '112%' }} /> */}
+                {/* <div className="container-xxl" style={{ position: 'absolute', top: '15%' }}> */}
+                <div className="container-xl" style={{ display: 'flex', zIndex: '5' }} >
                     <div className="fea">
                         <div className="sec-fea">
                             <i class="fa-regular fa-sun"></i>
@@ -269,13 +271,14 @@ function Homes() {
                             <h3>Supercharged Battery</h3>
                             <p>Equipped with a Supercharged Battery, our bike offers unmatched range and rapid charging, ensuring you stay powered up for longer, no matter the journey</p>
                         </div>
-                        <div className="sec-fea">
+                        <div className="sec-fea ll">
                             <i class="fa-solid fa-gears"></i>
                         </div>
-                        <div className="sub-fea">
+                        <div className="sub-fea ll">
                             <h3>Nexxt-Gen CrankShaft</h3>
                             <p>Our Nexxt-Gen CrankShaft delivers enhanced pedaling efficiency and power transfer, giving riders a smoother, more responsive cycling experience</p>
                         </div>
+
 
                     </div>
                     <div className="fea">
@@ -293,25 +296,24 @@ function Homes() {
                             <h3>Sustainable Practices</h3>
                             <p>Our bicycles are built with sustainability in mind, using recycled materials, eco-friendly coatings, and energy-efficient manufacturing to promote a cleaner, greener ride</p>
                         </div>
-                        <div className="sec-fea">
+                        <div className="sec-fea ll">
                             <i class="fa-regular fa-thumbs-up"></i>
                         </div>
-                        <div className="sub-fea">
+                        <div className="sub-fea ll">
                             <h3>Sustainable Practices</h3>
                             <p>Experience unparalleled support with every ride, backed by expert service and innovative design</p>
                         </div>
                     </div>
+                </div>
+                {/* </div> */}
 
-                </div>
-                <div style={{ position: 'absolute', top: '0', zIndex: '-1' }}>
-                    <img src={F1} alt="" style={{ width: '112%' }} />
-                </div>
             </div>
 
             {/* ================*****************=================== */}
-
-            <h1 style={{ padding: '15px 0 ', justifyContent: 'center', display: 'flex', fontFamily: 'math', fontSize: '60px', fontWeight: '700' }}>OUR SERVICES</h1>
-            <div className="container-xl" style={{ padding: '10px 0', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+            <div className="serr container-xl">
+                <h1>OUR SERVICES</h1>
+            </div>
+            <div className="container-xl" style={{ padding: '10px 10px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
                 <div className="services">
                     <img src={S1} alt="" style={{ width: '100%' }} />
                     <p style={{ padding: '8px 0' }}><i style={{ color: '#ff8600' }} class="fa-solid fa-stop"></i> December 16, 2021 / By admin</p>
@@ -353,13 +355,12 @@ function Homes() {
                     </div>
 
                 </div>
-
             </div>
-
+                    <Footer></Footer>
             {/* ================*****************=================== */}
 
-            <div className="container-xxl" style={{ position: 'relative', overflow: 'hidden',padding:'0' }}>
-                <div className="container-xl" style={{ display: 'flex', flexWrap: 'wrap' }}>
+            {/* <div className="foott container-xxl" style={{ display: 'flex' }}>
+                <div className="container-xl" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
                     <div className="foot">
                         <h1 style={{ display: 'flex', justifyContent: 'center' }}><i class="fa-regular fa-message"></i></h1>
                         <h3>NEED HELP ?</h3>
@@ -379,20 +380,19 @@ function Homes() {
                         <h3>SUBSCRIBE US</h3>
                         <p style={{ display: 'flex', justifyContent: 'center' }}>And get the scoop on sales & new gear!</p>
                         <Form>
-                            <Form.Group className="mb-3 d-flex" controlId="formGroupEmail">
+                            <Form.Group className="mpm mb-3 d-flex" controlId="formGroupEmail">
                                 <Form.Control type="email" placeholder="Enter Email Address" style={{ color: 'ble' }} >
                                 </Form.Control>
                                 <button style={{ border: 'none', borderRadius: '0 10px 10px 0' }}>Subscribe</button>
                             </Form.Group>
                         </Form>
-
                     </div>
                 </div>
-                <div style={{ position: 'absolute', top: '0', zIndex: '-1' }}>
-                    <img src={Ff2} alt="" style={{ width: '100%' }} />
-                </div>
-            </div>
-            <div className="container-xxl" style={{ position: 'relative', overflow: 'hidden',padding:'0' }}>
+            </div> */}
+
+            {/* ================*****************=================== */}
+
+            {/* <div className="footrr container-xxl" >
                 <div className="container-xl py-4 d-flex " style={{ flexWrap: 'wrap', justifyContent: 'space-between' }} >
                     <div className="footer">
                         <h4>Information</h4>
@@ -437,10 +437,7 @@ function Homes() {
                         <p><img src={Ll1} alt="" /></p>
                     </div>
                 </div>
-                <div style={{ position: 'absolute', top: '0', zIndex: '-1' }}>
-                    <img src={Ff1} alt="" style={{ width: '120%' }} />
-                </div>
-            </div>
+            </div> */}
         </>
     )
 }

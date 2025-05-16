@@ -4,10 +4,10 @@ import { Dropdown, DropdownButton } from 'react-bootstrap'
 function Heding() {
   return (
     <>
-      <div className="container-xl" style={{ position: 'absolute' }}>
-        <div className="heder">
+      <div className="container-xxl" style={{ position: 'absolute' }}>
+        <div className="heder container-xl">
           <div className="sub-heder row" style={{ color: 'white' }}>
-            <div className="col-md-1 col-sm-11">
+            <div className="col-md-1 col-sm-11 col-10">
               <h1>Bikes</h1>
             </div>
             <div className="header1 col-lg-7 col-md-10  d-none d-md-block " >

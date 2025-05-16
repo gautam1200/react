@@ -17,12 +17,12 @@ function App() {
   return (
     <>
       <Boostrap></Boostrap>
-      <Carousele></Carousele>
+      {/* <Carousele></Carousele> */}
       {/* <h1>hello</h1> */}
-      <Start></Start>
-      <News></News>
-      <Offers></Offers>
-      <Formss></Formss>
+      {/* <Start></Start> */}
+      {/* <News></News> */}
+      {/* <Offers></Offers> */}
+      {/* <Formss></Formss> */}
       <Off></Off>
       {/* {['start', 'end', 'top', 'bottom'].map((placement, idx) => (
         <Offff key={idx} placement={placement} name={placement} />
