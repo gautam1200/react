@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       {/* <Heding></Heding> */}
-      {/* <Homes></Homes> */}
+      <Homes></Homes>
       <Shop></Shop>
     </>
   );

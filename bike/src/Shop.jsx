@@ -15,9 +15,16 @@ import Imm15 from './Imm15.webp'
 import Imm5 from './Imm5.webp'
 import Imm6 from './Imm6.webp'
 import Imm16 from './Imm16.webp'
+import Imm7 from './Imm7.webp'
+import Imm8 from './Imm8.webp'
+import Imm9 from './Imm9.webp'
 import H1 from './H1.webp'
 import H2 from './H2.webp'
 import H3 from './H3.webp'
+import  J1 from './J1.jpg'
+import  J11 from './J11.jpg'
+import  J2 from './J2.jpg'
+import  J12 from './J12.jpg'
 
 
 function Shop() {
@@ -25,18 +32,18 @@ function Shop() {
         <>
             <Heding></Heding>
             <div className="sshop container-xxl py-0">
-                <div className="hh" style={{ height: '250px' }}></div>
+                <div className="hh" style={{ height: '200px' }}></div>
                 <div className="shops container-xl">
                     <h1>Shop</h1>
                     <h3>Performance built to handle any terrain and riding style</h3>
                 </div>
-                <div className="hh" style={{ height: '250px' }}></div>
+                <div className="hh" style={{ height: '200px' }}></div>
             </div>
 
 
             <div className="container-xl d-flex" style={{flexWrap:'wrap'}}>
                     <div className="row my-5 row-gap-4">
-                        <div className="imgee col-xl-4 col-md-4 col-6 ">
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-11 m-auto">
                             <Card style={{ width: '100%', position: 'relative' }}>
                                 <Card.Img className='img2' src={Imm1} />
                                 <Card.Img className='img12' src={Imm11} />
@@ -48,15 +55,15 @@ function Shop() {
                                         <h5><big>$1999</big>  <small style={{ color: '#00000085' }}><del>$2300</del></small></h5>
                                         <h6 style={{ color: '#00000085' }}>Cruiser Bike</h6>
                                     </Card.Text>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
                                     <button className='select'>Select Options</button>
                                
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className="imgee col-xl-4 col-md-4 col-6">
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-11 m-auto">
                             <Card style={{ width: '100%',position:'relative' }}>
                                 <Card.Img className='img2' src={Imm2} />
                                 <Card.Img className='img12' src={Imm12} />
@@ -69,15 +76,15 @@ function Shop() {
                                         <h5><big>$2300</big>  <small style={{ color: '#00000085' }}><del>$2800</del></small></h5>
                                         <h6 style={{ color: '#00000085' }}>Electric Urban Bike </h6>
                                     </Card.Text>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
                                     <button className='select'>Select Options</button>
                                 
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className="imgee col-xl-4 col-md-4 col-6">
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-11 m-auto">
                             <Card style={{ width: '100%' }}>
                                 <Card.Img className='img2' src={Imm3} />
                                 <Card.Img className='img12' src={Imm13} />
@@ -88,15 +95,15 @@ function Shop() {
                                         <h5><big>$2599</big></h5>
                                         <h6 style={{ color: '#00000085' }}>Electric Urban Bike</h6>
                                     </Card.Text>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
                                     <button className='select'>Select Options</button>
                                 
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className="imgee col-xl-4 col-md-4 col-6">
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-11 m-auto">
                             <Card style={{ width: '100%' }}>
                                 <Card.Img className='img2' src={Imm4} />
                                 <Card.Img className='img12' src={Imm14} />
@@ -107,15 +114,15 @@ function Shop() {
                                         <h5><big>$2500</big></h5>
                                         <h6 style={{ color: '#00000085' }}>Cruiser Bike</h6>
                                     </Card.Text>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
                                     <button className='select'>Select Options</button>
                                
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className="imgee col-xl-4 col-md-4 col-6">
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-11 m-auto">
                             <Card style={{ width: '100%' }}>
                                 <Card.Img className='img2' src={Imm5} />
                                 <Card.Img className='img12' src={Imm15} />
@@ -126,15 +133,15 @@ function Shop() {
                                         <h5><big>$2699</big></h5>
                                         <h6 style={{ color: '#00000085' }}>Electric Urban Bike </h6>
                                     </Card.Text>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
                                     <button className='select'>Select Options</button>
                               
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className="imgee col-xl-4 col-md-4 col-6">
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-11 m-auto">
                             <Card style={{ width: '100%' }}>
                                 <Card.Img className='img2' src={Imm6} />
                                 <Card.Img className='img12' src={Imm16} />
@@ -145,15 +152,110 @@ function Shop() {
                                         <h5><big>$2249</big></h5>
                                         <h6 style={{ color: '#00000085' }}>Electric Urban Bike</h6>
                                     </Card.Text>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
-                                    <Button style={{ padding: '5px 5px 0px 2px', margin: '2px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
                                     <button className='select'>Select Options</button>
                                 
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className="imgee col-xl-4 col-md-4 col-6">
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-11 m-auto">
+                            <Card style={{ width: '100%'}}>
+                                <Card.Img className='img3' src={Imm7} />
+                                {/* <Card.Img className='img12' src={Imm11} /> */}
+                                <Card.Body>
+                                    <Card.Title style={{ fontFamily: 'monospace', color: 'red', fontWeight: 'bold', fontSize: '24px' }}>Cali Cruiser</Card.Title>
+                                    <Card.Text>
+                                        <small><i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#00000085' }} class="fa-regular fa-star"></i> (1 review)</small>
+                                        <h5><big>$1999</big>  <small style={{ color: '#00000085' }}><del>$2300</del></small></h5>
+                                        <h6 style={{ color: '#00000085' }}>Cruiser Bike</h6>
+                                    </Card.Text>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
+                                    <button className='select'>Select Options</button>
+                               
+                                </Card.Body>
+                            </Card>
+                        </div>
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-11 m-auto">
+                            <Card style={{ width: '100%'}}>
+                                <Card.Img className='img3' src={Imm8} />
+                                {/* <Card.Img className='img12' src={Imm11} /> */}
+                                <Card.Body>
+                                    <Card.Title style={{ fontFamily: 'monospace', color: 'red', fontWeight: 'bold', fontSize: '24px' }}>Cali Cruiser</Card.Title>
+                                    <Card.Text>
+                                        <small><i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#00000085' }} class="fa-regular fa-star"></i> (1 review)</small>
+                                        <h5><big>$1999</big>  <small style={{ color: '#00000085' }}><del>$2300</del></small></h5>
+                                        <h6 style={{ color: '#00000085' }}>Cruiser Bike</h6>
+                                    </Card.Text>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
+                                    <button className='select'>Select Options</button>
+                               
+                                </Card.Body>
+                            </Card>
+                        </div>
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-11 m-auto">
+                            <Card style={{ width: '100%'}}>
+                                <Card.Img className='img3' src={Imm9} />
+                                {/* <Card.Img className='img12' src={Imm11} /> */}
+                                <Card.Body>
+                                    <Card.Title style={{ fontFamily: 'monospace', color: 'red', fontWeight: 'bold', fontSize: '24px' }}>Cali Cruiser</Card.Title>
+                                    <Card.Text>
+                                        <small><i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#00000085' }} class="fa-regular fa-star"></i> (1 review)</small>
+                                        <h5><big>$1999</big>  <small style={{ color: '#00000085' }}><del>$2300</del></small></h5>
+                                        <h6 style={{ color: '#00000085' }}>Cruiser Bike</h6>
+                                    </Card.Text>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
+                                    <button className='select'>Select Options</button>
+                               
+                                </Card.Body>
+                            </Card>
+                        </div>
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-11 m-auto">
+                            <Card style={{ width: '100%'}}>
+                                <Card.Img className='img2' src={J1} />
+                                <Card.Img className='img12' src={J11} />
+                                <Card.Body>
+                                    <Card.Title style={{ fontFamily: 'monospace', color: 'red', fontWeight: 'bold', fontSize: '24px' }}>Cali Cruiser</Card.Title>
+                                    <Card.Text>
+                                        <small><i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#00000085' }} class="fa-regular fa-star"></i> (1 review)</small>
+                                        <h5><big>$1999</big>  <small style={{ color: '#00000085' }}><del>$2300</del></small></h5>
+                                        <h6 style={{ color: '#00000085' }}>Cruiser Bike</h6>
+                                    </Card.Text>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
+                                    <button className='select'>Select Options</button>
+                               
+                                </Card.Body>
+                            </Card>
+                        </div>
+                         <div className="imgee col-xl-4 col-md-4 col-sm-6 col-11 m-auto">
+                            <Card style={{ width: '100%'}}>
+                                <Card.Img className='img2' src={J2} />
+                                <Card.Img className='img12' src={J12} />
+                                <Card.Body>
+                                    <Card.Title style={{ fontFamily: 'monospace', color: 'red', fontWeight: 'bold', fontSize: '24px' }}>Cali Cruiser</Card.Title>
+                                    <Card.Text>
+                                        <small><i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#ffbf00' }} class="fa-solid fa-star"></i> <i style={{ color: '#00000085' }} class="fa-regular fa-star"></i> (1 review)</small>
+                                        <h5><big>$1999</big>  <small style={{ color: '#00000085' }}><del>$2300</del></small></h5>
+                                        <h6 style={{ color: '#00000085' }}>Cruiser Bike</h6>
+                                    </Card.Text>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-gauge-high"></i> 32 MPH</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-battery-half"></i> 45 Mi</small></h6></Button>
+                                    <Button style={{ padding: '5px 5px 0px 5px', margin: '5px', border: '1px solid', backgroundColor: 'white', color: 'black' }}><h6><small><i class="fa-solid fa-bolt"></i> 48V/18AH</small></h6></Button>
+                                    <button className='select'>Select Options</button>
+                               
+                                </Card.Body>
+                            </Card>
+                        </div>
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-10 m-auto">
                             <Card style={{ width: '100%', position: 'relative' }}>
                                 <Card.Img className='img3' src={H1} />
                                 {/* <Card.Img className='img12' src={Imi11} /> */}
@@ -173,7 +275,7 @@ function Shop() {
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className="imgee col-xl-4 col-md-4 col-6">
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-10 m-auto">
                             <Card style={{ width: '100%',position:'relative' }}>
                                 <Card.Img className='img3' src={H2} />
                                 <h6 style={{ backgroundColor: 'yellow', width: 'max-content', padding: '5px', position: 'absolute', top: '5px', left: '5px' }}><small> SELE !</small></h6>
@@ -194,7 +296,7 @@ function Shop() {
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className="imgee col-xl-4 col-md-4 col-6">
+                        <div className="imgee col-xl-4 col-md-4 col-sm-6 col-10 m-auto">
                             <Card style={{ width: '100%' }}>
                                 <Card.Img className='img3' src={H3} />
                                 {/* <Card.Img className='img12' src={Imi13} /> */}
@@ -215,6 +317,7 @@ function Shop() {
                                 </Card.Body>
                             </Card>
                         </div>
+                        
                     </div>
             </div>
             <Footer></Footer>

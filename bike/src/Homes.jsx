@@ -33,10 +33,7 @@ import S2 from '../src/S2.jpg'
 import S3 from '../src/S3.jpg'
 import S4 from '../src/S4.jpg'
 import S5 from '../src/S5.jpg'
-import F1 from '../src/F1.jpg'
-import Ff2 from '../src/Ff2.webp'
-import Ff1 from '../src/Ff1.jpg'
-import Ll1 from '../src/Ll1.svg'
+
 
 import Slider from 'react-slick';
 
@@ -60,7 +57,7 @@ function Homes() {
             <div className="container-xxl p-0">
                 <div className="images">
                     <Heding></Heding>
-                    <img src={Slide} alt="" style={{ width: '120%' }}></img>
+                    <img src={Slide} alt="" style={{ width: '120%', height: '100vh' }}></img>
                     <div className="clean">
                         <h4>Clean - Flexible - Customizable</h4>
                         <h1>BIKE &ACCESSORIES </h1>
@@ -72,9 +69,9 @@ function Homes() {
             {/* ================*****************=================== */}
 
             <div className="popular container-xl mb-4">
-                <h1 style={{}}>Popular Categories</h1>
+                <h1>Popular Categories</h1>
                 <div className="row">
-                    <div className="col-lg-6 col-md-6 col-sm-8 col-8 py-3" style={{ margin: 'auto' }}>
+                    <div className="col-lg-6 col-md-6 col-sm-10 py-3" style={{ margin: 'auto' }}>
                         <div className="row row-gap-3" style={{ position: 'relative' }} >
                             <img src={Im1} alt="" style={{ width: '100%', transition: 'all 0.6s ease' }} />
                             <a href="" style={{ position: 'absolute', bottom: '41%', left: '5%' }}>Mountain Bikes</a>
@@ -82,7 +79,7 @@ function Homes() {
                             <img src={Im2} alt="" style={{ width: '100%', transition: 'all 0.6s ease' }} />
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-6 col-sm-8 col-8 " style={{ margin: 'auto' }}>
+                    <div className="col-lg-6 col-md-6 col-sm-10 " style={{ margin: 'auto' }}>
                         <div className="row row-gap-3">
                             <div className="col-12" style={{ position: 'relative' }}>
                                 <img src={Im3} alt="" style={{ width: '100%' }} />
@@ -101,7 +98,7 @@ function Homes() {
                     </div>
                 </div>
 
-                <div className="slider-container" style={{ marginTop: '20px' }}>
+                <div className="slider-container" style={{ marginTop: '20px', overflow: 'hidden' }}>
                     <Slider {...settings}>
                         <div>
                             <img src={Imp1} alt="" style={{ width: '100%' }} />
@@ -129,8 +126,8 @@ function Homes() {
 
             <div className="ourmost container-xl mt-5">
                 <h1>Our Most <br /> Advanced Lineup</h1>
-                <div className="row my-5">
-                    <div className="imgg col-xl-4 col-md-4 col-sm-6">
+                <div className="row my-5 row-gap-4">
+                    <div className="imgg col-xl-4 col-md-4 col-sm-10" style={{ margin: 'auto' }}>
                         <Card style={{ width: '100%', position: 'relative' }}>
                             <Card.Img className='img1' src={Imm1} />
                             <Card.Img className='img11' src={Imm11} />
@@ -148,7 +145,7 @@ function Homes() {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="imgg col-xl-4 col-md-4 col-sm-6">
+                    <div className="imgg col-xl-4 col-md-4 col-sm-10" style={{ margin: 'auto' }}>
                         <Card style={{ width: '100%' }}>
                             <Card.Img className='img1' src={Imm2} />
                             <Card.Img className='img11' src={Imm12} />
@@ -165,7 +162,7 @@ function Homes() {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className="imgg col-xl-4   col-sm-6">
+                    <div className="imgg col-xl-4 col-md-4  col-sm-10" style={{ margin: 'auto' }}>
                         <Card style={{ width: '100%' }}>
                             <Card.Img className='img1' src={Imm3} />
                             <Card.Img className='img11' src={Imm13} />
@@ -184,7 +181,7 @@ function Homes() {
                     </div>
                 </div>
             </div>
-            <div className="container-xl d-flex py-5" style={{ justifyContent: 'center' }}>
+            <div className="container-xl d-flex" style={{ justifyContent: 'center', padding: '0px 0px 15px 0px' }}>
                 <Button variant="outline-primary">Shop All Bikes <i class="fa-solid fa-arrow-right"></i></Button>
             </div>
 
@@ -214,8 +211,6 @@ function Homes() {
                     <div className="gallery_style" >
                         <img src={G6} alt="Dish 6" className="img-container" />
                     </div>
-
-
 
                     <div className="ga gallery_style " style={{ display: 'none' }}>
                         <img src={G7} alt="Dish 3" className="img-container" />
@@ -255,7 +250,7 @@ function Homes() {
                 </div>
                 {/* <img src={F1} alt="" style={{ width: '112%' }} /> */}
                 {/* <div className="container-xxl" style={{ position: 'absolute', top: '15%' }}> */}
-                <div className="container-xl" style={{ display: 'flex', zIndex: '5' }} >
+                <div className="container-xl" style={{ display: 'flex', flexWrap: 'wrap' }} >
                     <div className="fea">
                         <div className="sec-fea">
                             <i class="fa-regular fa-sun"></i>
@@ -318,7 +313,7 @@ function Homes() {
                     <img src={S1} alt="" style={{ width: '100%' }} />
                     <p style={{ padding: '8px 0' }}><i style={{ color: '#ff8600' }} class="fa-solid fa-stop"></i> December 16, 2021 / By admin</p>
                     <h2 className='ser' style={{ fontFamily: 'auto', fontWeight: '700' }}>Introducing: Titan Racing Partners with Weekend</h2>
-                    <p style={{ padding: '10px 0', fontFamily: 'math', fontSize: '21px' }}>Proin faucibus nec mauris a sodales, sed elementum mi tincidunt. Sed eget viverra egestas nisi in consequat. Fusce sodales augue a accumsan. Cras sollicitudin, ipsum  eget...</p>
+                    <p className='ser1'>Proin faucibus nec mauris a sodales, sed elementum mi tincidunt. Sed eget viverra egestas nisi in consequat. Fusce sodales augue a accumsan. Cras sollicitudin, ipsum  eget...</p>
                 </div>
                 <div className="services" style={{ display: 'flex', flexWrap: 'wrap' }}>
 
@@ -356,7 +351,7 @@ function Homes() {
 
                 </div>
             </div>
-                    <Footer></Footer>
+            <Footer></Footer>
             {/* ================*****************=================== */}
 
             {/* <div className="foott container-xxl" style={{ display: 'flex' }}>

@@ -73,7 +73,7 @@ ul li {
 
 .images .clean {
   position: absolute;
-  top: 15%;
+  top: 20%;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -212,6 +212,13 @@ ul li {
 
 .services {
   width: 47%;
+  .ser{
+    .ser1{
+       padding: '10px 0';
+       font-family: math;
+       font-size: 21px;       
+    }
+  }
 }
 
 .sec-ser {
@@ -288,7 +295,7 @@ ul li {
       font-weight: 700;
       font-size: 18px;
       font-family: monospace;
-      border: 3px solid;
+      border: 1px solid;
     }
   }
 
@@ -449,7 +456,7 @@ ul li {
   }
 
   .fea {
-    width: 50%;
+    width: 46%;
   }
 
   .sec-fea {
@@ -501,7 +508,7 @@ ul li {
 @media (max-width : 768px) {
   .clean {
     h4 {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     h1 {
@@ -548,7 +555,7 @@ ul li {
   }
 
   .fea {
-    width: 50%;
+    width: 45%;
 
     .ll {
       display: none;
@@ -571,32 +578,74 @@ ul li {
 }
 
 @media (max-width : 576px) {
-  .clean {
-    width: 100%;
+  .images .clean{
+    width: 65%;
 
     h4 {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     h1 {
-      font-size: 24px;
+      font-size: 21px;
     }
   }
-
   .popular {
-
-
     a {
       font-size: 12px;
       padding: 5px 5px;
     }
   }
+  .fea{
+    width: 100%;
+  }
 
   .gallery_style img {
     height: 150px;
+  }
+  .foot{
+    width: 100%;
+    padding: 10px;
+    h4{
+      font-size: 22px;
+    }
   }
 
   .onzo {
     padding: 0px;
   }
+  .slick-slider{
+    width: 150%;
+  }
+  .slick-dots {
+    left: -80px;
+  }
+  .shops{
+    h1{
+      font-size: 56px;
+    }
+    h3{
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 576px) {
+  .services{
+    .ser{
+      font-size: 20px;
+    }
+    .ser1{
+      font-size: 15px;
+    }
+  }
+  .footer{
+    h4{
+      font-size: 21px;
+    }
+    p{
+      font-size: 15px;
+      padding: 0;
+    }
+  }
+  
 }
