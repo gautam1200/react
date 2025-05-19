@@ -4,6 +4,8 @@ import Heding from './Heding';
 import Homes from './Homes';
 import Shop from './Shop';
 import Footer from './Footer';
+import Cart from './Cart'
+import Accessories from './Accessories';
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       {/* <Heding></Heding> */}
       <Homes></Homes>
       <Shop></Shop>
+      <Cart></Cart>
+      {/* <Accessories></Accessories> */}
     </>
   );
 }

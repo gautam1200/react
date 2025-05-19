@@ -3,9 +3,9 @@ import { Button, Form } from 'react-bootstrap'
 import Ll1 from './Ll1.svg'
 
 function Footer() {
-  return (
-    <>
-      <div className="foott container-xxl" style={{ display: 'flex' }}>
+    return (
+        <>
+            <div className="foott container-xxl" style={{ display: 'flex' }}>
                 <div className="container-xl" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
                     <div className="foot">
                         <h1 style={{ display: 'flex', justifyContent: 'center' }}><i class="fa-regular fa-message"></i></h1>
@@ -22,12 +22,12 @@ function Footer() {
                     </div>
 
                     <div className="foot">
-                        <h1 style={{ display: 'flex', justifyContent: 'center' }}><i class="fa-regular fa-envelope-open"></i></h1>
+                        <h1 style={{ display: 'flex', justifyContent: 'center'}}><i class="fa-regular fa-envelope-open"></i></h1>
                         <h3>SUBSCRIBE US</h3>
-                        <p style={{ display: 'flex', justifyContent: 'center' }}>And get the scoop on sales & new gear!</p>
+                        <p style={{ display: 'flex', justifyContent: 'center'}}>And get the scoop on sales & new gear!</p>
                         <Form>
                             <Form.Group className="mpm mb-3 d-flex" controlId="formGroupEmail">
-                                <Form.Control type="email" placeholder="Enter Email"  >
+                                <Form.Control type="email" placeholder="Enter Email">
                                 </Form.Control>
                                 <button style={{ border: 'none', borderRadius: '0 10px 10px 0' }}>Subscribe</button>
                             </Form.Group>
@@ -87,8 +87,8 @@ function Footer() {
                     <img src={Ff1} alt="" style={{ width: '120%' }} />
                 </div> */}
             </div>
-    </>
-  )
+        </>
+    )
 }
 
 export default Footer
