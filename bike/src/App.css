@@ -63,12 +63,26 @@ ul li {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.907);
 }
+ul li:hover{
+  color: #ff9d00;
+}
+.sec-heder i:hover{
+  color: #ff9d00;
+}
 
 .images {
   position: relative;
   justify-content: center;
   display: flex;
   overflow: hidden;
+}
+.footer{
+  p:hover{
+    color: #ff9d00;
+  }
+  h4:hover{
+    color: #ff0000;
+  }
 }
 
 .hamburger {
@@ -118,10 +132,10 @@ ul li {
 }
 
 .nav-item a:hover {
-  color: #c59d5f;
+  color: #c59d5f; 
 }
 
-/* .header-wrapper {
+ .header-wrapper {
   background-color: #111; 
   color: white;
 }
@@ -175,7 +189,7 @@ ul li {
 
 .nav-item a:hover {
   color: #f8b400;
-} */
+} 
 
 
 
@@ -184,7 +198,7 @@ ul li {
 
 .clean {
   h4 {
-    font-size: 22px;
+    font-size: 24px;
     font-family: webkit-body;
   }
 
@@ -784,6 +798,11 @@ ul li {
       }
     }
   }
+  .accessories{
+    h1{
+      font-size: 46px;
+    }
+  }
 
   /* .nav-menu-container {
     display: block !important;
@@ -865,6 +884,22 @@ ul li {
       h1 {
         font-size: 40px;
       }
+    }
+  }
+.card_info{
+  h1{
+    font-size: 26px;
+  }
+  h3{
+    font-size: 22px;
+  }
+  p{
+    font-size: 18px;
+  }
+}
+.accessories{
+    h1{
+      font-size: 36px;
     }
   }
 }

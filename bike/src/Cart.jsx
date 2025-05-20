@@ -7,23 +7,24 @@ import Ap2 from './Ap2.png'
 import Ap3 from './Ap3.png'
 import Accessories from './Accessories'
 import Footer from './Footer'
+import imp6 from './Imp6.png'
 
 function Cart() {
     return (
         <>
             <div className="cart container-xxl p-0" style={{ overflow: 'hidden' }}>
                 <Heding></Heding>
-                <div className="hh" style={{ height: '150px'}}></div>
+                <div className="hh" style={{ height: '150px' }}></div>
                 <div className="card_header container-xl">
                     <h1>Shop</h1>
                 </div>
                 <div className="hh" style={{ height: '150px' }}></div>
             </div>
-            <div className="container-xxl py-5">
+            <div className="container-xxl py-5 bg-dark">
                 <div className="container-xl">
                     <div className="row">
                         <div className="col-lg-6 col-md-6 col-sm-11">
-                            <img src={Imm11} alt="" style={{ width: '100%' }}/>
+                            <img src={imp6} alt="" style={{ width: '100%' }} />
                         </div>
                         <div className="card_info col-lg-6 col-md-6 col-sm-11">
                             <div className="info">
@@ -37,7 +38,7 @@ function Cart() {
                     </div>
                 </div>
             </div>
-            <div className="container-xxl py-5 bg-danger">
+            <div className="container-xxl py-5 bg-light">
                 <div className="container-xl">
                     <div className="row">
                         <div className="card_info col-lg-6 col-md-6 col-sm-11">
@@ -59,7 +60,7 @@ function Cart() {
                 <div className="container-xl">
                     <div className="row">
                         <div className="col-lg-6 col-md-6 col-sm-11" style={{ display: 'flex', alignItems: 'center' }}>
-                            <img src={Ap3} alt="" style={{ width: '100%' }} />
+                            <img src={Ap3} alt="" style={{ width: '100%',padding:'10px 0' }} />
                         </div>
                         <div className="card_info col-lg-6 col-md-6 col-sm-11">
                             <div className="info ">
@@ -78,8 +79,8 @@ function Cart() {
                 <Accessories></Accessories>
             </div>
             <br /><br />
-                <Footer></Footer>
-            
+            <Footer></Footer>
+
         </>
     )
 }

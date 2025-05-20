@@ -3,10 +3,10 @@ import React, { useState } from 'react'
 import { Dropdown, DropdownButton } from 'react-bootstrap'
 import Logo from './Lo2.png'
 function Heding() {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpens, setMobileMenuOpens] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
+  const toggleMobileMenus = () => {
+    setMobileMenuOpens(!isMobileMenuOpens);
   };
   return (
     <>
@@ -14,7 +14,6 @@ function Heding() {
         <div className="heder container-xl">
           <div className="sub-heder row" style={{ color: 'white' }}>
             <div className="col-md-2 col-sm-11 col-10">
-              {/* <h1 style={{fontSize:'40px'}}>Bikes</h1> */}
               <img src={Logo} alt="" style={{ width: '90px', height: '90px' }} />
             </div>
             <div className="header1 col-lg-7 col-md-10  d-none d-md-block " >
@@ -27,11 +26,6 @@ function Heding() {
                 <li>CONTACT</li>
                 <li></li>
               </ul>
-              <div className="hamburger" onClick={toggleMobileMenu}>
-                <span className="bar"></span>
-                <span className="bar"></span>
-                <span className="bar"></span>
-              </div>
             </div>
             <DropdownButton id="dropdown-Light-button" className='col-1  d-md-none d-sm-block' title="">
               <Dropdown.Item href="#/action-1">HOME</Dropdown.Item>
@@ -51,107 +45,53 @@ function Heding() {
         </div>
       </div>
 
+
+      {/* <header>
+        <div className="header-container">
+          <div className="logo">
+            <img src={Logo} alt="Cafeu Logo" />
+          </div>
+
+          <div className="hamburger" onClick={toggleMobileMenus}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+
+          <nav className={`nav-menu ${isMobileMenuOpens ? "active" : ""}`}>
+            <ul className="nav-list">
+              {["Home", "Pages", "Menu", "Blog", "About Us", "Contact"].map(
+                (item, idx) => (
+                  <li key={idx} className="nav-item">
+                    <a
+                      href={`#${item.toLowerCase().replace(/\s+/g, "")}`}
+                      onClick={() => setMobileMenuOpens(false)}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
+              <li className="nav-item number">
+                <a
+                  href="tel:+919714051182"
+                  className="call-link"
+                  onClick={() => setMobileMenuOpens(false)}
+                  
+                >
+            
+              <i class="fa-solid fa-user" style={{ fontSize: '30px', marginLeft: '20px', alignItems: 'center', display: 'flex' }}></i>
+              <i class="fa-regular fa-heart" style={{ fontSize: '30px', marginLeft: '20px', alignItems: 'center', display: 'flex' }}></i>
+              <i class="fa-solid fa-cart-shopping" style={{ fontSize: '30px', marginLeft: '20px', alignItems: 'center', display: 'flex' }}></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header> */}
+
     </>
   )
 }
 
 export default Heding
-// const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-//   const toggleMobileMenu = () => {
-//     setMobileMenuOpen(!isMobileMenuOpen);
-//   };
-
-//   return (
-//     <header>
-//       {/* Header Top Navigation */}
-//       <div className="header-container">
-//         <div className="logo">
-//           <img src={logo} alt="Cafeu Logo" />
-//         </div>
-
-//         <div className="hamburger" onClick={toggleMobileMenu}>
-//           <span className="bar"></span>
-//           <span className="bar"></span>
-//           <span className="bar"></span>
-//         </div>
-
-//         <nav className={`nav-menu ${isMobileMenuOpen ? "active" : ""}`}>
-//           <ul className="nav-list">
-//             {["Home", "Pages", "Menu", "Blog", "About Us", "Contact"].map(
-//               (item, idx) => (
-//                 <li key={idx} className="nav-item">
-//                   <a
-//                     href={`#${item.toLowerCase().replace(/\s+/g, "")}`}
-//                     onClick={() => setMobileMenuOpen(false)}
-//                   >
-//                     {item}
-//                   </a>
-//                 </li>
-//               )
-//             )}
-//             <li className="nav-item number">
-//               <a
-//                 href="tel:+919714051182"
-//                 className="call-link"
-//                 onClick={() => setMobileMenuOpen(false)}
-//               >
-//                 <img src={call} alt="Call" /> +91 9714051182
-//               </a>
-//             </li>
-//           </ul>
-//         </nav>
-//       </div>
-
-
-// function Heding() {
-//   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-// const toggleMobileMenu = () => {
-// setMobileMenuOpen(!isMobileMenuOpen);
-// };
-//   return (
-//     <>
-
-{/* Header Top Navigation */ }
-{/* <div className="header-container">
-        <div className="logo"> */}
-{/* <img src={logo} alt="Cafeu Logo" /> */ }
-{/* </div>
-
-        <div className="hamburger" onClick={toggleMobileMenu}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </div>
-
-        <nav className={`nav-menu ${isMobileMenuOpen ? "active" : ""}`}>
-          <ul className="nav-list">
-            {["Home", "Pages", "Menu", "Blog", "About Us", "Contact"].map(
-              (item, idx) => (
-                <li key={idx} className="nav-item">
-                  <a
-                    href={`#${item.toLowerCase().replace(/\s+/g, "")}`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item}
-                  </a>
-                </li>
-              )
-            )}
-            <li className="nav-item number">
-              <a
-                href="tel:+919714051182"
-                className="call-link"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </>
-  )
-}
-
-export default Heding */}

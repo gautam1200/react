@@ -10,7 +10,7 @@ function Footer() {
                     <div className="foot">
                         <h1 style={{ display: 'flex', justifyContent: 'center' }}><i class="fa-regular fa-message"></i></h1>
                         <h3>NEED HELP ?</h3>
-                        <p>Our dedicated team are here to help.</p>
+                        <p style={{textAlign:'center'}}>Our dedicated team are here to help.</p>
                         <h2 style={{ display: 'flex', justifyContent: 'center' }}><Button variant="outline-warning">CHAT NOW</Button></h2>
                     </div>
 

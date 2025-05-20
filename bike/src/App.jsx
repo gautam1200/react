@@ -12,8 +12,8 @@ function App() {
     <>
       {/* <Heding></Heding> */}
       <Homes></Homes>
-      <Shop></Shop>
-      <Cart></Cart>
+      {/* <Shop></Shop> */}
+      {/* <Cart></Cart> */}
       {/* <Accessories></Accessories> */}
     </>
   );
