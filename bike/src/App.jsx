@@ -14,7 +14,7 @@ function App() {
       <Homes></Homes>
       <Shop></Shop>
       <Cart></Cart>
-      <Accessories></Accessories>
+      {/* <Accessories></Accessories> */}
     </>
   );
 }
