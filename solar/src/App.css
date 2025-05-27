@@ -231,6 +231,14 @@
 } */
 
 /* ====================**********************====================== */
+.css-1xjuwn-MuiPaper-root-MuiAccordion-root:first-of-type {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+.css-1xjuwn-MuiPaper-root-MuiAccordion-root:last-of-type {
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
 /* ====================**********************====================== */
 /* ====================**********************====================== */
 /* ====================**********************====================== */

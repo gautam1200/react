@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Paper, ListItem, ListItemAvatar, ListItemText, Avatar, CircularProgress, styled, LinearProgress, linearProgressClasses, AvatarGroup, CardMedia, CardContent, CardActions, CardActionArea } from '@mui/material'
+import { Box, Typography, Grid, Paper, ListItem, ListItemAvatar, ListItemText, Avatar, CircularProgress, styled, LinearProgress, linearProgressClasses, AvatarGroup, CardMedia, CardContent, CardActions, CardActionArea, Accordion, AccordionSummary } from '@mui/material'
 import React from 'react'
 import Hedings from './Hedings';
 import { Height } from '@mui/icons-material';
@@ -25,6 +25,14 @@ import blog2 from './blog-6.jpg'
 import blog3 from './blog-4.jpg'
 import user from './user1.png'
 import commente from './comment.png'
+import Bac1 from './bac1.png'
+import question from './question.png'
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import solar from './pahal-solar.gif'
+import india from './india.png'
+import LocationPinIcon from '@mui/icons-material/LocationPin';
 
 
 const cards = [
@@ -44,6 +52,19 @@ const cards = [
     iconClass: "icon-solar",
   },
 ];
+const questions = [{
+  title: "What is Equality and solidarity?",
+  text: "The generated is therefore always free from repetition, injected humour, or words etc."
+},
+{
+  title: "How to inspire humanity?",
+  text: "The generated is therefore always free from repetition, injected humour, or words etc."
+},
+{
+  title: "Where are Better living programs?",
+  text: "The generated is therefore always free from repetition, injected humour, or words etc."
+}
+]
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
   borderRadius: 5,
@@ -62,6 +83,12 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
 }));
 
+const solars = [{
+  logo : <LocationPinIcon />,
+  title: "Pan India Presence ",
+  text: "Our growing presence across India as one of the leading solar panel manufacturers greatly helps with us with on-time service, local liasoning and efficient project management activities."
+}]
+
 
 function Homepage() {
   const settings = {
@@ -74,7 +101,6 @@ function Homepage() {
     autoplaySpeed: 1000,
     cssEase: "linear"
   };
-
   const images = [So1, So2, So3, So4];
   const blog = [{
     images: blog1,
@@ -95,10 +121,12 @@ function Homepage() {
     lebal1: "nextwpcook",
     commente: " Comment (0)",
     title: "How Solar Energy Contributes to Sustainable"
-
   }
-
   ]
+
+
+
+
 
 
 
@@ -267,8 +295,6 @@ function Homepage() {
           ))}
         </Slider>
       </Box>
-
-
       {/* ===============**************==================== */}
       <Box className="w-100" display={'flex'} flexWrap={'wrap'} padding={'40px 0'} sx={{ backgroundColor: 'black', color: 'white' }} justifyContent={'center'}>
         {/* <Box className="Proven" width={'60%'}> */}
@@ -288,7 +314,7 @@ function Homepage() {
             </Box>
             <Box display={'flex'} flexWrap={'wrap'}>
 
-              <ListItem alignItems="center" sx={{ width: { xs: '70%', sm: '40%' },margin:'auto'}}>
+              <ListItem alignItems="center" sx={{ width: { xs: '70%', sm: '40%' }, margin: 'auto' }}>
                 <ListItemAvatar>
                   <Avatar alt="Remy Sharp" src={p1} sx={{ width: '70px', height: '70px' }} />
                 </ListItemAvatar>
@@ -297,7 +323,7 @@ function Homepage() {
                   Results
                 </Typography>
               </ListItem>
-              <ListItem alignItems="center" sx={{ width: { xs: '70%', sm: '40%' } ,margin:'auto'}}>
+              <ListItem alignItems="center" sx={{ width: { xs: '70%', sm: '40%' }, margin: 'auto' }}>
                 <ListItemAvatar>
                   <Avatar alt="Remy Sharp" src={p2} sx={{ width: '70px', height: '70px' }} />
                 </ListItemAvatar>
@@ -307,7 +333,7 @@ function Homepage() {
                 </Typography>
               </ListItem>
             </Box>
-            <Box width={{xs: '90%', sm: '80%' }} padding={'15px 0'}margin={'auto'}>
+            <Box width={{ xs: '90%', sm: '80%' }} padding={'15px 0'} margin={'auto'}>
 
               <Box spacing={2} sx={{ flexGrow: '1', margin: '15px 0' }}>
                 <Box display={'flex'} justifyContent={'space-between'}>
@@ -352,41 +378,119 @@ function Homepage() {
           </Box>
         </Box>
       </Box>
-      {/* </Box> */}
-
-      {/* ===============**************==================== */}
-
       {/* ===============**************==================== */}
       <Box className="w-100">
         <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-around'} padding={'50px 0'}>
           {blog.map((data) => (
-
-            <Box  sx={{ width:{xs:'95%',sm:'45%',md:'30%'},margin:'10px 0', transition: 'all 0.4s', borderRadius: '10px', overflow: 'hidden', boxShadow: '5px 10px 10px rgba(0, 0, 0, 0.17)',"&:hover":{
-              boxShadow: '5px 10px 10px rgba(0, 0, 0, 0.39)',
-              transform: "translatey(-10px)",
-               transition: "all 0.4s"
-            } }}>
+            <Box sx={{
+              width: { xs: '95%', sm: '45%', md: '30%' }, margin: '10px 0', transition: 'all 0.4s', borderRadius: '10px', overflow: 'hidden', boxShadow: '5px 10px 10px rgba(0, 0, 0, 0.17)', "&:hover": {
+                boxShadow: '5px 10px 10px rgba(0, 0, 0, 0.39)',
+                transform: "translatey(-10px)",
+                transition: "all 0.4s"
+              }
+            }}>
               <img src={data.images} alt="" width={'100%'} />
               <Box padding={'20px 10px'}>
-              <Box display={'flex'}  >
-                <Typography gutterBottom fontSize={'16px'} alignItems={'center'} component="div" display={'flex'} width={'50%'}>
-                  <img src={user} alt=""/>
-                  {data.lebal1}
+                <Box display={'flex'}  >
+                  <Typography gutterBottom fontSize={'16px'} alignItems={'center'} component="div" display={'flex'} width={'50%'}>
+                    <img src={user} alt="" />
+                    {data.lebal1}
+                  </Typography>
+                  <Typography gutterBottom fontSize={'16px'} alignItems={'center'} component="div" display={'flex'} width={'50%'}>
+                    <img src={commente} alt="" />
+                    {data.commente}
+                  </Typography>
+                </Box>
+                <Typography fontSize={'24px'} fontFamily={'math'} fontWeight={'700'}>
+                  {data.title}
                 </Typography>
-                <Typography gutterBottom fontSize={'16px'} alignItems={'center'} component="div" display={'flex'} width={'50%'}>
-                  <img src={commente} alt="" />
-                  {data.commente}
-                </Typography>
-              </Box>
-              <Typography fontSize={'24px'}fontFamily={'math'} fontWeight={'700'}>
-                {data.title}
-              </Typography>
               </Box>
             </Box>
           ))}
         </Box>
       </Box>
       {/* ===============**************==================== */}
+      <Box className="w-100" sx={{ backgroundImage: `url(${Bac1})` }}>
+        <Box textAlign={'center'} padding={'50px 0'} width={'60%'} margin={'auto'}>
+          <Typography fontSize={'24px'} color='green' fontWeight={'600'}>
+            RECENTLY ASLED
+          </Typography >
+          <Typography padding={'15px 0'} fontFamily={'math'} fontSize={'64px'} color='white'>
+            Asked Any Questions
+          </Typography>
+          <Typography fontSize={'20px'} color=' #ffffff69'>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout
+          </Typography>
+        </Box>
+        <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-around'} paddingBottom={'60px '}>
+          <Box width={'45%'}>
+            <img src={question} alt="" width={'100%'} />
+          </Box>
+          <Box width={'45%'} sx={{ alignItems: 'center', display: 'flex', flexWrap: 'wrap' }}>
+            <Box>
+
+              {questions.map((data1) => (
+                <Accordion sx={{ margin: '20px 0', borderRadius: '10px' }}>
+                  <AccordionSummary
+                    expandIcon={<ArrowDownwardIcon />}
+                    aria-controls="panel1-content"
+                    id="panel1-header"
+                  >
+                    <Typography component="span">{data1.title}</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      {data1.text}
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              ))}
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+      {/* ===============**************==================== */}
+      <Box className="w-100">
+        <Box className="main">
+          <img src={solar} alt="" />
+        </Box>
+      </Box>
+      {/* ===============**************==================== */}
+      <Box className="w-100">
+        <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-between'}>
+          <Box className="Manufacture" width={'45%'}>
+            <img src={india} alt="" width={'100%'} />
+          </Box>
+
+
+          <Box className="Manufacture" width={'45%'} display={'flex'}>
+      
+            {solars.map((el , index) => (
+              <>
+              <Box width={'10%'}>
+                  {el.logo}
+              </Box>
+              <Box width={'90%'}>
+                  <Typography>
+                    {el.title}
+                  </Typography>
+                  <Typography>
+                    {el.text}
+                  </Typography>
+                </Box>   
+               
+           
+              </>
+            ))}
+          </Box>
+        </Box>
+      </Box>
+      {/* ===============**************==================== */}
+      {/* ===============**************==================== */}
+      {/* ===============**************==================== */}
+      {/* ===============**************==================== */}
+      {/* ===============**************==================== */}
+
     </>
   )
 }
