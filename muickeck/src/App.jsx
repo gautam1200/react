@@ -14,9 +14,9 @@ function App() {
       {/* <Inputs></Inputs> */}
    {/* <Sliderss></Sliderss> */}
    {/* <Transfers></Transfers> */}
-   <Tooltips></Tooltips>
+   {/* <Tooltips></Tooltips> */}
    {/* <Surfacess></Surfacess>   */}
-   {/* <Layouts></Layouts> */}
+   <Layouts></Layouts>
    {/* <Dd></Dd> */}
       <br /><br /><br /><br /><br /><br /><br />
     </>

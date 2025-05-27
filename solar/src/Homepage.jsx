@@ -1,12 +1,30 @@
-import { Box, Typography, Grid, Paper, ListItem, ListItemAvatar, ListItemText, Avatar, CircularProgress } from '@mui/material'
+import { Box, Typography, Grid, Paper, ListItem, ListItemAvatar, ListItemText, Avatar, CircularProgress, styled, LinearProgress, linearProgressClasses, AvatarGroup, CardMedia, CardContent, CardActions, CardActionArea } from '@mui/material'
 import React from 'react'
 import Hedings from './Hedings';
 import { Height } from '@mui/icons-material';
 import Performanceimg from './img-4.jpg'
-import { List } from 'lucide-react';
+import { List, Settings } from 'lucide-react';
 import Ceoimg from './ceoimg.jpg'
-import { Stack } from 'react-bootstrap';
-
+import { Button, Card, Stack } from 'react-bootstrap';
+import So1 from './So-1.jpg'
+import So2 from './So-2.jpg'
+import So3 from './So-3.jpg'
+import So4 from './So-4.jpg'
+import Slider from "react-slick";
+import Proimg from './choose-us-2.jpg'
+import p1 from './p1.png'
+import p2 from './p2.png'
+import z1 from './z1.jpg'
+import z2 from './z2.jpg'
+import z3 from './z3.jpg'
+import z4 from './z4.jpg'
+import z5 from './z5.jpg'
+import o2 from './o1.png'
+import blog1 from './blog-5.jpg'
+import blog2 from './blog-6.jpg'
+import blog3 from './blog-4.jpg'
+import user from './user1.png'
+import commente from './comment.png'
 
 
 const cards = [
@@ -26,8 +44,62 @@ const cards = [
     iconClass: "icon-solar",
   },
 ];
+const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+  height: 10,
+  borderRadius: 5,
+  [`&.${linearProgressClasses.colorPrimary}`]: {
+    backgroundColor: theme.palette.grey[200],
+    ...theme.applyStyles('dark', {
+      backgroundColor: theme.palette.grey[800],
+    }),
+  },
+  [`& .${linearProgressClasses.bar}`]: {
+    borderRadius: 5,
+    backgroundColor: '#1a90ff',
+    ...theme.applyStyles('dark', {
+      backgroundColor: '#308fe8',
+    }),
+  },
+}));
+
 
 function Homepage() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 1000,
+    cssEase: "linear"
+  };
+
+  const images = [So1, So2, So3, So4];
+  const blog = [{
+    images: blog1,
+    lebal1: "nextwpcook",
+    commente: " Comment (0)",
+    title: "Impact of Solar Energy on Reducing Carbon"
+
+  },
+  {
+    images: blog2,
+    lebal1: "nextwpcook",
+    commente: " Comment (0)",
+    title: "The Financial Benefits of Solar Installation"
+
+  },
+  {
+    images: blog3,
+    lebal1: "nextwpcook",
+    commente: " Comment (0)",
+    title: "How Solar Energy Contributes to Sustainable"
+
+  }
+
+  ]
+
 
 
   return (
@@ -67,7 +139,7 @@ function Homepage() {
 
       {/* ===============**************==================== */}
 
-      <Box className="w-100"padding={'50px 0'}>
+      <Box className="w-100" padding={'50px 0'}>
         <Box className="main" sx={{ padding: '35px 0' }}>
           <Box className="cards-wrapper">
             {cards.map((card, index) => (
@@ -90,30 +162,32 @@ function Homepage() {
 
       <Box className="w-100" display={'flex'} flexWrap={'wrap'}>
         <Box className="Performance" width={{ lg: '65%', md: '65%', xs: '100%' }} display={'flex'} alignItems={'center'}>
-          <Box padding={{xs:'10px', lg:'50px'}}margin={'auto'}>
-            <Typography fontSize={{sx:'20px'}} >
+          <Box padding={{ xs: '10px', lg: '50px' }} margin={'auto'}>
+            <Typography fontSize={{ sx: '20px' }} >
               | PERFORMANCE
             </Typography>
-            <Typography fontSize={{ lg: '70px', md: '56px', xs:'34px' }} width={{xs:'70%'}}  fontFamily={'math'} fontWeight={'600'} >
+            <Typography fontSize={{ lg: '70px', md: '56px', xs: '34px' }} width={{ xs: '90%', md: '70%', lg: '100%' }} fontFamily={'math'} fontWeight={'600'} >
               Solar Powering Your Sustainable Scene
             </Typography>
-            <Box display={'flex'} flexWrap={'wrap'}  justifyContent={'space-around'}>
-              <Box width={{xs:'80%'}} sx={{backgroundColor:'rgb(20, 21, 21)',padding:'10px 15px',borderRadius:'10px',alignItems:'center',display:'flex'}}justifyContent={'space-evenly'} >
-                <Box display={'flex'} justifyContent={'center'} flexWrap={'wrap'} width={{xs:'80%'}}margin={'auto'} >
+
+            <Box display={'flex'} flexWrap={'wrap'} justifyContent={'space-around'}>
+
+              <Box width={{ xs: '80%', sm: '29%' }} sx={{ backgroundColor: 'rgb(20, 21, 21)', padding: '10px 15px', borderRadius: '10px', alignItems: 'center', display: 'flex' }} justifyContent={'space-evenly'} >
+                <Box display={'flex'} justifyContent={'center'} flexWrap={'wrap'} width={{ xs: '80%' }} margin={'auto'} >
                   <img src={Ceoimg} alt="" style={{ borderRadius: '50%' }} />
                   <Box>
-
-                  <Typography variant='h5' color='white'>
-                    Roberto Lewis
-                  </Typography>
-                  <Typography variant='h6' color='#ffffffab'>
-                    Founder of CEO
-                  </Typography>
+                    <Typography color='white' fontSize={{ xs: '18px', sm: '24px' }}>
+                      Roberto Lewis
+                    </Typography>
+                    <Typography color='#ffffffab' fontSize={{ xs: '18px', sm: '22px' }}>
+                      Founder of CEO
+                    </Typography>
                   </Box>
                 </Box>
               </Box>
-              <Box width={'60%'}>
-                <Typography variant='h5'>
+
+              <Box padding={'10px'} width={{ xs: '90%', sm: '60%' }}>
+                <Typography fontSize={{ xs: '18px', sm: '22px' }}>
                   Solar Powering Your Sustainable Scene" is a vibrant and compelling phrase that conveys the idea of integrating solar energy into
                 </Typography>
                 <Box padding={'20px 0'} display={'flex'} justifyContent={'space-evenly'}>
@@ -136,7 +210,7 @@ function Homepage() {
                         </Typography>
                       </Box>
                     </Box>
-                    <Typography variant="h4" fontFamily={'math'} padding={'10px 0'}>
+                    <Typography fontSize={{ xs: '22px', sm: '30px' }} fontFamily={'math'} padding={'10px 0'}>
                       Successful
                     </Typography>
                   </Box>
@@ -159,7 +233,7 @@ function Homepage() {
                         </Typography>
                       </Box>
                     </Box>
-                    <Typography variant="h4" fontFamily={'math'} padding={'10px 0'}>
+                    <Typography fontSize={{ xs: '22px', sm: '30px' }} fontFamily={'math'} padding={'10px 0'}>
                       Branching
                     </Typography>
                   </Box>
@@ -172,25 +246,151 @@ function Homepage() {
           <img src={Performanceimg} alt="" width={{ md: '100%', xs: '60%' }} />
         </Box>
       </Box>
-
-
-
-
-
-
-
-  
       {/* ===============**************==================== */}
+      <Box className="w-100" overflow={'hidden'} padding={'40px 0'} >
+        <Slider {...settings}>
+          {images.map((imgSrc, index) => (
+            <>
+              <Box className="imghover" key={index} zIndex={'0'} position={'relative'}>
+                <img
+                  src={imgSrc}
+                  alt={`Slide ${index + 1}`}
+                  style={{ width: '100%', height: '100%' }}
+                />
+                <Box className="imghovers">
+                </Box>
+                <Box className="imgicon">
+                  <img src={o2} alt="" />
+                </Box>
+              </Box>
+            </>
+          ))}
+        </Slider>
+      </Box>
+
+
       {/* ===============**************==================== */}
-      {/* ===============**************==================== */}
-      {/* ===============**************==================== */}
+      <Box className="w-100" display={'flex'} flexWrap={'wrap'} padding={'40px 0'} sx={{ backgroundColor: 'black', color: 'white' }} justifyContent={'center'}>
+        {/* <Box className="Proven" width={'60%'}> */}
+        <Box className="Performance" width={{ lg: '60%', md: '60%', sm: '80%', xs: '100%' }} display={'flex'} alignItems={'center'} >
+          <Box padding={{ xs: '10px', lg: '50px' }} margin={'auto'}>
+            <Typography fontSize={{ sx: '20px' }} >
+              | WHY CHOOSE US
+            </Typography>
+            <Typography fontSize={{ lg: '70px', md: '56px', xs: '34px' }} width={{ xs: '80%', md: '70%', lg: '100%' }} fontFamily={'math'} fontWeight={'600'} >
+              Proven Excellence Client's Choice
+            </Typography>
+            <Box>
+
+              <Typography fontFamily={'math'} fontSize={{ xs: '18px', sm: '22px' }}>
+                Business, or everyday living, imagine a world where solar success is not just an aspiration but a reality driven by the
+              </Typography>
+            </Box>
+            <Box display={'flex'} flexWrap={'wrap'}>
+
+              <ListItem alignItems="center" sx={{ width: { xs: '70%', sm: '40%' },margin:'auto'}}>
+                <ListItemAvatar>
+                  <Avatar alt="Remy Sharp" src={p1} sx={{ width: '70px', height: '70px' }} />
+                </ListItemAvatar>
+                <Typography padding={'0px 20px'}>
+                  Trusted <br />
+                  Results
+                </Typography>
+              </ListItem>
+              <ListItem alignItems="center" sx={{ width: { xs: '70%', sm: '40%' } ,margin:'auto'}}>
+                <ListItemAvatar>
+                  <Avatar alt="Remy Sharp" src={p2} sx={{ width: '70px', height: '70px' }} />
+                </ListItemAvatar>
+                <Typography padding={'0px 20px'}>
+                  Client<br />
+                  Satisfaction
+                </Typography>
+              </ListItem>
+            </Box>
+            <Box width={{xs: '90%', sm: '80%' }} padding={'15px 0'}margin={'auto'}>
+
+              <Box spacing={2} sx={{ flexGrow: '1', margin: '15px 0' }}>
+                <Box display={'flex'} justifyContent={'space-between'}>
+                  <Typography>
+                    Hybrid Energy
+                  </Typography>
+                  <Typography>
+                    76%
+                  </Typography>
+                </Box>
+                <BorderLinearProgress variant="determinate" value={76} />
+              </Box>
+              <Box spacing={2} sx={{ flexGrow: '1', margin: '15px 0' }}>
+                <Box display={'flex'} justifyContent={'space-between'}>
+                  <Typography>
+                    Wind Turbines
+                  </Typography>
+                  <Typography>
+                    61%
+                  </Typography>
+                </Box>
+                <BorderLinearProgress variant="determinate" value={61} />
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box className="Proven-img" width={{ lg: '40%', md: '40%', sm: '60%', sx: '100%' }} position={'relative'} sx={{ objectFit: 'cover' }}>
+          <img src={Proimg} alt="" width={'100%'} />
+          <Box padding={'30px'} width={'max-content'} sx={{ backgroundColor: 'white', position: 'absolute', bottom: { xs: '0%', sm: '5%', md: '10%' }, left: { xs: '0%', sm: '-15%', md: '-15%' } }}>
+            <AvatarGroup max={4}>
+              <Avatar alt="Remy Sharp" src={z1} />
+              <Avatar alt="Travis Howard" src={z2} />
+              <Avatar alt="Cindy Baker" src={z3} />
+              <Avatar alt="Agnes Walker" src={z4} />
+              <Avatar alt="Trevor Henderson" src={z5} />
+            </AvatarGroup>
+            <Typography color='black' margin={'10px 0'}>
+              25,000 Customer <br />
+              Satisfaction services
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+      {/* </Box> */}
+
       {/* ===============**************==================== */}
 
+      {/* ===============**************==================== */}
+      <Box className="w-100">
+        <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-around'} padding={'50px 0'}>
+          {blog.map((data) => (
+
+            <Box  sx={{ width:{xs:'95%',sm:'45%',md:'30%'},margin:'10px 0', transition: 'all 0.4s', borderRadius: '10px', overflow: 'hidden', boxShadow: '5px 10px 10px rgba(0, 0, 0, 0.17)',"&:hover":{
+              boxShadow: '5px 10px 10px rgba(0, 0, 0, 0.39)',
+              transform: "translatey(-10px)",
+               transition: "all 0.4s"
+            } }}>
+              <img src={data.images} alt="" width={'100%'} />
+              <Box padding={'20px 10px'}>
+              <Box display={'flex'}  >
+                <Typography gutterBottom fontSize={'16px'} alignItems={'center'} component="div" display={'flex'} width={'50%'}>
+                  <img src={user} alt=""/>
+                  {data.lebal1}
+                </Typography>
+                <Typography gutterBottom fontSize={'16px'} alignItems={'center'} component="div" display={'flex'} width={'50%'}>
+                  <img src={commente} alt="" />
+                  {data.commente}
+                </Typography>
+              </Box>
+              <Typography fontSize={'24px'}fontFamily={'math'} fontWeight={'700'}>
+                {data.title}
+              </Typography>
+              </Box>
+            </Box>
+          ))}
+        </Box>
+      </Box>
+      {/* ===============**************==================== */}
     </>
   )
 }
 export default Homepage
-
 
 
 

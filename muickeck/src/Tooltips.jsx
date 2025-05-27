@@ -2059,7 +2059,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
                 <FacebookCircularProgress />
                 <GradientCircularProgress />
                 <br />
-                <BorderLinearProgress variant="determinate" value={50} />
+                <BorderLinearProgress variant="determinate" value={70} valueBuffer={"0"} />
             </Stack>
             <br /><br />
             {/* ========================********************================== */}
