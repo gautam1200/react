@@ -12,10 +12,10 @@ function App() {
     <>
 
       {/* <Inputs></Inputs> */}
-   {/* <Sliderss></Sliderss> */}
+   {/* <Sliders></Sliders> */}
    {/* <Transfers></Transfers> */}
-   {/* <Tooltips></Tooltips> */}
-   <Surfacess></Surfacess>  
+   <Tooltips></Tooltips>
+   {/* <Surfacess></Surfacess>   */}
    {/* <Layouts></Layouts> */}
    {/* <Dd></Dd> */}
       <br /><br /><br /><br /><br /><br /><br />

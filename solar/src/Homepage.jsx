@@ -1,11 +1,8 @@
-import { Box, Typography, Grid, Paper, ListItem, ListItemAvatar, ListItemText, Avatar, CircularProgress, styled, LinearProgress, linearProgressClasses, AvatarGroup, CardMedia, CardContent, CardActions, CardActionArea, Accordion, AccordionSummary } from '@mui/material'
-import React from 'react'
+import { Box, Typography, ListItem, ListItemAvatar, Avatar, CircularProgress, styled, LinearProgress, linearProgressClasses, AvatarGroup, Accordion, AccordionSummary } from '@mui/material'
+import React from 'react';
 import Hedings from './Hedings';
-import { Height } from '@mui/icons-material';
 import Performanceimg from './img-4.jpg'
-import { List, Settings } from 'lucide-react';
 import Ceoimg from './ceoimg.jpg'
-import { Button, Card, Stack } from 'react-bootstrap';
 import So1 from './So-1.jpg'
 import So2 from './So-2.jpg'
 import So3 from './So-3.jpg'
@@ -28,11 +25,22 @@ import commente from './comment.png'
 import Bac1 from './bac1.png'
 import question from './question.png'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import solar from './pahal-solar.gif'
+import LocationPinIcon from '@mui/icons-material/PinDrop';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import WatchLaterIcon from '@mui/icons-material/WatchLater';
+import SecurityIcon from '@mui/icons-material/Security';
+import Footers from './Footer';
 import india from './india.png'
-import LocationPinIcon from '@mui/icons-material/LocationPin';
+import video from './P11.mp4'
+import logo1 from './logo1.png'
+import logo2 from './logo2.png'
+import logo3 from './logo3.png'
+import logo4 from './logo4.png'
+import logo5 from './logo5.png'
+import logo6 from './logo6.png'
+
 
 
 const cards = [
@@ -82,14 +90,6 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     }),
   },
 }));
-
-const solars = [{
-  logo : <LocationPinIcon />,
-  title: "Pan India Presence ",
-  text: "Our growing presence across India as one of the leading solar panel manufacturers greatly helps with us with on-time service, local liasoning and efficient project management activities."
-}]
-
-
 function Homepage() {
   const settings = {
     dots: true,
@@ -107,14 +107,12 @@ function Homepage() {
     lebal1: "nextwpcook",
     commente: " Comment (0)",
     title: "Impact of Solar Energy on Reducing Carbon"
-
   },
   {
     images: blog2,
     lebal1: "nextwpcook",
     commente: " Comment (0)",
     title: "The Financial Benefits of Solar Installation"
-
   },
   {
     images: blog3,
@@ -123,17 +121,67 @@ function Homepage() {
     title: "How Solar Energy Contributes to Sustainable"
   }
   ]
-
-
-
-
-
-
-
+  const solars = [
+    {
+      logo: <LocationPinIcon />,
+      title: "Pan India Presence ",
+      text: "Our growing presence across India as one of the leading solar panel manufacturers greatly helps with us with on-time service, local liasoning and efficient project management activities."
+    },
+    {
+      logo: <LocationPinIcon />,
+      title: "We make high quality solar panels by ourselves ",
+      text: "We manufacture superior-quality mono crystalline solar panels and polycrystalline solar panels in our top-of-the-line solar manufacturing facility."
+    },
+    {
+      logo: < EmojiEventsIcon />,
+      title: "Experienced Project Execution",
+      text: "The success of our industrial and residential solar installation projects is fueled by our strong and dedicated project execution team, with a focus on quality and performance."
+    },
+    {
+      logo: < WatchLaterIcon />,
+      title: "48 Hour Services Guarantee ",
+      text: "With a dedicated and in-house O&M team with constant remote monitoring, we strive to exceed the highest level of support and service customers expect when working with India’s best solar panel company."
+    },
+    {
+      logo: < SecurityIcon />,
+      title: "End-To-End Solutions ",
+      text: "As leading solar EPC contractors in India, we focus on offering end-to-end design, engineering, and O&M for solar projects across the commercial, industrial, residential and institutional sectors."
+    },
+  ]
+  const module = [{
+    logo: logo2,
+    title: "800MW",
+    text: "Solar Module Manufacturing"
+  },
+  {
+    logo: logo3,
+    title: "5+MW",
+    text: "Engineered"
+  },
+  {
+    logo: logo5,
+    title: "14+",
+    text: "States Covered"
+  },
+  {
+    logo: logo4,
+    title: "30,000t",
+    text: "CO2 Emissions Mitigated"
+  },
+  {
+    logo: logo1,
+    title: "250+",
+    text: "Successful Projects"
+  },
+  {
+    logo: logo6,
+    title: "350+",
+    text: "Happy Clients"
+  },
+  ]
   return (
     <>
       {/* ===============**************==================== */}
-
       <Box className="homepage">
         <Hedings></Hedings>
         <Box sx=
@@ -161,12 +209,10 @@ function Homepage() {
             }}>
             Save Energy and Save Earth for Your Future Generations.
           </Typography>
-          <button>Get Started Now</button>
+          {/* <button>Get Started Now</button> */}
         </Box>
       </Box>
-
       {/* ===============**************==================== */}
-
       <Box className="w-100" padding={'50px 0'}>
         <Box className="main" sx={{ padding: '35px 0' }}>
           <Box className="cards-wrapper">
@@ -185,9 +231,7 @@ function Homepage() {
           </Box>
         </Box>
       </Box>
-
       {/* ===============**************==================== */}
-
       <Box className="w-100" display={'flex'} flexWrap={'wrap'}>
         <Box className="Performance" width={{ lg: '65%', md: '65%', xs: '100%' }} display={'flex'} alignItems={'center'}>
           <Box padding={{ xs: '10px', lg: '50px' }} margin={'auto'}>
@@ -411,24 +455,23 @@ function Homepage() {
       </Box>
       {/* ===============**************==================== */}
       <Box className="w-100" sx={{ backgroundImage: `url(${Bac1})` }}>
-        <Box textAlign={'center'} padding={'50px 0'} width={'60%'} margin={'auto'}>
-          <Typography fontSize={'24px'} color='green' fontWeight={'600'}>
+        <Box textAlign={'center'} padding={'50px 0'} width={{ xs: '90%', sm: '75%', md: '60%' }} margin={'auto'}>
+          <Typography fontSize={{ xs: '20px', sm: '22px' }} color='green' fontWeight={'600'}>
             RECENTLY ASLED
           </Typography >
-          <Typography padding={'15px 0'} fontFamily={'math'} fontSize={'64px'} color='white'>
+          <Typography fontSize={{ xs: '36px', sm: '42px', md: '59px' }} padding={'15px 0'} fontFamily={'math'} color='white'>
             Asked Any Questions
           </Typography>
-          <Typography fontSize={'20px'} color=' #ffffff69'>
+          <Typography fontSize={{ xs: '18px', sm: '20px' }} color=' #ffffff69'>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout
           </Typography>
         </Box>
         <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-around'} paddingBottom={'60px '}>
-          <Box width={'45%'}>
-            <img src={question} alt="" width={'100%'} />
+          <Box width={{ xs: '90%', sm: '45%' }}>
+            <img src={question} alt="" width={'100%'} height={'100%'} objectFit="cover" />
           </Box>
-          <Box width={'45%'} sx={{ alignItems: 'center', display: 'flex', flexWrap: 'wrap' }}>
+          <Box width={{ xs: '90%', sm: '50%' }} sx={{ alignItems: 'center', display: 'flex', flexWrap: 'wrap' }}>
             <Box>
-
               {questions.map((data1) => (
                 <Accordion sx={{ margin: '20px 0', borderRadius: '10px' }}>
                   <AccordionSummary
@@ -452,45 +495,69 @@ function Homepage() {
       {/* ===============**************==================== */}
       <Box className="w-100">
         <Box className="main">
-          <img src={solar} alt="" />
+          <img src={solar} alt="" width={'100%'} />
         </Box>
       </Box>
       {/* ===============**************==================== */}
-      <Box className="w-100">
+      <Box className="w-100" sx={{ backgroundImage: `url(${Bac1})`, padding: '40px 0' }}>
         <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-between'}>
-          <Box className="Manufacture" width={'45%'}>
+          <Box className="Manufacture" width={{ xs: '90%', sm: '45%' }} margin={'auto'} display={'flex'} alignItems={'center'}>
             <img src={india} alt="" width={'100%'} />
           </Box>
-
-
-          <Box className="Manufacture" width={'45%'} display={'flex'}>
-      
-            {solars.map((el , index) => (
+          <Box className="Manufacture" width={{ xs: '95%', sm: '80', md: '55%' }} justifyContent={'space-between'} margin={'auto'} display={'flex'} flexWrap={'wrap'} >
+            {solars.map((el, index) => (
               <>
-              <Box width={'10%'}>
+                <Box width={'10%'} fontSize="34px" color={'orange'} margin={'10px 0'}>
                   {el.logo}
-              </Box>
-              <Box width={'90%'}>
-                  <Typography>
+                </Box>
+                <Box width={'85%'}>
+                  <Typography fontFamily={'math'} fontSize={{ xs: '22px' }} margin={'10px 0'} fontWeight={'700'} color={'white'}>
                     {el.title}
                   </Typography>
-                  <Typography>
+                  <Typography color='#ffffffa3' fontSize={{ xs: '15px' }}>
                     {el.text}
                   </Typography>
-                </Box>   
-               
-           
+                </Box>
               </>
             ))}
           </Box>
         </Box>
       </Box>
       {/* ===============**************==================== */}
-      {/* ===============**************==================== */}
-      {/* ===============**************==================== */}
-      {/* ===============**************==================== */}
-      {/* ===============**************==================== */}
 
+      <Box className="w-100" position={'relative'} padding={'50px 0'} backgroundColor="#0039ffab">
+        <Box className="main" display={'flex'} justifyContent={'space-around'} flexWrap={'wrap'}>
+          {module.map((data) => (
+            <Box width={{ xs: '40%', sm: '30%', md: '15%' }} padding={'15px 0'} textAlign={'center'} color={'white'}>
+              <img src={data.logo} alt="" color='white' />
+              <Typography fontSize={'28px'} fontWeight={'700'}>
+                {data.title}
+              </Typography>
+              <Typography>
+                {data.text}
+              </Typography>
+            </Box>
+
+          ))}
+        </Box>
+        <video
+          src={video}
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: -1,
+          }}
+        />
+      </Box>
+      <Footers></Footers>
     </>
   )
 }

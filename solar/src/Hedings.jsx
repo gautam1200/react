@@ -1,19 +1,54 @@
-import { Box } from '@mui/material'
-import React, { useState } from 'react'
-import logo from './Solarlogo.png'
+import {
+    Box,
+    Button,
+    Container,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogTitle,
+    IconButton,
+    Link,
+    styled,
+    TextField,
+    Typography,
+} from '@mui/material';
+import React, { useState } from 'react';
+import logo from './Solarlogo.png';
+import CloseIcon from '@mui/icons-material/Close';
 
-const Hedings = () => {
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+    '& .MuiDialogContent-root': {
+        padding: theme.spacing(3),
+    },
+    '& .MuiDialogActions-root': {
+        padding: theme.spacing(2),
+    },
+}));
+
+const Headings = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [loginOpen, setLoginOpen] = useState(false);
+    const [signupOpen, setSignupOpen] = useState(false);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
     };
+
+    const openLoginDialog = () => setLoginOpen(true);
+    const closeLoginDialog = () => setLoginOpen(false);
+
+    const openSignupDialog = () => {
+        setLoginOpen(false);
+        setSignupOpen(true);
+    };
+    const closeSignupDialog = () => setSignupOpen(false);
+
     return (
         <>
-            <Box sx={{width:"100%"}}>
+            <Box sx={{ width: '100%' }}>
                 <Box className="header-container">
                     <Box className="logo">
-                        <img src={logo} alt="Cafeu Logo" />
+                        <img src={logo} alt="Solar Logo" />
                     </Box>
 
                     <Box className="hamburger" onClick={toggleMobileMenu}>
@@ -22,27 +57,153 @@ const Hedings = () => {
                         <span className="bar"></span>
                     </Box>
 
-                    <nav className={`nav-menu ${isMobileMenuOpen ? "active" : ""}`}>
+                    <nav className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
                         <ul className="nav-list">
-                            {["Home", "Pages", "Menu", "Blog", "About Us", "Contact"].map(
-                                (item, idx) => (
-                                    <li key={idx} className="nav-item">
-                                        <a
-                                            href={`#${item.toLowerCase()}`}
-                                            onClick={() => setMobileMenuOpen(false)}
-                                        >
-                                            {item}
-                                        </a>
-                                    </li>
-                                )
-                            )}
-
+                            {['Home', 'Pages', 'Menu', 'Blog', 'About Us', 'Contact'].map((item, idx) => (
+                                <li key={idx} className="nav-item">
+                                    <a href={`#${item.toLowerCase().replace(/\s/g, '-')}`} onClick={() => setMobileMenuOpen(false)}>
+                                        {item}
+                                    </a>
+                                </li>
+                            ))}
+                            <li>
+                                <Button
+                                    variant="outlined"
+                                    onClick={openLoginDialog}
+                                    sx={{
+                                        padding: '5px 15px',
+                                        fontSize: '16px',
+                                        border: '2px solid #ff8400',
+                                        borderRadius: '15px',
+                                        color: '#ff8400',
+                                        '&:hover': {
+                                            color: 'white',
+                                            backgroundColor: '#ff8400',
+                                        },
+                                    }}
+                                >
+                                    Login
+                                </Button>
+                            </li>
                         </ul>
                     </nav>
                 </Box>
             </Box>
-        </>
-    )
-}
 
-export default Hedings
+            {/* Login Dialog */}
+            <Dialog onClose={closeLoginDialog} open={loginOpen}>
+                <DialogTitle>
+                    Login
+                    <IconButton
+                        aria-label="close"
+                        onClick={closeLoginDialog}
+                        sx={{
+                            position: 'absolute',
+                            right: 8,
+                            top: 8,
+                            color: (theme) => theme.palette.grey[500],
+                        }}
+                    >
+                        <CloseIcon />
+                    </IconButton>
+                </DialogTitle>
+                <DialogContent dividers>
+                    <Typography variant="h4" gutterBottom sx={{ color: '#FFB300', fontWeight: 'bold' }}>
+                        Welcome Back!
+                    </Typography>
+                    <Typography variant="subtitle1" sx={{ color: '#616161', mb: 3 }}>
+                        Log in to order your favorite meals
+                    </Typography>
+                    <Box component="form" onSubmit={(e) => e.preventDefault()}>
+                        <TextField label="Email" type="email" fullWidth margin="normal" required />
+                        <TextField label="Password" type="password" fullWidth margin="normal" required />
+                        <Button
+                            type="submit"
+                            variant="contained"
+                            fullWidth
+                            sx={{
+                                mt: 2,
+                                backgroundColor: '#FFB300',
+                                color: '#fff',
+                                '&:hover': {
+                                    backgroundColor: '#FFA000',
+                                },
+                            }}
+                        >
+                            Log In
+                        </Button>
+                    </Box>
+                    <Typography variant="body2" sx={{ mt: 2 }}>
+                        New here?{' '}
+                        <Link href="#" underline="hover" sx={{ color: '#0288D1' }} onClick={openSignupDialog}>
+                            Create an account
+                        </Link>
+                    </Typography>
+                </DialogContent>
+            </Dialog>
+
+            {/* Signup Dialog */}
+            <Dialog onClose={closeSignupDialog} open={signupOpen}>
+                <DialogTitle>
+                    Sign Up
+                    <IconButton
+                        aria-label="close"
+                        onClick={closeSignupDialog}
+                        sx={{
+                            position: 'absolute',
+                            right: 8,
+                            top: 8,
+                            color: (theme) => theme.palette.grey[500],
+                        }}
+                    >
+                        <CloseIcon />
+                    </IconButton>
+                </DialogTitle>
+                <DialogContent dividers>
+                    <Typography variant="h4" gutterBottom sx={{ color: '#FFB300', fontWeight: 'bold' }}>
+                        Create Account
+                    </Typography>
+                    <Typography variant="subtitle1" sx={{ color: '#616161', mb: 3 }}>
+                        Join us in powering a cleaner future.
+                    </Typography>
+                    <Box component="form" onSubmit={(e) => e.preventDefault()}>
+                        <TextField label="Full Name" fullWidth margin="normal" required />
+                        <TextField label="Email" type="email" fullWidth margin="normal" required />
+                        <TextField label="Password" type="password" fullWidth margin="normal" required />
+                        <TextField label="Confirm Password" type="password" fullWidth margin="normal" required />
+                        <Button
+                            variant="contained"
+                            fullWidth
+                            sx={{
+                                mt: 3,
+                                backgroundColor: '#FFB300',
+                                color: '#fff',
+                                '&:hover': {
+                                    backgroundColor: '#FFA000',
+                                },
+                            }}
+                        >
+                            Sign Up
+                        </Button>
+                    </Box>
+                    <Typography variant="body2" sx={{ mt: 2, color: '#616161' }}>
+                        Already have an account?{' '}
+                        <Link
+                            href="#"
+                            underline="hover"
+                            sx={{ color: '#0288D1' }}
+                            onClick={() => {
+                                closeSignupDialog();
+                                openLoginDialog();
+                            }}
+                        >
+                            Log in
+                        </Link>
+                    </Typography>
+                </DialogContent>
+            </Dialog>
+        </>
+    );
+};
+
+export default Headings;

@@ -25,13 +25,7 @@ function Footer() {
                         <h1 style={{ display: 'flex', justifyContent: 'center'}}><i class="fa-regular fa-envelope-open"></i></h1>
                         <h3>SUBSCRIBE US</h3>
                         <p style={{ display: 'flex', justifyContent: 'center'}}>And get the scoop on sales & new gear!</p>
-                        <Form>
-                            <Form.Group className="mpm mb-3 d-flex" controlId="formGroupEmail">
-                                <Form.Control type="email" placeholder="Enter Email">
-                                </Form.Control>
-                                <button style={{ border: 'none', borderRadius: '0 10px 10px 0' }}>Subscribe</button>
-                            </Form.Group>
-                        </Form>
+                        
                     </div>
                 </div>
             </div>
