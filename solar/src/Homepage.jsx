@@ -7,6 +7,8 @@ import So1 from './So-1.jpg'
 import So2 from './So-2.jpg'
 import So3 from './So-3.jpg'
 import So4 from './So-4.jpg'
+import So5 from './P3.webp'
+import So6 from './blog-7.jpg'
 import Slider from "react-slick";
 import Proimg from './choose-us-2.jpg'
 import p1 from './p1.png'
@@ -40,7 +42,8 @@ import logo3 from './logo3.png'
 import logo4 from './logo4.png'
 import logo5 from './logo5.png'
 import logo6 from './logo6.png'
-
+import PersonIcon from '@mui/icons-material/Person';
+import ForumIcon from '@mui/icons-material/Forum';
 
 
 const cards = [
@@ -97,7 +100,7 @@ function Homepage() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
+    speed: 3000,
     autoplaySpeed: 1000,
     cssEase: "linear"
   };
@@ -148,6 +151,7 @@ function Homepage() {
       text: "As leading solar EPC contractors in India, we focus on offering end-to-end design, engineering, and O&M for solar projects across the commercial, industrial, residential and institutional sectors."
     },
   ]
+  const [hoveredb, setHoveredb] = React.useState(false);
   const module = [{
     logo: logo2,
     title: "800MW",
@@ -195,7 +199,7 @@ function Homepage() {
             sx={{
               fontFamily: 'cursive',
               fontSize: { xs: '20px' },
-              color: '#f4ff00de',
+              color: '#ffa200',
               padding: '10px 0'
             }}>
             Instant. Simple. Smart.
@@ -205,25 +209,44 @@ function Homepage() {
               fontSize: { xs: '43px', sm: '50px', md: '60px' },
               fontFamily: 'math',
               fontWeight: '600',
-              color: 'white'
+              transition: 'all 0.6s',
+              color: 'white',
+              '&:hover': {
+                color: '#ffa200',
+              }
             }}>
             Save Energy and Save Earth for Your Future Generations.
           </Typography>
-          {/* <button>Get Started Now</button> */}
         </Box>
       </Box>
       {/* ===============**************==================== */}
-      <Box className="w-100" padding={'50px 0'}>
+      <Box className="w-100">
         <Box className="main" sx={{ padding: '35px 0' }}>
           <Box className="cards-wrapper">
             {cards.map((card, index) => (
               <Box key={index} className="card-container">
                 <Box className={`icon ${card.iconClass}`} >
                 </Box>
-                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                <Typography
+                  variant="h6"
+                  fontWeight="bold"
+                  transition="all 0.5s"
+                  gutterBottom
+                  sx={{
+                    '&:hover': {
+                      color: '#ffa200',
+                      transition: "all 0.6s"
+                    },
+                  }}>
                   {card.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary"
+                  sx={{
+                    '&:hover': {
+                      color: '#ffa200',
+                      transition: "all 0.6s"
+                    },
+                  }}>
                   {card.text}
                 </Typography>
               </Box>
@@ -235,23 +258,71 @@ function Homepage() {
       <Box className="w-100" display={'flex'} flexWrap={'wrap'}>
         <Box className="Performance" width={{ lg: '65%', md: '65%', xs: '100%' }} display={'flex'} alignItems={'center'}>
           <Box padding={{ xs: '10px', lg: '50px' }} margin={'auto'}>
-            <Typography fontSize={{ sx: '20px' }} >
+            <Typography
+              fontSize={{ sx: '20px' }}
+              width={{ xs: '85%', md: '82%', lg: '93%' }}
+              margin={'auto'}
+              sx={{
+                transition: 'all 0.6s',
+                '&:hover': {
+                  color: '#ffa200',
+                  transition: 'all 0.6s'
+                },
+              }}>
               | PERFORMANCE
             </Typography>
-            <Typography fontSize={{ lg: '70px', md: '56px', xs: '34px' }} width={{ xs: '90%', md: '70%', lg: '100%' }} fontFamily={'math'} fontWeight={'600'} >
+            <Typography
+              fontSize={{ lg: '70px', md: '56px', xs: '34px' }}
+              width={{ xs: '85%', md: '82%', lg: '93%' }}
+              fontFamily={'math'}
+              fontWeight={'600'}
+              margin={'auto'}
+              padding={'10px 0'}
+              sx={{
+                lineHeight: '1.1',
+                transition: 'all 0.4s',
+                '&:hover': {
+                  color: '#ffa200',
+                  transition: 'all 0.4s'
+                },
+              }}>
               Solar Powering Your Sustainable Scene
             </Typography>
-
-            <Box display={'flex'} flexWrap={'wrap'} justifyContent={'space-around'}>
-
-              <Box width={{ xs: '80%', sm: '29%' }} sx={{ backgroundColor: 'rgb(20, 21, 21)', padding: '10px 15px', borderRadius: '10px', alignItems: 'center', display: 'flex' }} justifyContent={'space-evenly'} >
-                <Box display={'flex'} justifyContent={'center'} flexWrap={'wrap'} width={{ xs: '80%' }} margin={'auto'} >
+            <Box
+              display={'flex'}
+              flexWrap={'wrap'}
+              justifyContent={'space-around'}
+              width={{ sm: '85%', md: '100%' }}
+              margin={'auto'}>
+              <Box width={{ xs: '40%', sm: '29%' }} sx={{ backgroundColor: 'rgb(20, 21, 21)', padding: '10px 15px', borderRadius: '10px', alignItems: 'center', display: 'flex' }} justifyContent={'space-evenly'} >
+                <Box
+                  display={'flex'}
+                  justifyContent={'center'}
+                  flexWrap={'wrap'}
+                  width={'100%'}
+                  padding={{ xs: '40px 0', sm: '0' }}
+                  margin={'auto'} >
                   <img src={Ceoimg} alt="" style={{ borderRadius: '50%' }} />
                   <Box>
-                    <Typography color='white' fontSize={{ xs: '18px', sm: '24px' }}>
+                    <Typography color='white' fontSize={{ xs: '18px', sm: '20px' }}
+                      sx={{
+                        fontWeight: '600',
+                        transition: 'all 0.6s',
+                        '&:hover': {
+                          color: '#ffa200',
+                          transition: 'all 0.6s'
+                        },
+                      }}>
                       Roberto Lewis
                     </Typography>
-                    <Typography color='#ffffffab' fontSize={{ xs: '18px', sm: '22px' }}>
+                    <Typography color='#ffffffab' fontSize={{ xs: '18px', sm: '20px' }}
+                      sx={{
+                        transition: 'all 0.6s',
+                        '&:hover': {
+                          color: '#ffa200',
+                          transition: 'all 0.6s'
+                        },
+                      }}>
                       Founder of CEO
                     </Typography>
                   </Box>
@@ -259,13 +330,17 @@ function Homepage() {
               </Box>
 
               <Box padding={'10px'} width={{ xs: '90%', sm: '60%' }}>
-                <Typography fontSize={{ xs: '18px', sm: '22px' }}>
+                <Typography
+                  fontSize={{ xs: '16px', md: '20px' }}
+                  width={'95%'}
+                  margin={'auto'}
+                >
                   Solar Powering Your Sustainable Scene" is a vibrant and compelling phrase that conveys the idea of integrating solar energy into
                 </Typography>
                 <Box padding={'20px 0'} display={'flex'} justifyContent={'space-evenly'}>
                   <Box width={'40%'} display={'flex'} flexWrap={'wrap'} justifyContent={'center'}>
                     <Box position="relative" display="inline-flex">
-                      <CircularProgress variant="determinate" value={89} size={100} color="success" />
+                      <CircularProgress variant="determinate" value={89} size={90} color="success" />
                       <Box
                         position="absolute"
                         top={0}
@@ -277,18 +352,29 @@ function Homepage() {
                         justifyContent="center"
                         width={'100px'}
                       >
-                        <Typography variant="h4" color="text.secondary">
+                        <Typography variant="h5" color="text.secondary">
                           89%
                         </Typography>
                       </Box>
                     </Box>
-                    <Typography fontSize={{ xs: '22px', sm: '30px' }} fontFamily={'math'} padding={'10px 0'}>
+                    <Typography
+                      sx={{
+                        fontSize: { xs: '20px', sm: '26px' },
+                        fontFamily: 'math',
+                        padding: '10px 0',
+                        fontWeight: '600',
+                        transition: 'all 0.6s',
+                        '&:hover': {
+                          color: '#ffa200',
+                          transition: 'all 0.6s'
+                        },
+                      }}>
                       Successful
                     </Typography>
                   </Box>
                   <Box width={'40%'} display={'flex'} flexWrap={'wrap'} justifyContent={'center'}>
                     <Box position="relative" display="inline-flex">
-                      <CircularProgress variant="determinate" value={72} size={100} color="success" />
+                      <CircularProgress variant="determinate" value={72} size={90} color="success" />
                       <Box
                         position="absolute"
                         top={0}
@@ -300,12 +386,23 @@ function Homepage() {
                         justifyContent="center"
                         width={'100px'}
                       >
-                        <Typography variant="h4" color="text.secondary">
+                        <Typography variant="h5" color="text.secondary">
                           72%
                         </Typography>
                       </Box>
                     </Box>
-                    <Typography fontSize={{ xs: '22px', sm: '30px' }} fontFamily={'math'} padding={'10px 0'}>
+                    <Typography
+                      sx={{
+                        fontSize: { xs: '20px', sm: '26px' },
+                        fontFamily: 'math',
+                        padding: '10px 0',
+                        fontWeight: '600',
+                        transition: 'all 0.6s',
+                        '&:hover': {
+                          color: '#ffa200',
+                          transition: 'all 0.6s'
+                        },
+                      }}>
                       Branching
                     </Typography>
                   </Box>
@@ -315,15 +412,19 @@ function Homepage() {
           </Box>
         </Box>
         <Box className="Performance-img" width={{ lg: '35%', md: '35%', xs: '100%' }} overflow={'hidden'} display={'flex'} justifyContent={'center'}>
-          <img src={Performanceimg} alt="" width={{ md: '100%', xs: '60%' }} />
+          <img
+            src={Performanceimg}
+            alt="Performance"
+            sx={{ display: 'block', width: '100%', objectFit: 'cover', height: { xs: '50%', md: '100%' } }}
+          />
         </Box>
-      </Box>
+      </Box >
       {/* ===============**************==================== */}
-      <Box className="w-100" overflow={'hidden'} padding={'40px 0'} >
+      <Box Box className="w-100" overflow={'hidden'} padding={'50px 0'}>
         <Slider {...settings}>
           {images.map((imgSrc, index) => (
             <>
-              <Box className="imghover" key={index} zIndex={'0'} position={'relative'}>
+              <Box className="imghover" key={index} zIndex={'0'} position={'relative'} overflow={'hidden'}>
                 <img
                   src={imgSrc}
                   alt={`Slide ${index + 1}`}
@@ -338,27 +439,52 @@ function Homepage() {
             </>
           ))}
         </Slider>
-      </Box>
+      </Box >
       {/* ===============**************==================== */}
-      <Box className="w-100" display={'flex'} flexWrap={'wrap'} padding={'40px 0'} sx={{ backgroundColor: 'black', color: 'white' }} justifyContent={'center'}>
-        {/* <Box className="Proven" width={'60%'}> */}
-        <Box className="Performance" width={{ lg: '60%', md: '60%', sm: '80%', xs: '100%' }} display={'flex'} alignItems={'center'} >
+      < Box className="w-100" display={'flex'} flexWrap={'wrap'} sx={{ backgroundColor: 'black', color: 'white' }
+      } justifyContent={'center'} >
+        < Box className="Performance" width={{ lg: '60%', md: '60%', sm: '80%', xs: '100%' }} display={'flex'} alignItems={'center'} >
           <Box padding={{ xs: '10px', lg: '50px' }} margin={'auto'}>
-            <Typography fontSize={{ sx: '20px' }} >
+            <Typography fontSize={{ sx: '20px' }}
+              sx={{
+                margin: 'auto',
+                width: { xs: '85%', md: '82%', lg: '93%' },
+                '&:hover': {
+                  color: '#ffa200',
+                  transition: "all 0.6s"
+                },
+              }} >
               | WHY CHOOSE US
             </Typography>
-            <Typography fontSize={{ lg: '70px', md: '56px', xs: '34px' }} width={{ xs: '80%', md: '70%', lg: '100%' }} fontFamily={'math'} fontWeight={'600'} >
+            <Typography
+              fontSize={{ lg: '70px', md: '56px', xs: '34px' }}
+              width={{ xs: '85%', md: '82%', lg: '93%' }}
+              fontFamily={'math'}
+              fontWeight={'600'}
+              margin={'auto'}
+              padding={'10px 0'}
+              sx={{
+                lineHeight: '1.1',
+                transition: 'all 0.4s',
+                '&:hover': {
+                  color: '#ffa200',
+                  transition: 'all 0.4s'
+                },
+              }}>
               Proven Excellence Client's Choice
             </Typography>
             <Box>
-
-              <Typography fontFamily={'math'} fontSize={{ xs: '18px', sm: '22px' }}>
+              <Typography
+                fontFamily={'math'}
+                fontSize={{ xs: '18px', sm: '20px' }}
+                width={{ xs: '85%', md: '82%', lg: '93%' }}
+                margin={'auto'}
+              >
                 Business, or everyday living, imagine a world where solar success is not just an aspiration but a reality driven by the
               </Typography>
             </Box>
             <Box display={'flex'} flexWrap={'wrap'}>
-
-              <ListItem alignItems="center" sx={{ width: { xs: '70%', sm: '40%' }, margin: 'auto' }}>
+              <ListItem alignItems="center" sx={{ width: { xs: '51%', sm: '40%' }, margin: 'auto' }}>
                 <ListItemAvatar>
                   <Avatar alt="Remy Sharp" src={p1} sx={{ width: '70px', height: '70px' }} />
                 </ListItemAvatar>
@@ -367,7 +493,7 @@ function Homepage() {
                   Results
                 </Typography>
               </ListItem>
-              <ListItem alignItems="center" sx={{ width: { xs: '70%', sm: '40%' }, margin: 'auto' }}>
+              <ListItem alignItems="center" sx={{ width: { xs: '51%', sm: '40%' }, margin: 'auto' }}>
                 <ListItemAvatar>
                   <Avatar alt="Remy Sharp" src={p2} sx={{ width: '70px', height: '70px' }} />
                 </ListItemAvatar>
@@ -403,11 +529,21 @@ function Homepage() {
               </Box>
             </Box>
           </Box>
-        </Box>
+        </Box >
 
         <Box className="Proven-img" width={{ lg: '40%', md: '40%', sm: '60%', sx: '100%' }} position={'relative'} sx={{ objectFit: 'cover' }}>
           <img src={Proimg} alt="" width={'100%'} />
-          <Box padding={'30px'} width={'max-content'} sx={{ backgroundColor: 'white', position: 'absolute', bottom: { xs: '0%', sm: '5%', md: '10%' }, left: { xs: '0%', sm: '-15%', md: '-15%' } }}>
+          <Box
+            padding={'30px'}
+            width={'max-content'}
+            sx={{
+              backgroundColor: 'white',
+              position: 'absolute',
+              bottom: { xs: '0%', sm: '5%', md: '10%' },
+              left: { xs: '0%', sm: '-15%', md: '-15%' },
+              borderRadius: '10px',
+              boxShadow: '0px 1px 12px 2px #a9a9a9'
+            }}>
             <AvatarGroup max={4}>
               <Avatar alt="Remy Sharp" src={z1} />
               <Avatar alt="Travis Howard" src={z2} />
@@ -415,54 +551,127 @@ function Homepage() {
               <Avatar alt="Agnes Walker" src={z4} />
               <Avatar alt="Trevor Henderson" src={z5} />
             </AvatarGroup>
-            <Typography color='black' margin={'10px 0'}>
+            <Typography color='black' margin={'10px 0'}
+              sx={{
+                transition: 'all 0.4s',
+                '&:hover': {
+                  color: '#ffa200',
+                  transition: 'all 0.4s'
+                },
+              }}>
               25,000 Customer <br />
               Satisfaction services
             </Typography>
           </Box>
         </Box>
-      </Box>
+      </Box >
       {/* ===============**************==================== */}
-      <Box className="w-100">
+      < Box className="w-100" >
         <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-around'} padding={'50px 0'}>
           {blog.map((data) => (
             <Box sx={{
-              width: { xs: '95%', sm: '45%', md: '30%' }, margin: '10px 0', transition: 'all 0.4s', borderRadius: '10px', overflow: 'hidden', boxShadow: '5px 10px 10px rgba(0, 0, 0, 0.17)', "&:hover": {
+              width: { xs: '80%', sm: '48%', md: '32%' },
+              margin: '15px 0', transition: 'all 0.4s',
+              borderRadius: '10px', overflow: 'hidden',
+              boxShadow: '5px 10px 10px rgba(0, 0, 0, 0.17)',
+              "&:hover": {
                 boxShadow: '5px 10px 10px rgba(0, 0, 0, 0.39)',
                 transform: "translatey(-10px)",
                 transition: "all 0.4s"
               }
             }}>
-              <img src={data.images} alt="" width={'100%'} />
+              <Box>
+                <img src={data.images} alt="" width={'100%'} />
+              </Box>
               <Box padding={'20px 10px'}>
                 <Box display={'flex'}  >
-                  <Typography gutterBottom fontSize={'16px'} alignItems={'center'} component="div" display={'flex'} width={'50%'}>
-                    <img src={user} alt="" />
+                  <Typography
+                    gutterBottom
+                    fontSize={{ xs: '16px', sm: '14px', md: '16px' }}
+                    component="div"
+                    display="flex"
+                    alignItems="center"
+                    width="50%"
+                    sx={{
+                      transition: 'all 0.6s',
+                      '&:hover': {
+                        color: '#ffa200',
+                        transition: 'all 0.6s'
+                      },
+                    }}
+                  >
+                    <PersonIcon style={{ width: '30px' }} />
                     {data.lebal1}
                   </Typography>
-                  <Typography gutterBottom fontSize={'16px'} alignItems={'center'} component="div" display={'flex'} width={'50%'}>
-                    <img src={commente} alt="" />
+                  <Typography
+                    gutterBottom
+                    fontSize={{ xs: '16px', sm: '14px', md: '16px' }}
+                    alignItems={'center'}
+                    component="div"
+                    display={'flex'}
+                    width={'50%'}
+                    sx={{
+                      transition: 'all 0.6s',
+                      '&:hover': {
+                        color: '#ffa200',
+                        transition: 'all 0.6s'
+                      },
+                    }}>
+                    <ForumIcon style={{ width: '30px' }} />
                     {data.commente}
                   </Typography>
                 </Box>
-                <Typography fontSize={'24px'} fontFamily={'math'} fontWeight={'700'}>
+                <Typography
+                  fontSize={{ xs: '24px', sm: '20px', md: '22px' }}
+                  fontFamily={'math'}
+                  fontWeight={'700'}
+                  sx={{
+                    transition: 'all 0.6s',
+                    '&:hover': {
+                      color: '#ffa200',
+                      transition: 'all 0.6s'
+                    },
+                  }}>
                   {data.title}
                 </Typography>
               </Box>
             </Box>
           ))}
         </Box>
-      </Box>
+      </Box >
       {/* ===============**************==================== */}
-      <Box className="w-100" sx={{ backgroundImage: `url(${Bac1})` }}>
+      < Box className="w-100" sx={{ backgroundImage: `url(${Bac1})` }}>
         <Box textAlign={'center'} padding={'50px 0'} width={{ xs: '90%', sm: '75%', md: '60%' }} margin={'auto'}>
-          <Typography fontSize={{ xs: '20px', sm: '22px' }} color='green' fontWeight={'600'}>
+          <Typography
+            fontSize={{ xs: '20px', sm: '22px' }}
+            color='white'
+            fontWeight={'600'}
+            sx={{
+              transition: 'all 0.6s',
+              '&:hover': {
+                color: '#ffa200',
+                transition: 'all 0.6s'
+              },
+            }}>
             RECENTLY ASLED
           </Typography >
-          <Typography fontSize={{ xs: '36px', sm: '42px', md: '59px' }} padding={'15px 0'} fontFamily={'math'} color='white'>
+          <Typography
+            fontSize={{ xs: '36px', sm: '42px', md: '59px' }}
+            padding={'15px 0'}
+            fontFamily={'math'}
+            color='white'
+            sx={{
+              transition: 'all 0.6s',
+              '&:hover': {
+                color: '#ffa200',
+                transition: 'all 0.6s'
+              },
+            }}>
             Asked Any Questions
           </Typography>
-          <Typography fontSize={{ xs: '18px', sm: '20px' }} color=' #ffffff69'>
+          <Typography
+            fontSize={{ xs: '18px', sm: '20px' }}
+            color=' #ffffff69'>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout
           </Typography>
         </Box>
@@ -479,10 +688,26 @@ function Homepage() {
                     aria-controls="panel1-content"
                     id="panel1-header"
                   >
-                    <Typography component="span">{data1.title}</Typography>
+                    <Typography component="span"
+                      sx={{
+                        fontWeight: '600',
+                        transition: 'all 0.6s',
+                        '&:hover': {
+                          color: '#ffa200',
+                          transition: 'all 0.6s'
+                        },
+                      }}
+                    >{data1.title}</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography>
+                    <Typography
+                      sx={{
+                        transition: 'all 0.6s',
+                        '&:hover': {
+                          color: '#ffa200',
+                          transition: 'all 0.6s'
+                        },
+                      }}>
                       {data1.text}
                     </Typography>
                   </AccordionDetails>
@@ -491,15 +716,15 @@ function Homepage() {
             </Box>
           </Box>
         </Box>
-      </Box>
+      </Box >
       {/* ===============**************==================== */}
-      <Box className="w-100">
+      < Box className="w-100" >
         <Box className="main">
           <img src={solar} alt="" width={'100%'} />
         </Box>
-      </Box>
+      </Box >
       {/* ===============**************==================== */}
-      <Box className="w-100" sx={{ backgroundImage: `url(${Bac1})`, padding: '40px 0' }}>
+      < Box className="w-100" sx={{ backgroundImage: `url(${Bac1})`, padding: '50px 0' }}>
         <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-between'}>
           <Box className="Manufacture" width={{ xs: '90%', sm: '45%' }} margin={'auto'} display={'flex'} alignItems={'center'}>
             <img src={india} alt="" width={'100%'} />
@@ -511,10 +736,31 @@ function Homepage() {
                   {el.logo}
                 </Box>
                 <Box width={'85%'}>
-                  <Typography fontFamily={'math'} fontSize={{ xs: '22px' }} margin={'10px 0'} fontWeight={'700'} color={'white'}>
+                  <Typography
+                    fontFamily={'math'}
+                    fontSize={{ xs: '22px' }}
+                    margin={'10px 0'}
+                    fontWeight={'700'}
+                    color={'white'}
+                    sx={{
+                      transition: 'all 0.6s',
+                      '&:hover': {
+                        color: '#ffa200',
+                        transition: 'all 0.6s'
+                      },
+                    }}>
                     {el.title}
                   </Typography>
-                  <Typography color='#ffffffa3' fontSize={{ xs: '15px' }}>
+                  <Typography
+                    color='#ffffffa3'
+                    fontSize={{ xs: '15px' }}
+                    sx={{
+                      transition: 'all 0.6s',
+                      '&:hover': {
+                        color: '#ffa200',
+                        transition: 'all 0.6s'
+                      },
+                    }}>
                     {el.text}
                   </Typography>
                 </Box>
@@ -522,10 +768,9 @@ function Homepage() {
             ))}
           </Box>
         </Box>
-      </Box>
+      </Box >
       {/* ===============**************==================== */}
-
-      <Box className="w-100" position={'relative'} padding={'50px 0'} backgroundColor="#0039ffab">
+      < Box className="w-100" position={'relative'} backgroundColor="#0039ffab" padding={'50px 0'} >
         <Box className="main" display={'flex'} justifyContent={'space-around'} flexWrap={'wrap'}>
           {module.map((data) => (
             <Box width={{ xs: '40%', sm: '30%', md: '15%' }} padding={'15px 0'} textAlign={'center'} color={'white'}>
@@ -556,7 +801,7 @@ function Homepage() {
             zIndex: -1,
           }}
         />
-      </Box>
+      </Box >
       <Footers></Footers>
     </>
   )

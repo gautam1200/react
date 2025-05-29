@@ -25,8 +25,10 @@ function Footers() {
         cursor: 'pointer',
         color: '#ffffffba',
         fontSize: '32px',
+        transition: 'all 0.6s',
         '&:hover': {
-            color: 'orange',
+            color: '#ffa200',
+            transition: 'all 0.6s'
         },
         mx: 1,
     };
@@ -45,44 +47,66 @@ function Footers() {
 
     return (
         <>
-            <Box className="w-100"backgroundColor={'#fbe7c1b5'}>
-                <Box className="main" 
-                display={'flex'}
-                flexDirection={{xs:'column',md:'row'}}
-                flexWrap={'wrap'}
-                alignItems={'center'}
-                justifyContent={'space-between'}
-                padding={'30px 0'}
+            <Box className="w-100">
+                <Box className="main"
+                    display={'flex'}
+                    flexDirection={{ xs: 'column', md: 'row' }}
+                    flexWrap={'wrap'}
+                    alignItems={'center'}
+                    justifyContent={'space-between'}
+                    padding={'30px 0'}
                 >
                     <Box>
-                        <Typography fontFamily={'math'}textAlign={'center'} fontSize={'28px'}fontWeight={'600'}>
+                        <Typography
+                            fontFamily={'math'}
+                            textAlign={'center'}
+                            fontSize={'30px'}
+                            fontWeight={'600'}
+                            sx={{
+                                transition: 'all 0.6s',
+                                '&:hover': {
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
+                            }}>
                             Switch to Solar Energy & Save Big!
                         </Typography>
-                        <Typography fontFamily={'math'}textAlign={'center'} fontSize={'20px'}fontWeight={'600'}>
+                        <Typography
+                            fontFamily={'math'}
+                            textAlign={'center'}
+                            fontSize={'24px'}
+                            fontWeight={'600'}
+                            sx={{
+                                transition: 'all 0.6s',
+                                '&:hover': {
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
+                            }}>
                             Contact us for more details.
                         </Typography>
                     </Box>
                     <Box>
                         <React.Fragment>
-                            <Button variant="outlined" onClick={handleClickOpen} 
-                            sx={{
-                                padding:'10px 15px',
-                                fontSize:'18px',
-                                border:'3px solid #1976d2',
-                                borderRadius:'15px',
-                                '&:hover':{
-                                    color :'white',
-                                    backgroundColor:'#1976d2'
-                                }
-                            }}>
-                               TALK TO SOLAR EXPERT
+                            <Button variant="outlined" onClick={handleClickOpen}
+                                sx={{
+                                    padding: '10px 15px',
+                                    fontSize: '18px',
+                                    border: '3px solid #1976d2',
+                                    borderRadius: '15px',
+                                    '&:hover': {
+                                        color: 'white',
+                                        backgroundColor: '#1976d2'
+                                    }
+                                }}>
+                                TALK TO SOLAR EXPERT
                             </Button>
                             <BootstrapDialog
                                 onClose={handleClose}
                                 aria-labelledby="customized-dialog-title"
                                 open={open}
                             >
-                                <DialogTitle sx={{ m: 0  }} id="customized-dialog-title">
+                                <DialogTitle sx={{ m: 0 }} id="customized-dialog-title">
                                     TALK TO OUR SOLAR EXPERT
                                 </DialogTitle>
                                 <IconButton
@@ -99,64 +123,69 @@ function Footers() {
                                 </IconButton>
                                 <DialogContent dividers>
                                     <TextField
-                                            type="text"
-                                            variant="outlined"
-                                            placeholder='Enter name'
-                                            fullWidth
-                                            sx={{
-                                                padding: '10px 0',
-                                                input: {
-                                                    color: 'black',
-                                                    '&::placeholder': { color: 'black', opacity: 1 },
-                                                },
-                                            }}
-                                        />
-                                        <TextField
-                                            type="email"
-                                            placeholder="Enter Email"
-                                            variant="outlined"
-                                            fullWidth
-                                            sx={{
-                                                padding: '10px 0',
-                                                input: {
-                                                    color: 'black',
-                                                    '&::placeholder': { color: 'black', opacity: 1 }
-                                                }
-                                            }}
-                                        />
-                                        <TextField
-                                            type="text"
-                                            variant="outlined"
-                                            placeholder='Number'
-                                            fullWidth
-                                            sx={{
-                                                padding: '10px 0',
-                                                input: {
-                                                    color: 'black',
-                                                    '&::placeholder': { color: 'black', opacity: 1 },
-                                                },
-                                            }}
-                                        />
-                                        <TextField
-                                            type="text"
-                                            variant="outlined"
-                                            placeholder='Location'
-                                            fullWidth
-                                            sx={{
-                                                padding: '10px 0',
-                                                input: {
-                                                    color: 'black',
-                                                    '&::placeholder': { color: 'black', opacity: 1 },
-                                                },
-                                            }}
-                                        />
+                                        type="text"
+                                        variant="outlined"
+                                        placeholder='Enter name'
+                                        fullWidth
+                                        required
+                                        sx={{
+                                            padding: '10px 0',
+                                            input: {
+                                                color: 'black',
+                                                '&::placeholder': { color: 'black', opacity: 1 },
+                                            },
+                                        }}
+                                    />
+
+                                    <TextField
+                                        type="email"
+                                        placeholder="Enter Email"
+                                        variant="outlined"
+                                        fullWidth
+                                        required
+                                        sx={{
+                                            padding: '10px 0',
+                                            input: {
+                                                color: 'black',
+                                                '&::placeholder': { color: 'black', opacity: 1 }
+                                            }
+                                        }}
+                                    />
+                                    <TextField
+                                        type="text"
+                                        variant="outlined"
+                                        placeholder='Number'
+                                        fullWidth
+                                        required
+                                        sx={{
+                                            padding: '10px 0',
+                                            input: {
+                                                color: 'black',
+                                                '&::placeholder': { color: 'black', opacity: 1 },
+                                            },
+                                        }}
+                                    />
+                                    <TextField
+                                        type="text"
+                                        variant="outlined"
+                                        placeholder='Location'
+                                        fullWidth
+                                        required
+                                        sx={{
+                                            padding: '10px 0',
+                                            input: {
+                                                color: 'black',
+                                                '&::placeholder': { color: 'black', opacity: 1 },
+                                            },
+                                        }}
+                                    />
                                 </DialogContent>
                                 <DialogActions >
                                     <Box display="flex" justifyContent="center" width="100%">
 
-                                    <Button autoFocus onClick={handleClose}>
-                                        Submit
-                                    </Button>
+                                        <Button autoFocus onClick={handleClose}>
+                                            Submit
+                                        </Button>
                                     </Box>
                                 </DialogActions>
                             </BootstrapDialog>
@@ -196,9 +225,20 @@ function Footers() {
                 <Box className="main" padding={'10px 0'}>
                     <hr />
                 </Box>
-                <Box className="main" display={'flex'} flexWrap={'wrap'} color='#ffffffb3' >
-                    <Box width={{ xs: '80%', sm: '60%', md: '30%' }} margin={'auto'}>
-                        <Typography fontSize={'24px'} padding={'10px 0'} fontWeight={'600'} fontFamily={'math'} color='white'>
+                <Box className="main" display={'flex'} flexWrap={'wrap'} color='#ffffffb3' justifyContent={'center'} >
+                    <Box width={{ xs: '80%', sm: '60%', md: '30%' }}>
+                        <Typography
+                            fontSize={'24px'}
+                            padding={'10px 0'}
+                            fontWeight={'600'}
+                            fontFamily={'math'}
+                            color='white'
+                            width={'max-content'}
+                            sx={{
+                                '&:hover': {
+                                    color: 'rgb(255, 111, 0)'
+                                }
+                            }}>
                             Contact US
                         </Typography>
                         <Typography fontSize={'20px'} fontFamily={'monospace'} fontWeight={'600'} color='#ffffffb3'>
@@ -214,24 +254,57 @@ function Footers() {
                             info.example@driller.com
                         </Typography>
                     </Box>
-                    <Box width={{ xs: '45%', sm: '30%', md: '20%' }} margin={'auto'}>
-                        <Typography fontSize={'24px'} color='white' padding={'10px 0'} fontWeight={'600'} fontFamily={'math'}>Useful Links</Typography>
+                    <Box width={{ xs: '45%', sm: '30%', md: '20%' }}>
+                        <Typography
+                            fontSize={'24px'}
+                            color='white'
+                            padding={'10px 0'}
+                            fontWeight={'600'}
+                            fontFamily={'math'}
+                            width={'max-content'}
+                            sx={{
+                                '&:hover': {
+                                    color: 'rgb(255, 111, 0)'
+                                }
+                            }}>Useful Links</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>About US</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>Our Service</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>What We Do</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>Out Team</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>Contact</Typography>
                     </Box>
-                    <Box width={{ xs: '45%', sm: '30%', md: '20%' }} margin={'auto'}>
-                        <Typography fontSize={'24px'} color='white' padding={'10px 0'} fontWeight={'600'} fontFamily={'math'}>More Service</Typography>
+                    <Box width={{ xs: '45%', sm: '30%', md: '20%' }} >
+                        <Typography
+                            fontSize={'24px'}
+                            color='white'
+                            padding={'10px 0'}
+                            fontWeight={'600'}
+                            fontFamily={'math'}
+                            width={'max-content'}
+                            sx={{
+                                '&:hover': {
+                                    color: 'rgb(255, 111, 0)'
+                                }
+                            }}>More Service</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>Accounting</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>Risk Management</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>Accounting</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>Marketing</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>Financial</Typography>
                     </Box>
-                    <Box width={{ xs: '80%', sm: '60%', md: '30%' }} margin={'auto'}>
-                        <Typography fontSize={'24px'} color='white' padding={'10px 0'} fontWeight={'600'} fontFamily={'math'}>Newsletter</Typography>
+                    <Box width={{ xs: '80%', sm: '60%', md: '30%' }} >
+                        <Typography
+                            fontSize={'24px'}
+                            color='white'
+                            padding={'10px 0'}
+                            fontWeight={'600'}
+                            fontFamily={'math'}
+                            width={'max-content'}
+                            sx={{
+                                '&:hover': {
+                                    color: 'rgb(255, 111, 0)'
+                                }
+                            }}>Newsletter</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'10px 0'}>It is a long established fact that a reader will be distracted</Typography>
 
                         <Box

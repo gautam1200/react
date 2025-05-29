@@ -73,12 +73,13 @@ const Headings = () => {
                                     sx={{
                                         padding: '5px 15px',
                                         fontSize: '16px',
-                                        border: '2px solid #ff8400',
+                                        border: '2px solid white',
                                         borderRadius: '15px',
-                                        color: '#ff8400',
+                                        color: 'white',
                                         '&:hover': {
                                             color: 'white',
-                                            backgroundColor: '#ff8400',
+                                            backgroundColor: '#ffa200',
+                                            border:'2px solid #ffa200'
                                         },
                                     }}
                                 >
@@ -89,7 +90,6 @@ const Headings = () => {
                     </nav>
                 </Box>
             </Box>
-
             {/* Login Dialog */}
             <Dialog onClose={closeLoginDialog} open={loginOpen}>
                 <DialogTitle>
@@ -112,7 +112,7 @@ const Headings = () => {
                         Welcome Back!
                     </Typography>
                     <Typography variant="subtitle1" sx={{ color: '#616161', mb: 3 }}>
-                        Log in to order your favorite meals
+                        Welcome to Surya Solar – Log In to Your Account
                     </Typography>
                     <Box component="form" onSubmit={(e) => e.preventDefault()}>
                         <TextField label="Email" type="email" fullWidth margin="normal" required />
@@ -123,10 +123,10 @@ const Headings = () => {
                             fullWidth
                             sx={{
                                 mt: 2,
-                                backgroundColor: '#FFB300',
+                                backgroundColor: '#ffa200',
                                 color: '#fff',
                                 '&:hover': {
-                                    backgroundColor: '#FFA000',
+                                    backgroundColor: '#ffa200',
                                 },
                             }}
                         >
@@ -164,7 +164,7 @@ const Headings = () => {
                         Create Account
                     </Typography>
                     <Typography variant="subtitle1" sx={{ color: '#616161', mb: 3 }}>
-                        Join us in powering a cleaner future.
+                        Surya Solar Customer Portal – Sign In
                     </Typography>
                     <Box component="form" onSubmit={(e) => e.preventDefault()}>
                         <TextField label="Full Name" fullWidth margin="normal" required />

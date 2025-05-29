@@ -120,7 +120,7 @@ function Secpage() {
             {/* ==============****************================== */}
             <Box className="w-100" padding={'50px 0'}>
                 <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-between'}>
-                    <Box className="Solutions" width={{xs:'100%',md:'45%'}} display={'flex'} alignItems={'center'}>
+                    <Box className="Solutions" width={{ xs: '100%', md: '45%' }} display={'flex'} alignItems={'center'}>
                         <img src={solution} alt="" width={'100%'}
                             style={{
                                 borderRadius: '10px',
@@ -130,14 +130,40 @@ function Secpage() {
                             onMouseEnter={() => setHovered(true)}
                             onMouseLeave={() => setHovered(false)} />
                     </Box>
-                    <Box className="Solutions" width={{xs:'100%',md:'50%'}} >
-                        <Typography fontSize={'36px'} fontWeight={'700'} fontFamily={'math'}>
+                    <Box className="Solutions" width={{ xs: '100%', md: '50%' }} >
+                        <Typography
+                            fontSize={'36px'}
+                            fontWeight={'700'}
+                            fontFamily={'math'}
+                            sx={{
+                                '&:hover': {
+                                    color: '#00ff43'
+                                }
+                            }}>
                             Solar Rooftop Solutions
                         </Typography>
-                        <Typography fontFamily={'serif'} fontSize={'19px'} padding={'15px 0'}textAlign={'justify'}>
+                        <Typography
+                            fontFamily={'serif'}
+                            fontSize={'19px'}
+                            padding={'15px 0'}
+                            textAlign={'justify'}
+                            sx={{
+                                '&:hover': {
+                                    color: ' rgb(255, 111, 0)'
+                                }
+                            }}>
                             Solar power is a highly efficient form of energy that is sustainable. It is also the most effective form of implementing sustainable energy consumption in homes. Residential areas fully rely on conventional electricity sources. But with solar power now available and the Government of India promoting its implementation in residential buildings, rooftop solar in India is becoming a popular option. There are also provisions for selling back the excess electricity into the grid and earning money.
                         </Typography>
-                        <Typography fontFamily={'serif'} fontSize={'19px'} padding={'15px 0'}textAlign={'justify'}>
+                        <Typography
+                            fontFamily={'serif'}
+                            fontSize={'19px'}
+                            padding={'15px 0'}
+                            textAlign={'justify'}
+                            sx={{
+                                '&:hover': {
+                                    color: ' rgb(255, 111, 0)'
+                                }
+                            }}>
                             Surya Solar provides residential solar installation with a dedicated team that is available around the clock to provide optimum solutions. Choose Surya Solar for a seamless transition to sustainable solar power.
                         </Typography>
                     </Box>
@@ -146,19 +172,46 @@ function Secpage() {
             {/* ==============****************================== */}
             <Box className="w-100" padding={'50px 0'} backgroundColor="#233b77">
                 <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-between'}>
-                    <Box className="Solutions" width={{xs:'100%',md:'50%'}} >
-                        <Typography fontSize={'32px'} fontWeight={'700'} fontFamily={'math'} color='white'>
+                    <Box className="Solutions" width={{ xs: '100%', md: '50%' }} >
+                        <Typography
+                            fontSize={'32px'}
+                            fontWeight={'700'}
+                            fontFamily={'math'}
+                            color='white'
+                            sx={{
+                                '&:hover': {
+                                    color: '#00ff43'
+                                }
+                            }}>
                             How Does a Rooftop System Work?
                         </Typography>
-                        <Typography fontFamily={'serif'} fontSize={'20px'} padding={'15px 0'} color='#ffffffb0'>
+                        <Typography
+                            fontFamily={'serif'}
+                            fontSize={'20px'}
+                            padding={'15px 0'}
+                            color='#ffffffb0'
+                            sx={{
+                                '&:hover': {
+                                    color: 'rgb(255, 111, 0)'
+                                }
+                            }}>
                             A rooftop is an ideal space for installing solar panels for personal energy consumption. A place that is otherwise left barren, it can house the required number of solar panels according to your home needs. The solar panels absorb sunlight and convert it to electricity. It is then stored in batteries to be used as and when required.
                         </Typography>
-                        <Typography fontFamily={'serif'} fontSize={'20px'} padding={'15px 0'} color='#ffffffb0'>
+                        <Typography
+                            fontFamily={'serif'}
+                            fontSize={'20px'}
+                            padding={'15px 0'}
+                            color='#ffffffb0'
+                            sx={{
+                                '&:hover': {
+                                    color: 'rgb(255, 111, 0)'
+                                }
+                            }}>
                             It reduces your energy bills significantly. Once you can fully harvest solar power for all your needs, you can safely say the energy bills are eliminated.
                             With the Government of India providing schemes and rooftop subsidies, solar power is a cost-effective way to consume electricity.
                         </Typography>
                     </Box>
-                    <Box className="Solutions" width={{xs:'100%',md:'45%'}} display={'flex'} alignItems={'center'}>
+                    <Box className="Solutions" width={{ xs: '100%', md: '45%' }} display={'flex'} alignItems={'center'}>
                         <img src={home} alt="" width={'100%'}
                             style={{
                                 borderRadius: '10px',
@@ -173,10 +226,27 @@ function Secpage() {
             {/* ==============****************================== */}
             <Box className="w-100" backgroundColor="#e9e9e9" padding={'50px 0'}>
                 <Box className="main" width={'70%'}>
-                    <Typography textAlign={'center'} fontSize={'46px'} fontFamily={'math'} fontWeight={'600'}>
+                    <Typography
+                        textAlign={'center'}
+                        fontSize={'46px'}
+                        fontFamily={'math'}
+                        fontWeight={'600'}
+                        sx={{
+                            '&:hover': {
+                                color: '#00ff43'
+                            }
+                        }}>
                         Why Choose Surya Solar
                     </Typography>
-                    <Typography textAlign={'center'} fontFamily={'fangsong'} fontSize={'22px'}>
+                    <Typography
+                        textAlign={'center'}
+                        fontFamily={'fangsong'}
+                        fontSize={'22px'}
+                        sx={{
+                            '&:hover': {
+                                color: 'rgb(255 , 111 , 0)'
+                            }
+                        }}>
                         Surya Solar is one of the best solar rooftop companies in Gujarat. Here are some more reasons why you should pick Surya Solar.
                     </Typography>
                 </Box>
@@ -184,10 +254,11 @@ function Secpage() {
                     {surya.map((kl) => (
                         <Box
 
-                            width={{xs:'100%',sm:'35%',md:'24%'}}
+                            width={{ xs: '100%', sm: '35%', md: '24%' }}
                             textAlign={'center'}
                             padding={'25px'}
-                            border={'2px solid #00000070'}
+                            border={'1px solid #00000070'}
+                            boxShadow={'-5px 1px 16px -7px #000000a6'}
                             margin={'10px 0'}
                             backgroundColor={'white'}
                             sx={{
@@ -221,7 +292,7 @@ function Secpage() {
             {/* ==============****************================== */}
             <Box className="w-100" padding={'50px 0'} backgroundColor="#233b77">
                 <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-between'}>
-                    <Box className="Solutions" width={{xs:'100%',md:'45%'}} display={'flex'} alignItems={'center'}>
+                    <Box className="Solutions" width={{ xs: '100%', md: '45%' }} display={'flex'} alignItems={'center'}>
                         <img
                             src={s3}
                             alt=""
@@ -235,17 +306,46 @@ function Secpage() {
                             onMouseLeave={() => setHoveredb(false)}
                         />
                     </Box>
-                    <Box className="Solutions" width={{xs:'100%',md:'50%'}} display={'flex'} flexWrap={'wrap'} alignItems={'center'} >
-                        <Typography fontSize={'32px'} fontWeight={'700'} fontFamily={'math'} color='white'>
+                    <Box className="Solutions" width={{ xs: '100%', md: '50%' }} display={'flex'} flexWrap={'wrap'} alignItems={'center'} >
+                        <Typography
+                            fontSize={'32px'}
+                            fontWeight={'700'}
+                            fontFamily={'math'}
+                            color='white'
+                            sx={{
+                                '&:hover': {
+                                    color: '#00ff43'
+                                }
+                            }}>
                             Benefits of Going Solar
                         </Typography>
                         <Box display={'flex'} flexWrap={'wrap'} >
                             {Benefits.map((jk) => (
                                 <>
-                                    <Box width={'10%'} display={'flex'} alignItems={'center'} color={'#ffffffb5'}>
+                                    <Box
+                                        width={'10%'}
+                                        display={'flex'}
+                                        alignItems={'center'}
+                                        color={'#ffffffb5'}
+                                        sx={{
+                                            '&:hover': {
+                                                color: 'rgb(255 , 111 , 0)'
+                                            }
+                                        }}>
                                         {jk.logo}
                                     </Box>
-                                    <Box width={'90%'} display={'flex'} alignItems={'center'} fontSize={'20px'} fontFamily={'serif'} color={'#ffffffb5'}>
+                                    <Box
+                                        width={'90%'}
+                                        display={'flex'}
+                                        alignItems={'center'}
+                                        fontSize={'20px'}
+                                        fontFamily={'serif'}
+                                        color={'#ffffffb5'}
+                                        sx={{
+                                            '&:hover': {
+                                                color: 'rgb(255 , 111 , 0)'
+                                            }
+                                        }}>
 
                                         {jk.text}
                                     </Box>
