@@ -11,7 +11,7 @@ import {
 const Login = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false); 
 
-  const toggleDrawer = () => setDrawerOpen(!isDrawerOpen);
+  const toggleDrawer = () => setDrawerOpen(!isDrawerOpen); 
 
   const menuItems = ["Home", "Pages", "Menu", "Blog", "About Us", "Contact"];
 
