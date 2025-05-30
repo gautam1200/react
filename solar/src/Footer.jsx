@@ -250,12 +250,11 @@ function Footers() {
                             Contact US
                         </Typography>
                         <Typography fontSize={'20px'} fontFamily={'monospace'} fontWeight={'600'} color='#ffffffb3'>
-                            +(1) 123 456 7890 <br />
-                            +(1) 098 765 4321
+                            +91 9099 000148 <br />
+                            1800 88 98 0 98
                         </Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'10px 0'}>
-                            Burmsille Street, MN 55337,
-                            United States
+                            BL No. 2281/2/1/1, Sub Plot. 1-A, Near Areth Minor Canal, Village - Tadkeshwar, Surat, Gujarat, 394170
                         </Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'10px 0'}>
                             info@driller.com <br />
@@ -334,7 +333,7 @@ function Footers() {
                                 fullWidth
                                 sx={{
                                     border: '2px solid white',
-                                    borderRadius:'10px',
+                                    borderRadius: '10px',
                                     input: {
                                         color: 'white',
                                         '&::placeholder': { color: '#ffffffb3', opacity: 1 }
@@ -344,7 +343,6 @@ function Footers() {
                         </Box>
 
                         <Box>
-
                             <Button
                                 sx={{
                                     width: '80%',
@@ -352,11 +350,10 @@ function Footers() {
                                     border: 'none',
                                     padding: '10px',
                                     fontSize: '20px',
-                                    // backgroundColor: hover ? '#ff9000' : 'green',
+                                    backgroundColor: hover ? '#ff9000' : 'green',
                                     color: 'white',
                                     fontFamily: 'monospace',
                                     transition: 'background-color 0.4s',
-                                    margin: 'auto'
                                 }}
                                 onMouseEnter={() => setHover(true)}
                                 onMouseLeave={() => setHover(false)}

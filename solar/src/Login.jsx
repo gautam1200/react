@@ -1,90 +1,3 @@
-// import React, { useState } from "react";
-// import {
-//   Typography,
-//   Button,
-//   Container,
-//   Box,
-//   TextField,
-//   Link,
-// } from "@mui/material";
-
-// const Login = () => {
-//   const [isDrawerOpen, setDrawerOpen] = useState(false); 
-
-//   const toggleDrawer = () => setDrawerOpen(!isDrawerOpen); 
-
-//   const menuItems = ["Home", "Pages", "Menu", "Blog", "About Us", "Contact"];
-
-//   return (
-//     <>
-
-//       {/* Login Form */}
-//       <Container maxWidth="sm" sx={{ mt: 8 }}>
-//         <Box
-//           sx={{
-//             p: 4,
-//             boxShadow: 3,
-//             borderRadius: 2,
-//             backgroundColor: "#ffffff",
-//             border: "1px solid #eeeeee",
-//           }}
-//         >
-//           <Typography variant="h4" gutterBottom sx={{ color: "#FFB300", fontWeight: "bold" }}>
-//             Welcome Back!
-//           </Typography>
-//           <Typography variant="subtitle1" sx={{ color: "#616161", mb: 3 }}>
-//             Welcome to Surya Solar – Log In to Your Account
-//           </Typography>
-
-//           <Box component="form">
-//             <TextField
-//               label="Email"
-//               type="email"
-//               fullWidth
-//               variant="outlined"
-//               margin="normal"
-//               required
-//             />
-//             <TextField
-//               label="Password"
-//               type="password"
-//               fullWidth
-//               variant="outlined"
-//               margin="normal"
-//               required
-//             />
-//             <Button
-//               type="submit"
-//               variant="contained"
-//               fullWidth
-//               sx={{
-//                 mt: 2,
-//                 backgroundColor: "#FFB300",
-//                 color: "#fff",
-//                 "&:hover": {
-//                   backgroundColor: "#FFA000",
-//                 },
-//               }}
-//             >
-//               Log In
-//             </Button>
-//           </Box>
-
-//           <Typography variant="body2" sx={{ mt: 2 }}>
-//             New here?{" "}
-//             <Link href="/signup" underline="hover" sx={{ color: "#0288D1" }}>
-//               Create an account
-//             </Link>
-//           </Typography>
-//         </Box>
-//       </Container>
-//     </>
-//   );
-// };
-
-// export default Login;
-
-// SolarLoginPage.js
 import React from 'react';
 import {
   Box,
@@ -93,42 +6,73 @@ import {
   Typography,
   Paper,
   useTheme,
+  useMediaQuery,
 } from '@mui/material';
 import SolarBackground from './Banner.jpg';
 
 const SolarLoginPage = () => {
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <Box backgroundColor="black"
+    <Box
       sx={{
         minHeight: '100vh',
-        backgroundImage: `url(${SolarBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        position: 'relative',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        p: 2,
-        
-    
-        
+        overflow: 'hidden',
       }}
     >
-      <Box>
-        <Paper 
-          elevation={10}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100vh',
+          backgroundImage: `url(${SolarBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          zIndex: 1,
+        }}
+      />
+      
+  
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100vh',
+          backgroundColor: 'rgba(0, 0, 0, 0.7)',
+          zIndex: 2,
+        }}
+      />
+
+  
+      <Box sx={{ zIndex: 3, width: '100%', maxWidth: {xs:'90%',sm:'70%',md:'45%'}}}>
+        <Paper
+          elevation={1}
           sx={{
-            p: 4,
-            maxWidth: 400,
+            mx: 'auto',
             width: '100%',
             backdropFilter: 'blur(10px)',
-            backgroundColor: 'rgba(255,255,255,0.8)',
+            backgroundColor: 'rgba(255, 255, 255, 0.9)',
             borderRadius: 3,
             
           }}
         >
-          <Typography variant="h4" align="center" gutterBottom color="primary">
+          <Box padding={'60px 20px'}>
+
+          <Typography
+            variant={isSmallScreen ? 'h5' : 'h4'}
+            align="center"
+            gutterBottom
+            color="primary"
+          >
             Surya Solar Login
           </Typography>
           <TextField
@@ -152,6 +96,7 @@ const SolarLoginPage = () => {
           >
             Login
           </Button>
+          </Box>
         </Paper>
       </Box>
     </Box>
@@ -159,4 +104,6 @@ const SolarLoginPage = () => {
 };
 
 export default SolarLoginPage;
+
+
 

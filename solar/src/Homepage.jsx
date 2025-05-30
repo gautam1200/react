@@ -186,7 +186,7 @@ function Homepage() {
   return (
     <>
       {/* ===============**************==================== */}
-      <Box className="homepage">
+      <Box className="homepage" height={'100vh'}>
         <Hedings></Hedings>
         <Box sx=
           {{
@@ -220,7 +220,7 @@ function Homepage() {
         </Box>
       </Box>
       {/* ===============**************==================== */}
-      <Box className="w-100">
+      <Box className="w-100" id="Pages">
         <Box className="main" sx={{ padding: '35px 0' }}>
           <Box className="cards-wrapper">
             {cards.map((card, index) => (
@@ -337,6 +337,7 @@ function Homepage() {
                   width={'95%'}
                   margin={'auto'}
                   textAlign={'justify'}
+                  lineHeight={'1.3'}
                 >
                   Solar Powering Your Sustainable Scene" is a vibrant and compelling phrase that conveys the idea of integrating solar energy into
                 </Typography>
@@ -446,10 +447,10 @@ function Homepage() {
       {/* ===============**************==================== */}
       < Box className="w-100" display={'flex'} flexWrap={'wrap'} sx={{ backgroundColor: 'black', color: 'white' }} justifyContent={'center'} >
         < Box className="Performance" width={{ lg: '60%', md: '60%', sm: '80%', xs: '100%' }} display={'flex'} alignItems={'center'} >
-          <Box 
-          padding={{ xs: '30px 10px', lg: '50px' }} 
-          margin={'auto'}
-          textAlign={{xs:'justify' ,sm:'left'}}>
+          <Box
+            padding={{ xs: '30px 10px', lg: '50px' }}
+            margin={'auto'}
+            textAlign={{ xs: 'justify', sm: 'left' }}>
             <Typography fontSize={{ sx: '20px' }}
               sx={{
                 margin: 'auto',
@@ -484,6 +485,7 @@ function Homepage() {
                 fontSize={{ xs: '18px', sm: '20px' }}
                 width={{ xs: '85%', md: '82%', lg: '93%' }}
                 margin={'auto'}
+                color='#ffffff69'
               >
                 Business, or everyday living, imagine a world where solar success is not just an aspiration but a reality driven by the
               </Typography>
@@ -586,11 +588,11 @@ function Homepage() {
       </Box >
       {/* ===============**************==================== */}
       < Box className="w-100" >
-        <Box 
-        className="main"
-         display={'flex'} 
-         flexWrap={'wrap'} 
-         justifyContent={'space-around'} padding={' 0'}>
+        <Box
+          className="main"
+          display={'flex'}
+          flexWrap={'wrap'}
+          justifyContent={'space-around'} padding={' 0'}>
           {blog.map((data) => (
             <Box sx={{
               width: { xs: '95%', sm: '48%', md: '32%' },
@@ -645,7 +647,7 @@ function Homepage() {
                   </Typography>
                 </Box>
                 <Typography
-                  fontSize={{ xs: '24px', sm: '20px', md: '22px' }}
+                  fontSize={{ xs: '22px', sm: '20px', md: '22px' }}
                   fontFamily={'math'}
                   fontWeight={'700'}
                   sx={{
@@ -666,7 +668,7 @@ function Homepage() {
       < Box className="w-100" sx={{ backgroundImage: `url(${Bac1})` }}>
         <Box textAlign={'center'} padding={'50px 0'} width={{ xs: '90%', sm: '75%', md: '60%' }} margin={'auto'}>
           <Typography
-            fontSize={{ xs: '18px', sm: '22px'}}
+            fontSize={{ xs: '18px', sm: '22px' }}
             color='white'
             fontWeight={'600'}
             sx={{
@@ -694,7 +696,7 @@ function Homepage() {
           </Typography>
           <Typography
             fontSize={{ xs: '16px', sm: '20px' }}
-            textAlign={{xs:'justify',sm:'center'}}
+            textAlign={{ xs: 'justify', sm: 'center' }}
             color=' #ffffff69'>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout
           </Typography>
@@ -753,7 +755,14 @@ function Homepage() {
           <Box className="Manufacture" width={{ xs: '100%', sm: '45%' }} margin={'auto'} display={'flex'} alignItems={'center'}>
             <img src={india} alt="" width={'100%'} />
           </Box>
-          <Box className="Manufacture" width={{ xs: '100%', sm: '80%', md: '55%' }} justifyContent={'space-between'} margin={'auto'} display={'flex'} flexWrap={'wrap'} >
+          <Box
+            className="Manufacture"
+            width={{ xs: '100%', sm: '80%', md: '55%' }}
+            justifyContent={'space-between'}
+            margin={'auto'}
+            display={'flex'}
+            flexWrap={'wrap'}
+            padding={'20px 0'}>
             {solars.map((el, index) => (
               <>
                 <Box width={'10%'} fontSize="34px" color={'orange'} margin={'10px 0'}>
@@ -799,23 +808,18 @@ function Homepage() {
         <Box className="main" display={'flex'} justifyContent={'space-around'} flexWrap={'wrap'}>
           {module.map((data) => (
             <Box width={{ xs: '40%', sm: '30%', md: '15%' }} padding={'15px 0'} textAlign={'center'} color={'white'}>
-              <img src={data.logo} alt="" color='white' />
-              <Typography fontSize={'28px'} fontWeight={'700'}>
+              <img src={data.logo} alt="" color='white'/>
+              <Typography 
+              fontSize={'28px'}fontWeight={'700'}>
                 {data.title}
               </Typography>
               <Typography>
                 {data.text}
               </Typography>
             </Box>
-
           ))}
         </Box>
-        <video
-          src={video}
-          autoPlay
-          loop
-          muted
-          playsInline
+        <video src={video} autoPlay loop muted playsInline
           style={{
             position: 'absolute',
             top: 0,
@@ -832,8 +836,3 @@ function Homepage() {
   )
 }
 export default Homepage
-
-
-
-
-

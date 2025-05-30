@@ -7,11 +7,16 @@ import {
     DialogContent,
     DialogTitle,
     IconButton,
-    Link,
     styled,
     TextField,
     Typography,
 } from '@mui/material';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import React, { useState } from 'react';
 import logo from './Solarlogo.png';
 import CloseIcon from '@mui/icons-material/Close';
@@ -42,11 +47,17 @@ const Headings = () => {
         setSignupOpen(true);
     };
     const closeSignupDialog = () => setSignupOpen(false);
+    const hedings = [{ name: 'home', id: 'home' },
+    { name: 'Pages', id: 'Pages' },
+    { name: 'Services', id: '#services' },
+    { name: 'About Us', id: 'AboutUs' },
+    { name: 'Contact', id: 'Contact' },
 
+    ]
     return (
         <>
-            <Box sx={{ width: '100%' }}>
-                <Box className="header-container">
+            <Box sx={{ width: '100%'}}>
+                <Box className="header-container" >
                     <Box className="logo">
                         <img src={logo} alt="Solar Logo" />
                     </Box>
@@ -59,11 +70,13 @@ const Headings = () => {
 
                     <nav className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
                         <ul className="nav-list">
-                            {['Home', 'Pages', 'Menu', 'Blog', 'About Us', 'Contact'].map((item, idx) => (
+                            {hedings.map((item, idx) => (
                                 <li key={idx} className="nav-item">
-                                    <a href={`#${item.toLowerCase().replace(/\s/g, '-')}`} onClick={() => setMobileMenuOpen(false)}>
-                                        {item}
-                                    </a>
+                                    <Router>
+                                    <Link to={`${item.id}`} onClick={() => setMobileMenuOpen(false)}>
+                                        {item.name}
+                                    </Link>
+                                    </Router>
                                 </li>
                             ))}
                             <li>
@@ -79,7 +92,7 @@ const Headings = () => {
                                         '&:hover': {
                                             color: 'white',
                                             backgroundColor: '#ffa200',
-                                            border:'2px solid #ffa200'
+                                            border: '2px solid #ffa200'
                                         },
                                     }}
                                 >

@@ -102,6 +102,7 @@ function Secpage() {
                         fontSize={{ xs: '32px', sm: '40px', md: '55px', lg: '60px' }}
                         fontWeight={'600'}
                         sx={{
+                            lineHeight:'1.2',
                             transition: 'all 0.6s',
                             '&:hover': {
                                 color: '#ffa200',
@@ -164,6 +165,7 @@ function Secpage() {
                             padding={'15px 0'}
                             textAlign={'justify'}
                             sx={{
+                                lineHeight:'1.3',
                                 transition: 'all 0.6s',
                                 '&:hover': {
                                     color: '#ffa200',
@@ -178,6 +180,7 @@ function Secpage() {
                             padding={'15px 0'}
                             textAlign={'justify'}
                             sx={{
+                                lineHeight:'1.3',
                                 transition: 'all 0.6s',
                                 '&:hover': {
                                     color: '#ffa200',
@@ -214,6 +217,7 @@ function Secpage() {
                             color='#ffffffb0'
                             textAlign={'justify'}
                             sx={{
+                                lineHeight:'1.3',
                                 transition: 'all 0.6s',
                                 '&:hover': {
                                     color: '#ffa200',
@@ -229,6 +233,7 @@ function Secpage() {
                             color='#ffffffb0'
                             textAlign={'justify'}
                             sx={{
+                                lineHeight:'1.3',
                                 transition: 'all 0.6s',
                                 '&:hover': {
                                     color: '#ffa200',
@@ -261,6 +266,7 @@ function Secpage() {
                         fontWeight={'600'}
                         sx={{
                             lineHeight:'1',
+                            padding:'20px 0',
                             transition: 'all 0.6s',
                             '&:hover': {
                                 color: '#ffa200',
@@ -274,6 +280,7 @@ function Secpage() {
                         fontFamily={'fangsong'}
                         fontSize={'22px'}
                         sx={{
+                            lineHeight:'1.3',
                             transition: 'all 0.6s',
                             '&:hover': {
                                 color: '#ffa200',
