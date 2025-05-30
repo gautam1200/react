@@ -190,7 +190,7 @@ function Homepage() {
         <Hedings></Hedings>
         <Box sx=
           {{
-            width: { xs: '85%', sm: '65%', md: '58%' },
+            width: { xs: '85%', sm: '66%', md: '56%' },
             margin: 'auto',
             marginTop: '-50px',
             textAlign: 'center'
@@ -206,7 +206,7 @@ function Homepage() {
           </Typography>
           <Typography variant='h2'
             sx={{
-              fontSize: { xs: '43px', sm: '50px', md: '60px' },
+              fontSize: { xs: '43px', sm: '50px', md: '58px' },
               fontFamily: 'math',
               fontWeight: '600',
               transition: 'all 0.6s',
@@ -224,11 +224,13 @@ function Homepage() {
         <Box className="main" sx={{ padding: '35px 0' }}>
           <Box className="cards-wrapper">
             {cards.map((card, index) => (
-              <Box key={index} className="card-container">
+              <Box
+                key={index}
+                className="card-container">
                 <Box className={`icon ${card.iconClass}`} >
                 </Box>
                 <Typography
-                  variant="h6"
+                  fontSize={'24px'}
                   fontWeight="bold"
                   transition="all 0.5s"
                   gutterBottom
@@ -272,7 +274,7 @@ function Homepage() {
               | PERFORMANCE
             </Typography>
             <Typography
-              fontSize={{ lg: '70px', md: '56px', xs: '34px' }}
+              fontSize={{ lg: '70px', md: '56px', xs: '32px' }}
               width={{ xs: '85%', md: '82%', lg: '93%' }}
               fontFamily={'math'}
               fontWeight={'600'}
@@ -294,7 +296,7 @@ function Homepage() {
               justifyContent={'space-around'}
               width={{ sm: '85%', md: '100%' }}
               margin={'auto'}>
-              <Box width={{ xs: '40%', sm: '29%' }} sx={{ backgroundColor: 'rgb(20, 21, 21)', padding: '10px 15px', borderRadius: '10px', alignItems: 'center', display: 'flex' }} justifyContent={'space-evenly'} >
+              <Box width={{ xs: '60%', sm: '29%' }} sx={{ backgroundColor: 'rgb(20, 21, 21)', padding: '10px 15px', borderRadius: '10px', alignItems: 'center', display: 'flex' }} justifyContent={'space-evenly'} >
                 <Box
                   display={'flex'}
                   justifyContent={'center'}
@@ -334,6 +336,7 @@ function Homepage() {
                   fontSize={{ xs: '16px', md: '20px' }}
                   width={'95%'}
                   margin={'auto'}
+                  textAlign={'justify'}
                 >
                   Solar Powering Your Sustainable Scene" is a vibrant and compelling phrase that conveys the idea of integrating solar energy into
                 </Typography>
@@ -441,10 +444,12 @@ function Homepage() {
         </Slider>
       </Box >
       {/* ===============**************==================== */}
-      < Box className="w-100" display={'flex'} flexWrap={'wrap'} sx={{ backgroundColor: 'black', color: 'white' }
-      } justifyContent={'center'} >
+      < Box className="w-100" display={'flex'} flexWrap={'wrap'} sx={{ backgroundColor: 'black', color: 'white' }} justifyContent={'center'} >
         < Box className="Performance" width={{ lg: '60%', md: '60%', sm: '80%', xs: '100%' }} display={'flex'} alignItems={'center'} >
-          <Box padding={{ xs: '10px', lg: '50px' }} margin={'auto'}>
+          <Box 
+          padding={{ xs: '30px 10px', lg: '50px' }} 
+          margin={'auto'}
+          textAlign={{xs:'justify' ,sm:'left'}}>
             <Typography fontSize={{ sx: '20px' }}
               sx={{
                 margin: 'auto',
@@ -489,13 +494,13 @@ function Homepage() {
                   <Avatar alt="Remy Sharp" src={p1} sx={{ width: '70px', height: '70px' }} />
                 </ListItemAvatar>
                 <Typography padding={'0px 20px'}
-                sx={{
-                transition: 'all 0.4s',
-                '&:hover': {
-                  color: '#ffa200',
-                  transition: 'all 0.4s'
-                },
-              }}>
+                  sx={{
+                    transition: 'all 0.4s',
+                    '&:hover': {
+                      color: '#ffa200',
+                      transition: 'all 0.4s'
+                    },
+                  }}>
                   Trusted <br />
                   Results
                 </Typography>
@@ -505,13 +510,13 @@ function Homepage() {
                   <Avatar alt="Remy Sharp" src={p2} sx={{ width: '70px', height: '70px' }} />
                 </ListItemAvatar>
                 <Typography padding={'0px 20px'}
-                sx={{
-                transition: 'all 0.4s',
-                '&:hover': {
-                  color: '#ffa200',
-                  transition: 'all 0.4s'
-                },
-              }}>
+                  sx={{
+                    transition: 'all 0.4s',
+                    '&:hover': {
+                      color: '#ffa200',
+                      transition: 'all 0.4s'
+                    },
+                  }}>
                   Client<br />
                   Satisfaction
                 </Typography>
@@ -581,10 +586,14 @@ function Homepage() {
       </Box >
       {/* ===============**************==================== */}
       < Box className="w-100" >
-        <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-around'} padding={'50px 0'}>
+        <Box 
+        className="main"
+         display={'flex'} 
+         flexWrap={'wrap'} 
+         justifyContent={'space-around'} padding={' 0'}>
           {blog.map((data) => (
             <Box sx={{
-              width: { xs: '80%', sm: '48%', md: '32%' },
+              width: { xs: '95%', sm: '48%', md: '32%' },
               margin: '15px 0', transition: 'all 0.4s',
               borderRadius: '10px', overflow: 'hidden',
               boxShadow: '5px 10px 10px rgba(0, 0, 0, 0.17)',
@@ -601,7 +610,7 @@ function Homepage() {
                 <Box display={'flex'}  >
                   <Typography
                     gutterBottom
-                    fontSize={{ xs: '16px', sm: '14px'}}
+                    fontSize={{ xs: '16px', sm: '14px' }}
                     component="div"
                     display="flex"
                     alignItems="center"
@@ -619,7 +628,7 @@ function Homepage() {
                   </Typography>
                   <Typography
                     gutterBottom
-                    fontSize={{ xs: '16px', sm: '14px'}}
+                    fontSize={{ xs: '16px', sm: '14px' }}
                     alignItems={'center'}
                     component="div"
                     display={'flex'}
@@ -657,7 +666,7 @@ function Homepage() {
       < Box className="w-100" sx={{ backgroundImage: `url(${Bac1})` }}>
         <Box textAlign={'center'} padding={'50px 0'} width={{ xs: '90%', sm: '75%', md: '60%' }} margin={'auto'}>
           <Typography
-            fontSize={{ xs: '20px', sm: '22px' }}
+            fontSize={{ xs: '18px', sm: '22px'}}
             color='white'
             fontWeight={'600'}
             sx={{
@@ -684,16 +693,17 @@ function Homepage() {
             Asked Any Questions
           </Typography>
           <Typography
-            fontSize={{ xs: '18px', sm: '20px' }}
+            fontSize={{ xs: '16px', sm: '20px' }}
+            textAlign={{xs:'justify',sm:'center'}}
             color=' #ffffff69'>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout
           </Typography>
         </Box>
         <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-around'} paddingBottom={'60px '}>
-          <Box width={{ xs: '90%', sm: '45%' }}>
+          <Box width={{ xs: '100%', sm: '45%' }}>
             <img src={question} alt="" width={'100%'} height={'100%'} objectFit="cover" />
           </Box>
-          <Box width={{ xs: '90%', sm: '50%' }} sx={{ alignItems: 'center', display: 'flex', flexWrap: 'wrap' }}>
+          <Box width={{ xs: '100%', sm: '50%' }} sx={{ alignItems: 'center', display: 'flex', flexWrap: 'wrap' }}>
             <Box>
               {questions.map((data1) => (
                 <Accordion sx={{ margin: '20px 0', borderRadius: '10px' }}>
@@ -740,10 +750,10 @@ function Homepage() {
       {/* ===============**************==================== */}
       < Box className="w-100" sx={{ backgroundImage: `url(${Bac1})`, padding: '50px 0' }}>
         <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-between'}>
-          <Box className="Manufacture" width={{ xs: '90%', sm: '45%' }} margin={'auto'} display={'flex'} alignItems={'center'}>
+          <Box className="Manufacture" width={{ xs: '100%', sm: '45%' }} margin={'auto'} display={'flex'} alignItems={'center'}>
             <img src={india} alt="" width={'100%'} />
           </Box>
-          <Box className="Manufacture" width={{ xs: '95%', sm: '80', md: '55%' }} justifyContent={'space-between'} margin={'auto'} display={'flex'} flexWrap={'wrap'} >
+          <Box className="Manufacture" width={{ xs: '100%', sm: '80%', md: '55%' }} justifyContent={'space-between'} margin={'auto'} display={'flex'} flexWrap={'wrap'} >
             {solars.map((el, index) => (
               <>
                 <Box width={'10%'} fontSize="34px" color={'orange'} margin={'10px 0'}>
@@ -768,6 +778,7 @@ function Homepage() {
                   <Typography
                     color='#ffffffa3'
                     fontSize={{ xs: '15px' }}
+                    textAlign={'justify'}
                     sx={{
                       transition: 'all 0.6s',
                       '&:hover': {
