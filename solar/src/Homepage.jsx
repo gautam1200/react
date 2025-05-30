@@ -488,7 +488,14 @@ function Homepage() {
                 <ListItemAvatar>
                   <Avatar alt="Remy Sharp" src={p1} sx={{ width: '70px', height: '70px' }} />
                 </ListItemAvatar>
-                <Typography padding={'0px 20px'}>
+                <Typography padding={'0px 20px'}
+                sx={{
+                transition: 'all 0.4s',
+                '&:hover': {
+                  color: '#ffa200',
+                  transition: 'all 0.4s'
+                },
+              }}>
                   Trusted <br />
                   Results
                 </Typography>
@@ -497,7 +504,14 @@ function Homepage() {
                 <ListItemAvatar>
                   <Avatar alt="Remy Sharp" src={p2} sx={{ width: '70px', height: '70px' }} />
                 </ListItemAvatar>
-                <Typography padding={'0px 20px'}>
+                <Typography padding={'0px 20px'}
+                sx={{
+                transition: 'all 0.4s',
+                '&:hover': {
+                  color: '#ffa200',
+                  transition: 'all 0.4s'
+                },
+              }}>
                   Client<br />
                   Satisfaction
                 </Typography>
@@ -532,7 +546,7 @@ function Homepage() {
         </Box >
 
         <Box className="Proven-img" width={{ lg: '40%', md: '40%', sm: '60%', sx: '100%' }} position={'relative'} sx={{ objectFit: 'cover' }}>
-          <img src={Proimg} alt="" width={'100%'} />
+          <img src={Proimg} alt="" width={'100%'} height={'100%'} />
           <Box
             padding={'30px'}
             width={'max-content'}
@@ -540,9 +554,9 @@ function Homepage() {
               backgroundColor: 'white',
               position: 'absolute',
               bottom: { xs: '0%', sm: '5%', md: '10%' },
-              left: { xs: '0%', sm: '-15%', md: '-15%' },
+              left: { xs: '0%', sm: '-10%', md: '-10%' },
               borderRadius: '10px',
-              boxShadow: '0px 1px 12px 2px #a9a9a9'
+              boxShadow: '0px 1px 7px 2px #c5c5c5db'
             }}>
             <AvatarGroup max={4}>
               <Avatar alt="Remy Sharp" src={z1} />
@@ -587,7 +601,7 @@ function Homepage() {
                 <Box display={'flex'}  >
                   <Typography
                     gutterBottom
-                    fontSize={{ xs: '16px', sm: '14px', md: '16px' }}
+                    fontSize={{ xs: '16px', sm: '14px'}}
                     component="div"
                     display="flex"
                     alignItems="center"
@@ -600,12 +614,12 @@ function Homepage() {
                       },
                     }}
                   >
-                    <PersonIcon style={{ width: '30px' }} />
+                    <PersonIcon style={{ width: '24px' }} />
                     {data.lebal1}
                   </Typography>
                   <Typography
                     gutterBottom
-                    fontSize={{ xs: '16px', sm: '14px', md: '16px' }}
+                    fontSize={{ xs: '16px', sm: '14px'}}
                     alignItems={'center'}
                     component="div"
                     display={'flex'}
@@ -617,7 +631,7 @@ function Homepage() {
                         transition: 'all 0.6s'
                       },
                     }}>
-                    <ForumIcon style={{ width: '30px' }} />
+                    <ForumIcon style={{ width: '24px' }} />
                     {data.commente}
                   </Typography>
                 </Box>

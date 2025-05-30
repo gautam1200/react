@@ -89,15 +89,29 @@ function Secpage() {
     ]
     return (
         <>
-            <Box className="w-100" position={'relative'} backgroundColor="#00000052">
+            <Box className="w-100" margin={'0'} position={'relative'} backgroundColor="#00000052">
                 <Hedings></Hedings>
-                <Box className="main" padding={{ xs: '40px 0', sm: '70px 0' }}></Box>
-                <Box className="main" textAlign={'center'} width={{ xs: '90%', sm: '70%' }}>
-                    <Typography color='white' fontFamily={'math'} fontSize={{ xs: '32px', sm: '40px', md: '58px' }} fontWeight={'600'}>
+                <Box className="main" padding={{ xs: '60px 0', sm: '100px 0' }}></Box>
+                <Box
+                    className="main"
+                    textAlign={'center'}
+                    width={{ xs: '90%', sm: '70%', md: '71%', lg: '70%' }}>
+                    <Typography
+                        color='white'
+                        fontFamily={'math'}
+                        fontSize={{ xs: '32px', sm: '40px', md: '55px', lg: '60px' }}
+                        fontWeight={'600'}
+                        sx={{
+                            transition: 'all 0.6s',
+                            '&:hover': {
+                                color: '#ffa200',
+                                transition: 'all 0.6s'
+                            },
+                        }}>
                         Going Green Starts With Your Rooftop. And It Costs Lesser Than You Think
                     </Typography>
                 </Box>
-                <Box className="main" padding={{ xs: '70px 0', sm: '70px 0' }}></Box>
+                <Box className="main" padding={{ xs: '70px 0', sm: '100px 0' }}></Box>
 
                 <video
                     src={video}
@@ -118,7 +132,7 @@ function Secpage() {
                 />
             </Box>
             {/* ==============****************================== */}
-            <Box className="w-100" padding={'50px 0'}>
+            <Box className="w-100" padding={'50px 0'} backgroundColor={'#e9e9e9'}>
                 <Box className="main" display={'flex'} flexWrap={'wrap'} justifyContent={'space-between'}>
                     <Box className="Solutions" width={{ xs: '100%', md: '45%' }} display={'flex'} alignItems={'center'}>
                         <img src={solution} alt="" width={'100%'}
@@ -136,9 +150,11 @@ function Secpage() {
                             fontWeight={'700'}
                             fontFamily={'math'}
                             sx={{
+                                transition: 'all 0.6s',
                                 '&:hover': {
-                                    color: '#00ff43'
-                                }
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
                             }}>
                             Solar Rooftop Solutions
                         </Typography>
@@ -148,9 +164,11 @@ function Secpage() {
                             padding={'15px 0'}
                             textAlign={'justify'}
                             sx={{
+                                transition: 'all 0.6s',
                                 '&:hover': {
-                                    color: ' rgb(255, 111, 0)'
-                                }
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
                             }}>
                             Solar power is a highly efficient form of energy that is sustainable. It is also the most effective form of implementing sustainable energy consumption in homes. Residential areas fully rely on conventional electricity sources. But with solar power now available and the Government of India promoting its implementation in residential buildings, rooftop solar in India is becoming a popular option. There are also provisions for selling back the excess electricity into the grid and earning money.
                         </Typography>
@@ -160,9 +178,11 @@ function Secpage() {
                             padding={'15px 0'}
                             textAlign={'justify'}
                             sx={{
+                                transition: 'all 0.6s',
                                 '&:hover': {
-                                    color: ' rgb(255, 111, 0)'
-                                }
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
                             }}>
                             Surya Solar provides residential solar installation with a dedicated team that is available around the clock to provide optimum solutions. Choose Surya Solar for a seamless transition to sustainable solar power.
                         </Typography>
@@ -179,9 +199,11 @@ function Secpage() {
                             fontFamily={'math'}
                             color='white'
                             sx={{
+                                transition: 'all 0.6s',
                                 '&:hover': {
-                                    color: '#00ff43'
-                                }
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
                             }}>
                             How Does a Rooftop System Work?
                         </Typography>
@@ -190,10 +212,13 @@ function Secpage() {
                             fontSize={'20px'}
                             padding={'15px 0'}
                             color='#ffffffb0'
+                            textAlign={'justify'}
                             sx={{
+                                transition: 'all 0.6s',
                                 '&:hover': {
-                                    color: 'rgb(255, 111, 0)'
-                                }
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
                             }}>
                             A rooftop is an ideal space for installing solar panels for personal energy consumption. A place that is otherwise left barren, it can house the required number of solar panels according to your home needs. The solar panels absorb sunlight and convert it to electricity. It is then stored in batteries to be used as and when required.
                         </Typography>
@@ -202,10 +227,13 @@ function Secpage() {
                             fontSize={'20px'}
                             padding={'15px 0'}
                             color='#ffffffb0'
+                            textAlign={'justify'}
                             sx={{
+                                transition: 'all 0.6s',
                                 '&:hover': {
-                                    color: 'rgb(255, 111, 0)'
-                                }
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
                             }}>
                             It reduces your energy bills significantly. Once you can fully harvest solar power for all your needs, you can safely say the energy bills are eliminated.
                             With the Government of India providing schemes and rooftop subsidies, solar power is a cost-effective way to consume electricity.
@@ -232,9 +260,12 @@ function Secpage() {
                         fontFamily={'math'}
                         fontWeight={'600'}
                         sx={{
+                            lineHeight:'1',
+                            transition: 'all 0.6s',
                             '&:hover': {
-                                color: '#00ff43'
-                            }
+                                color: '#ffa200',
+                                transition: 'all 0.6s'
+                            },
                         }}>
                         Why Choose Surya Solar
                     </Typography>
@@ -243,9 +274,11 @@ function Secpage() {
                         fontFamily={'fangsong'}
                         fontSize={'22px'}
                         sx={{
+                            transition: 'all 0.6s',
                             '&:hover': {
-                                color: 'rgb(255 , 111 , 0)'
-                            }
+                                color: '#ffa200',
+                                transition: 'all 0.6s'
+                            },
                         }}>
                         Surya Solar is one of the best solar rooftop companies in Gujarat. Here are some more reasons why you should pick Surya Solar.
                     </Typography>
@@ -313,9 +346,11 @@ function Secpage() {
                             fontFamily={'math'}
                             color='white'
                             sx={{
+                                transition: 'all 0.6s',
                                 '&:hover': {
-                                    color: '#00ff43'
-                                }
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
                             }}>
                             Benefits of Going Solar
                         </Typography>
@@ -328,9 +363,11 @@ function Secpage() {
                                         alignItems={'center'}
                                         color={'#ffffffb5'}
                                         sx={{
+                                            transition: 'all 0.6s',
                                             '&:hover': {
-                                                color: 'rgb(255 , 111 , 0)'
-                                            }
+                                                color: '#ffa200',
+                                                transition: 'all 0.6s'
+                                            },
                                         }}>
                                         {jk.logo}
                                     </Box>
@@ -342,9 +379,11 @@ function Secpage() {
                                         fontFamily={'serif'}
                                         color={'#ffffffb5'}
                                         sx={{
+                                            transition: 'all 0.6s',
                                             '&:hover': {
-                                                color: 'rgb(255 , 111 , 0)'
-                                            }
+                                                color: '#ffa200',
+                                                transition: 'all 0.6s'
+                                            },
                                         }}>
 
                                         {jk.text}

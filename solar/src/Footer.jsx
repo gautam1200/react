@@ -21,6 +21,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 
 function Footers() {
     const [hover, setHover] = useState(false);
+    const [hovers, setHovers] = useState(false);
     const iconStyle = {
         cursor: 'pointer',
         color: '#ffffffba',
@@ -54,7 +55,6 @@ function Footers() {
                     flexWrap={'wrap'}
                     alignItems={'center'}
                     justifyContent={'space-between'}
-                    padding={'30px 0'}
                 >
                     <Box>
                         <Typography
@@ -88,18 +88,23 @@ function Footers() {
                     </Box>
                     <Box>
                         <React.Fragment>
-                            <Button variant="outlined" onClick={handleClickOpen}
+                            <Button onClick={handleClickOpen}
                                 sx={{
-                                    padding: '10px 15px',
-                                    fontSize: '18px',
-                                    border: '3px solid #1976d2',
-                                    borderRadius: '15px',
-                                    '&:hover': {
-                                        color: 'white',
-                                        backgroundColor: '#1976d2'
-                                    }
-                                }}>
-                                TALK TO SOLAR EXPERT
+                                    width: '100%',
+                                    borderRadius: '30px',
+                                    border: 'none',
+                                    padding: '8px 30px',
+                                    fontSize: '20px',
+                                    backgroundColor: hovers ? '#ff9000' : 'green',
+                                    color: 'white',
+                                    fontFamily: 'monospace',
+                                    transition: 'background-color 0.4s',
+                                    margin: 'auto'
+                                }}
+                                onMouseEnter={() => setHovers(true)}
+                                onMouseLeave={() => setHovers(false)}
+                            >
+                                Subscribe Now
                             </Button>
                             <BootstrapDialog
                                 onClose={handleClose}
@@ -197,6 +202,7 @@ function Footers() {
             {/* ===============**************==================== */}
             <Box
                 className="w-100"
+                marginBottom={'0'}
                 sx={{
                     background: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${footer})`,
                     padding: '50px 0',
@@ -235,9 +241,11 @@ function Footers() {
                             color='white'
                             width={'max-content'}
                             sx={{
+                                transition: 'all 0.6s',
                                 '&:hover': {
-                                    color: 'rgb(255, 111, 0)'
-                                }
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
                             }}>
                             Contact US
                         </Typography>
@@ -263,9 +271,11 @@ function Footers() {
                             fontFamily={'math'}
                             width={'max-content'}
                             sx={{
+                                transition: 'all 0.6s',
                                 '&:hover': {
-                                    color: 'rgb(255, 111, 0)'
-                                }
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
                             }}>Useful Links</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>About US</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>Our Service</Typography>
@@ -282,9 +292,11 @@ function Footers() {
                             fontFamily={'math'}
                             width={'max-content'}
                             sx={{
+                                transition: 'all 0.6s',
                                 '&:hover': {
-                                    color: 'rgb(255, 111, 0)'
-                                }
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
                             }}>More Service</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>Accounting</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'2px 0'}>Risk Management</Typography>
@@ -301,9 +313,11 @@ function Footers() {
                             fontFamily={'math'}
                             width={'max-content'}
                             sx={{
+                                transition: 'all 0.6s',
                                 '&:hover': {
-                                    color: 'rgb(255, 111, 0)'
-                                }
+                                    color: '#ffa200',
+                                    transition: 'all 0.6s'
+                                },
                             }}>Newsletter</Typography>
                         <Typography fontFamily={'emoji'} fontSize={'20px'} padding={'10px 0'}>It is a long established fact that a reader will be distracted</Typography>
 
@@ -319,24 +333,26 @@ function Footers() {
                                 variant="outlined"
                                 fullWidth
                                 sx={{
-                                    padding: '10px',
+                                    border: '2px solid white',
+                                    borderRadius:'10px',
                                     input: {
                                         color: 'white',
                                         '&::placeholder': { color: '#ffffffb3', opacity: 1 }
-                                    }
+                                    },
                                 }}
                             />
                         </Box>
+
                         <Box>
 
-                            <button
-                                style={{
+                            <Button
+                                sx={{
                                     width: '80%',
                                     borderRadius: '30px',
                                     border: 'none',
                                     padding: '10px',
                                     fontSize: '20px',
-                                    backgroundColor: hover ? '#ff9000' : 'green',
+                                    // backgroundColor: hover ? '#ff9000' : 'green',
                                     color: 'white',
                                     fontFamily: 'monospace',
                                     transition: 'background-color 0.4s',
@@ -346,7 +362,7 @@ function Footers() {
                                 onMouseLeave={() => setHover(false)}
                             >
                                 Subscribe Now
-                            </button>
+                            </Button>
                         </Box>
                     </Box>
                 </Box>

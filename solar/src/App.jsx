@@ -17,7 +17,7 @@ function App() {
     {/* <Signin></Signin> */}
     {/* <Footer ></Footer> */}
     {/* <Login></Login> */}
-    <Secpage></Secpage>
+    {/* <Secpage></Secpage> */}
     
     </>
   );
