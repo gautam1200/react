@@ -5,7 +5,6 @@ import Homepage from './Homepage';
 
 import Footer from './Footer';
 import Secpage from './Secpage';
-// import { Login } from '@mui/icons-material';
 import Signin from './Signin';
 import Login from './Login';
 import Home from './Home';
@@ -17,28 +16,29 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import ContactSection from './Users';
 
 function App() {
   return (
     <>
-      {/* <Hedings></Hedings> */}
-      {/* <Homepage></Homepage> */}
       {/* <Footer ></Footer> */}
       {/* <Signin></Signin>  */}
       {/* <Login></Login> */}
       {/* <Secpage></Secpage> */}
       {/* <Home></Home> */}
       {/* <About></About> */}
-      {/* <Users></Users> */}
       <Router>
+      {/* <Hedings></Hedings> */}
+      <Users></Users>
+      {/* <Homepage></Homepage> */}
         <Switch>
           <Route exact path="/">
             <Homepage />
           </Route>
-          <Route  path="/Home">
+          <Route path="/Home">
             <Homepage />
           </Route>
-          <Route path="/Menu">
+          <Route path="/services">
             <Signin />
           </Route>
           <Route path="/Pages">
@@ -46,6 +46,9 @@ function App() {
           </Route>
           <Route path="/AboutUs">
             <Secpage />
+          </Route>
+          <Route path="/Users">
+            <Users />
           </Route>
         </Switch>
       </Router>

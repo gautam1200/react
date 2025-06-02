@@ -10,6 +10,7 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
 import { AiFillAccountBook, AiFillAlert } from "react-icons/ai";
+import InputExample from './InputExample';
 
 function App() {
   return (
@@ -72,7 +73,7 @@ function App() {
       {/* <StateExample></StateExample> */}
       {/* <ReactBootstrap></ReactBootstrap> */}
 
-      <Button variant="text">Text</Button>
+      {/* <Button variant="text">Text</Button>
       <Button variant="contained">Contained</Button>
 
 
@@ -85,7 +86,9 @@ function App() {
       </Typography>
 
       <AiFillAccountBook />
-      <AiFillAlert />
+      <AiFillAlert /> */}
+
+      <InputExample></InputExample>
 
 
     </>

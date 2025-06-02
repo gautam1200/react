@@ -12,10 +12,10 @@ import {
     Typography,
 } from '@mui/material';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
 } from "react-router-dom";
 import React, { useState } from 'react';
 import logo from './Solarlogo.png';
@@ -49,14 +49,14 @@ const Headings = () => {
     const closeSignupDialog = () => setSignupOpen(false);
     const hedings = [{ name: 'home', id: 'home' },
     { name: 'Pages', id: 'Pages' },
-    { name: 'Services', id: '#services' },
+    { name: 'Services', id: 'services' },
     { name: 'About Us', id: 'AboutUs' },
-    { name: 'Contact', id: 'Contact' },
+    { name: 'Contact', id: 'Users' },
 
     ]
     return (
         <>
-            <Box sx={{ width: '100%'}}>
+            <Box sx={{ width: '100%' }}>
                 <Box className="header-container" >
                     <Box className="logo">
                         <img src={logo} alt="Solar Logo" />
@@ -69,37 +69,38 @@ const Headings = () => {
                     </Box>
 
                     <nav className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-                        <ul className="nav-list">
-                            {hedings.map((item, idx) => (
-                                <li key={idx} className="nav-item">
-                                    <Router>
-                                    <Link to={`${item.id}`} onClick={() => setMobileMenuOpen(false)}>
-                                        {item.name}
-                                    </Link>
-                                    </Router>
-                                </li>
-                            ))}
-                            <li>
-                                <Button
-                                    variant="outlined"
-                                    onClick={openLoginDialog}
-                                    sx={{
-                                        padding: '5px 15px',
-                                        fontSize: '16px',
-                                        border: '2px solid white',
-                                        borderRadius: '15px',
-                                        color: 'white',
-                                        '&:hover': {
+                      
+                            <ul className="nav-list">
+                                {hedings.map((item, idx) => (
+                                    <li key={idx} className="nav-item">
+                                        <Link to={`${item.id}`} onClick={() => setMobileMenuOpen(false)}>
+                                            {item.name}
+                                        </Link>
+
+                                    </li>
+                                ))}
+                                <li>
+                                    <Button
+                                        variant="outlined"
+                                        onClick={openLoginDialog}
+                                        sx={{
+                                            padding: '5px 15px',
+                                            fontSize: '16px',
+                                            border: '2px solid white',
+                                            borderRadius: '15px',
                                             color: 'white',
-                                            backgroundColor: '#ffa200',
-                                            border: '2px solid #ffa200'
-                                        },
-                                    }}
-                                >
-                                    Login
-                                </Button>
-                            </li>
-                        </ul>
+                                            '&:hover': {
+                                                color: 'white',
+                                                backgroundColor: '#ffa200',
+                                                border: '2px solid #ffa200'
+                                            },
+                                        }}
+                                    >
+                                        Login
+                                    </Button>
+                                </li>
+                            </ul>
+                        
                     </nav>
                 </Box>
             </Box>
@@ -215,8 +216,10 @@ const Headings = () => {
                     </Typography>
                 </DialogContent>
             </Dialog>
+
         </>
     );
 };
 
 export default Headings;
+

@@ -8,6 +8,7 @@ import {
   Link,
 } from "@mui/material";
 import SolarBackground from './Banner.jpg';
+import Headings from "./Hedings";
 
 const Signin = () => {
   const handleSubmit = (e) => {
@@ -17,7 +18,9 @@ const Signin = () => {
   };
 
   return (
+    <>
     <Box position="relative">
+    <Headings></Headings>
       {/* Background Image */}
       <Box
         sx={{
@@ -143,6 +146,7 @@ const Signin = () => {
         </Box>
       </Container>
     </Box>
+    </>
   );
 };
 
