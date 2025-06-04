@@ -11,6 +11,7 @@ import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
 import { AiFillAccountBook, AiFillAlert } from "react-icons/ai";
 import InputExample from './InputExample';
+import UseFormikExample from './UseFormikExample';
 
 function App() {
   return (
@@ -88,7 +89,10 @@ function App() {
       <AiFillAccountBook />
       <AiFillAlert /> */}
 
-      <InputExample></InputExample>
+      {/* <InputExample></InputExample> */}
+
+
+      <UseFormikExample></UseFormikExample>
 
 
     </>
