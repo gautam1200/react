@@ -1,4 +1,4 @@
-import { Button, Input, Typography } from '@mui/material'
+import { Box, Button, Input, Typography } from '@mui/material'
 import React, { useState } from 'react'
 
 function Result() {
@@ -7,235 +7,213 @@ function Result() {
   const [Eng, setEng] = useState('')
   const [Guj, setGuj] = useState('')
   const [Hindi, setHindi] = useState('')
-  const [Soc, setSoc] = useState('')
+  const [Matsh, setMatsh] = useState('')
   const [List, SetList] = useState([])
+  const [edit, setedit] = useState(null)
 
   const savedata = () => {
-    const stdata = { Name, Number, Eng, Guj, Hindi, Soc }
-    SetList([...List, stdata])
-    setName('')
-    setNumber('')
-    setEng('')
-    setGuj('')
-    setHindi('')
-    setSoc('')
-    console.log(List);
-  }
-  const Total = (Eng, Guj, Hindi, Soc) => {
-
-
-    return parseInt(Eng) + parseInt(Guj) + parseInt(Hindi) + parseInt(Soc)
-  }
-
-  const per = (Eng, Guj, Hindi, Soc) => {
-    return (parseInt(Eng) + parseInt(Guj) + parseInt(Hindi) + parseInt(Soc)) / 4
-  }
-  const minimum = (Eng, Guj, Hindi, Soc) => {
-    let min = [Eng, Guj, Hindi, Soc]
-    return Math.min(...min)
-  }
-  const maximum = (Eng, Guj, Hindi, Soc) => {
-    let max = [Eng, Guj, Hindi, Soc]
-    return Math.max(...max)
-  }
-  const pass = (Eng, Guj, Hindi, Soc) => {
-    if (Eng >= 33 && Guj >= 33 && Hindi >= 33 && Soc >= 33) {
-      return "pass"
+    if ((Name && Number && Eng && Guj && Hindi && Matsh) == '') {
+      alert('Fill Data')
     }
     else {
-      return "fail"
+      const stdata = { Name, Number, Eng, Guj, Hindi, Matsh }
+      if (edit != null) {
+        const copydatat = [...List]
+        copydatat[edit] = stdata
+        SetList(copydatat)
+        setedit(null)
+      }
+      else {
+        SetList([...List, stdata])
+      }
+      setName('')
+      setNumber('')
+      setEng('')
+      setGuj('')
+      setHindi('')
+      setMatsh('')
     }
   }
-  const grade = (Eng, Guj, Hindi, Soc) => {
-    let total = parseInt(Eng) + parseInt(Guj) + parseInt(Hindi) + parseInt(Soc)
+  const Total = (item) => {
+    return parseInt(item.Eng) + parseInt(item.Guj) + parseInt(item.Hindi) + parseInt(item.Matsh)
+  }
+
+  const per = (item) => {
+    return (parseInt(item.Eng) + parseInt(item.Guj) + parseInt(item.Hindi) + parseInt(item.Matsh)) / 4
+  }
+  const minimum = (item) => {
+    let min = [item.Eng, item.Guj, item.Hindi, item.Matsh]
+    return Math.min(...min)
+  }
+  const maximum = (item) => {
+    let max = [item.Eng, item.Guj, item.Hindi, item.Matsh]
+    return Math.max(...max)
+  }
+  const pass = (item) => {
+    if (item.Eng >= 33 && item.Guj >= 33 && item.Hindi >= 33 && item.Matsh >= 33) {
+      return grade(item)
+    }
+    else {
+      return "Fail"
+    }
+  }
+  const grade = (item) => {
+    let total = parseInt(item.Eng) + parseInt(item.Guj) + parseInt(item.Hindi) + parseInt(item.Matsh)
     let per = total / 4
-    let grades 
-    if(per >=90){
+    let grades
+    if (per >= 90) {
       grades = "A"
-    }else if(per >=80){
+    } else if (per >= 80) {
       grades = "B"
-    }else if(per >=70){
+    } else if (per >= 70) {
       grades = "C"
-    }else if(per >=60){
+    } else if (per >= 60) {
       grades = "D"
-    }else if(per >=50){
+    } else if (per >= 50) {
       grades = "E"
     }
     return grades
   }
+  const deletedata = (index) => {
+    const copydatat = [...List]
+    copydatat.splice(index, 1)
+    SetList(copydatat)
 
+  }
+  const editdata = (item, index) => {
+    setName(item.Name)
+    setNumber(item.Number)
+    setEng(item.Eng)
+    setGuj(item.Guj)
+    setHindi(item.Hindi)
+    setMatsh(item.Matsh)
+    setedit(index)
+  }
   return (
     <>
-      <Input type="text" placeholder='student name' value={Name} onChange={(e) => setName(e.target.value)} />  <br /><br />
-      <Input type="number" placeholder='Roll No.' value={Number} onChange={(e) => setNumber(e.target.value)} /> <br /> <br />
-      <Input type="number" placeholder='End' value={Eng} onChange={(e) => setEng(e.target.value)} /> <br /> <br />
-      <Input type="number" placeholder='Guj' value={Guj} onChange={(e) => setGuj(e.target.value)} /> <br /> <br />
-      <Input type="number" placeholder='Hindi' value={Hindi} onChange={(e) => setHindi(e.target.value)} /> <br /> <br />
-      <Input type="number" placeholder='Soc' value={Soc} onChange={(e) => setSoc(e.target.value)} /> <br /> <br />
+      <table border="1" cellSpacing="6" bgcolor="white" width={'80%'}>
+        <caption>
+          <b>Input Marks</b>
+        </caption>
+        <thead>
+          <tr>
+            <th rowSpan={2}>Name</th>
+            <th rowSpan={2}>Roll No.</th>
+            <th colSpan={5}>Score</th>
+          </tr>
+          <tr>
+            <th>English</th>
+            <th>Gujrati</th>
+            <th>Hindi</th>
+            <th>Math</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <Input
+                type="text"
+                placeholder="ENTER NAME"
+                value={Name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </td>
+            <td>
+              <Input
+                type="number"
+                placeholder="ENTER ROLL NO"
+                value={Number}
+                onChange={(e) => setNumber(e.target.value)}
+              />
+            </td>
+            <td>
+              <Input
+                type="number"
+                placeholder="GUJRATI MARK"
+                value={Guj}
+                onChange={(e) => setGuj(e.target.value)}
+              />
+            </td>
+            <td>
+              <Input
+                type="number"
+                placeholder="HINDI MARK"
+                value={Hindi}
+                onChange={(e) => setHindi(e.target.value)}
+              />
+            </td>
+            <td>
+              <Input
+                type="number"
+                placeholder="MATH MARK"
+                value={Matsh}
+                onChange={(e) => setMatsh(e.target.value)}
+              />
+            </td>
+            <td>
+              <Input
+                type="number"
+                placeholder="ENGLISH MARK"
+                value={Eng}
+                onChange={(e) => setEng(e.target.value)}
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
       <Button onClick={savedata}>Submit</Button>
 
-      <Typography textAlign={'center'} fontSize={'46px'} fontFamily={'math'} fontWeight={'600'}>
-        Result
-      </Typography>
-      <hr />
-      {
-        List.map((item) => (
-          <>
-            <Typography>
-              {item.Name}
-            </Typography>
-            <Typography>{Total(item.Eng, item.Guj, item.Hindi, item.Soc)}</Typography>
-            <Typography>{per(item.Eng, item.Guj, item.Hindi, item.Soc)}</Typography>
-            <Typography>{minimum(item.Eng, item.Guj, item.Hindi, item.Soc)}</Typography>
-            <Typography>{maximum(item.Eng, item.Guj, item.Hindi, item.Soc)}</Typography>
-            <Typography>{pass(item.Eng, item.Guj, item.Hindi, item.Soc)}</Typography>
-            <Typography>{grade(item.Eng, item.Guj, item.Hindi, item.Soc)}</Typography>
-          </>
-        ))
-      }
+      <table border="1" cellSpacing="6" bgcolor="white" width={'80%'}>
+        <caption>
+          <b>Input Marks</b>
+        </caption>
+        <thead>
+          <tr>
+            <th rowSpan={2}>Name</th>
+            <th rowSpan={2}>Roll No.</th>
+            <th colSpan={9}>Score</th>
+            <th rowSpan={2}>Delete</th>
+            <th rowSpan={2}>Updet</th>
+          </tr>
+          <tr>
+            <th>English</th>
+            <th>Gujrati</th>
+            <th>Hindi</th>
+            <th>Math</th>
+            <th>Total</th>
+            <th>Per</th>
+            <th>Minimum</th>
+            <th>Maximum</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        {
+          List.map((item, index) => (
+            <>
+              <tbody>
+                <tr>
+                  <td>{item.Name}</td>
+                  <td>{item.Number}</td>
+                  <td>{item.Eng}</td>
+                  <td>{item.Guj}</td>
+                  <td>{item.Hindi}</td>
+                  <td>{item.Matsh}</td>
+                  <td>{Total(item)}</td>
+                  <td>{per(item)}</td>
+                  <td>{minimum(item)}</td>
+                  <td>{maximum(item)}</td>
+                  <td>{pass(item)}</td>
+                  <td><Button onClick={() => deletedata(index)}>Delete</Button></td>
+                  <td><Button onClick={() => editdata(item, index)}>Updet</Button></td>
+                </tr>
+              </tbody>
+            </>
+          ))
+        }
+      </table>
     </>
   )
 }
-
 export default Result
-
-
-
-
-
-// import { Button, Input } from '@mui/material';
-// import React, { useState } from 'react';
-
-// function Result() {
-//   const [Name, setName] = useState('');
-//   const [Number, setNumber] = useState('');
-//   const [Eng, setEng] = useState('');
-//   const [Guj, setGuj] = useState('');
-//   const [Hindi, setHindi] = useState('');
-//   const [Soc, setSoc] = useState('');
-//   const [List, SetList] = useState([]);
-
-//   const savedata = () => {
-//     const total = parseInt(Eng ) +parseInt(Guj) +parseInt(Hindi) +parseInt(Soc);
-//     const percentage = total / 4;
-
-//     const stdata = {Name,Number, Eng,Guj,Hindi,Soc,total,percentage};
-
-//     SetList([...List, stdata]);
-//     setName('');
-//     setNumber('');
-//     setEng('');
-//     setGuj('');
-//     setHindi('');
-//     setSoc('');
-//   };
-
-//   return (
-//     <>
-//       <Input type="text" placeholder="Student Name" value={Name} onChange={(e) => setName(e.target.value)} /> <br /><br />
-//       <Input type="number" placeholder="Roll No." value={Number} onChange={(e) => setNumber(e.target.value)} /> <br /><br />
-//       <Input type="number" placeholder="Eng" value={Eng} onChange={(e) => setEng(e.target.value)} /> <br /><br />
-//       <Input type="number" placeholder="Guj" value={Guj} onChange={(e) => setGuj(e.target.value)} /> <br /><br />
-//       <Input type="number" placeholder="Hindi" value={Hindi} onChange={(e) => setHindi(e.target.value)} /> <br /><br />
-//       <Input type="number" placeholder="Soc" value={Soc} onChange={(e) => setSoc(e.target.value)} /> <br /><br />
-//       <Button variant="contained" onClick={savedata}>Submit</Button>
-
-//       <h1>Results</h1>
-//       {
-//         List.map((student, index) => (
-//           <div key={index}>
-//             <p><strong>Name:</strong> {student.Name}</p>
-//             <p><strong>Roll No:</strong> {student.Number}</p>
-//             <p><strong>Total:</strong> {student.total}</p>
-//             <p><strong>Percentage:</strong> {student.percentage.toFixed(2)}%</p>
-//             <hr />
-//           </div>
-//         ))
-//       }
-//     </>
-//   );
-// }
-
-// export default Result;
-
-
-
-// const Total = (Eng, Guj, Hindi, Soc) => {
-//     let totalMarks = parseInt(Eng) + parseInt(Guj) + parseInt(Hindi) + parseInt(Soc);
-//     return totalMarks;
-// };
-
-// const per = (totalMarks) => {
-//     return totalMarks / 4;  // 4 subjects
-// };
-
-// // Example usage:
-// let totalMarks = Total(85, 90, 78, 88);
-// let percentage = per(totalMarks);
-
-// console.log("Total:", totalMarks);
-// console.log("Percentage:", percentage);
-
-// import { Button, Input } from '@mui/material'
-// import React, { useState } from 'react'
-
-// function Result() {
-//   const [Name, setName] = useState('')
-//   const [Number, setNumber] = useState('')
-//   const [Eng, setEng] = useState('')
-//   const [Guj, setGuj] = useState('')
-//   const [Hindi, setHindi] = useState('')
-//   const [Soc, setSoc] = useState('')
-//   const [List, SetList] = useState([])
-
-//   const savedata = () => {
-//     const stdata = { Name, Number, Eng, Guj, Hindi, Soc }
-//     SetList([...List, stdata])
-//     setName('')
-//     setNumber('')
-//     setEng('')
-//     setGuj('')
-//     setHindi('')
-//     setSoc('')
-//   }
-
-//   const Total = (Eng, Guj, Hindi, Soc) => {
-//     let Total1 =
-//       parseInt(Eng) +
-//       parseInt(Guj) +
-//       parseInt(Hindi) +
-//       parseInt(Soc)
-//     let per = Total1 / 4
-//     return { Total1, per }
-//   }
-
-//   return (
-//     <>
-//       <Input type="text" placeholder="Student Name" value={Name} onChange={(e) => setName(e.target.value)} /> <br /><br />
-//       <Input type="number" placeholder="Roll No." value={Number} onChange={(e) => setNumber(e.target.value)} /> <br /><br />
-//       <Input type="number" placeholder="Eng" value={Eng} onChange={(e) => setEng(e.target.value)} /> <br /><br />
-//       <Input type="number" placeholder="Guj" value={Guj} onChange={(e) => setGuj(e.target.value)} /> <br /><br />
-//       <Input type="number" placeholder="Hindi" value={Hindi} onChange={(e) => setHindi(e.target.value)} /> <br /><br />
-//       <Input type="number" placeholder="Soc" value={Soc} onChange={(e) => setSoc(e.target.value)} /> <br /><br />
-//       <Button variant="contained" onClick={savedata}>Submit</Button>
-
-//       <h1>Result</h1>
-//       {
-//         List.map((jp, index) => {
-//           const result = Total(jp.Eng, jp.Guj, jp.Hindi, jp.Soc)
-//           return (
-//             <div key={index} style={{ border: '1px solid gray', margin: '10px', padding: '10px' }}>
-//               <p><strong>Name:</strong> {jp.Name}</p>
-//               <p><strong>Roll No:</strong> {jp.Number}</p>
-//               <p><strong>Total Marks:</strong> {result.Total1}</p>
-//               <p><strong>Percentage:</strong> {result.per}%</p>
-//             </div>
-//           )
-//         })
-//       }
-//     </>
-//   )
-// }
-
-// export default Result
 
