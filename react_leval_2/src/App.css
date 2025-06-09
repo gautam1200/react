@@ -118,6 +118,36 @@
 } */
 
 
+/* ===================*****************************============================= */
+.box{
+  width: 109px;
+  height: 109px;
+
+  font-size: 78px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  margin-right: 17px;
+  
+}
+.row{
+  display: flex;
+  margin: 17px 17px;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./bg1.jpg);
+  height: 100vh;
+}
+
+
+
+
+
 
 
 

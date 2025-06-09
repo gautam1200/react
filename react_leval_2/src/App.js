@@ -3,6 +3,7 @@ import './App.css';
 import Inputs from './Inputs';
 import Result from './Result';
 import FormicResulr from './FormicResulr';
+import Tictactoy from './Tictactoy';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <>
       {/* <Inputs /> */}
       {/* <Result /> */}
-      <FormicResulr />
+      {/* <FormicResulr /> */}
+      <Tictactoy/>
     </>
   );
 }

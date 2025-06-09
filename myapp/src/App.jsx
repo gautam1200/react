@@ -12,6 +12,8 @@ import { Typography } from '@mui/material';
 import { AiFillAccountBook, AiFillAlert } from "react-icons/ai";
 import InputExample from './InputExample';
 import UseFormikExample from './UseFormikExample';
+import FormikTagExample from './FormikTagExample';
+import ApiCalling from './ApiCalling';
 
 function App() {
   return (
@@ -92,7 +94,11 @@ function App() {
       {/* <InputExample></InputExample> */}
 
 
-      <UseFormikExample></UseFormikExample>
+      {/* <UseFormikExample></UseFormikExample> */}
+
+      {/* <FormikTagExample></FormikTagExample> */}
+
+      <ApiCalling></ApiCalling>
 
 
     </>
