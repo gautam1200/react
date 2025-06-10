@@ -4,6 +4,8 @@ import Inputs from './Inputs';
 import Result from './Result';
 import FormicResulr from './FormicResulr';
 import Tictactoy from './Tictactoy';
+import Results from './Results';
+import Apiget  from './Apiget';
 
 
 function App() {
@@ -12,7 +14,13 @@ function App() {
       {/* <Inputs /> */}
       {/* <Result /> */}
       {/* <FormicResulr /> */}
-      <Tictactoy/>
+      {/* <Tictactoy/> */}
+      {/* <Results /> */}
+      <Apiget />
+
+      {/* api key : = djkzaJWTyAwWJvxU
+      
+      google link :=   https://generateapi.onrender.com/*/}
     </>
   );
 }

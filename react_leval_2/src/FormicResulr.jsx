@@ -174,7 +174,6 @@ const FormikCrudResult = () => {
       name: item.name,
       surname: item.surname,
       roll_no: item.roll_no,
-   
       gujrati: item.gujrati,
       hindi: item.hindi,
       english: item.english,
