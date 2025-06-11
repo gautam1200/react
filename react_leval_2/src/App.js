@@ -6,6 +6,8 @@ import FormicResulr from './FormicResulr';
 import Tictactoy from './Tictactoy';
 import Results from './Results';
 import Apiget  from './Apiget';
+import Apitest from './Apitest';
+import Cardapi from './Cardapi';
 
 
 function App() {
@@ -16,7 +18,9 @@ function App() {
       {/* <FormicResulr /> */}
       {/* <Tictactoy/> */}
       {/* <Results /> */}
-      <Apiget />
+      {/* <Apiget /> */}
+      {/* <Apitest /> */}
+      <Cardapi />
 
       {/* api key : = djkzaJWTyAwWJvxU
       
