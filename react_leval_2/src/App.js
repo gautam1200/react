@@ -9,6 +9,10 @@ import Apiget  from './Apiget';
 import Apitest from './Apitest';
 import Cardapi from './Cardapi';
 
+import Nextpage from './Nextpage';
+import ApiCallingImage from './Nextpage';
+
+
 
 function App() {
   return (
@@ -20,7 +24,9 @@ function App() {
       {/* <Results /> */}
       {/* <Apiget /> */}
       {/* <Apitest /> */}
-      <Cardapi />
+      {/* <Cardapi /> */}
+      {/* <Nextpage/> */}
+      <ApiCallingImage/>
 
       {/* api key : = djkzaJWTyAwWJvxU
       
