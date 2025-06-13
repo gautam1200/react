@@ -11,6 +11,11 @@ import Cardapi from './Cardapi';
 
 import Nextpage from './Nextpage';
 import ApiCallingImage from './Nextpage';
+import WeatherApi from './WeatherApi';
+import Multiimg from './Multiimg';
+import UseRef from './Useref';
+import UseMemo from './UseMemo';
+import UseCallback from './UseCallback';
 
 
 
@@ -26,7 +31,13 @@ function App() {
       {/* <Apitest /> */}
       {/* <Cardapi /> */}
       {/* <Nextpage/> */}
-      <ApiCallingImage/>
+      {/* <ApiCallingImage/> */}
+      {/* <WeatherApi /> */}
+      {/* <Nextpage /> */}
+      <Multiimg/>
+      {/* <UseRef/> */}
+      {/* <UseMemo/> */}
+      {/* <UseCallback/> */}
 
       {/* api key : = djkzaJWTyAwWJvxU
       

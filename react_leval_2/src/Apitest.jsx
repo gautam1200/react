@@ -159,3 +159,115 @@ const Apitest = () => {
 }
 
 export default Apitest
+
+
+
+
+
+// import { Box } from '@mui/material';
+// import axios from 'axios';
+// import { Field, Form, Formik } from 'formik';
+// import React, { useEffect, useState } from 'react';
+
+// function Multiimg() {
+//     const [init, setInit] = useState({
+//         name: "",
+//         images: []
+//     });
+
+//     const [data, setData] = useState([]);
+
+//     const dataView = () => {
+//         axios.get('https://generateapi.onrender.com/api/multiphoto', {
+//             headers: {
+//                 Authorization: 'LUdnjyzlN2az7Acq',
+//             }
+//         })
+//             .then((res) => {
+//                 setData(res.data.Data);
+//             })
+//             .catch((error) => {
+//                 console.log(error);
+//             });
+//     };
+
+//     useEffect(() => {
+//         dataView();
+//     }, []);
+
+//     const handleSubmit = (values, { resetForm }) => {
+//         const formData = new FormData();
+//         formData.append('name', values.name);
+
+//         values.images.forEach((file) => {
+//             formData.append('images', file);
+//         });
+
+//         axios.post(`https://generateapi.onrender.com/api/multiphoto`, formData, {
+//             headers: {
+//                 Authorization: 'LUdnjyzlN2az7Acq',
+//                 'Content-Type': 'multipart/form-data'
+//             }
+//         })
+//             .then(() => {
+//                 console.log("Success");
+//                 dataView();
+//                 resetForm();
+//             })
+//             .catch((error) => {
+//                 console.log(error);
+//             });
+//     };
+
+//     const deleteData = (id) => {
+//         axios.delete(`https://generateapi.onrender.com/api/multiphoto/${id}`, {
+//             headers: {
+//                 Authorization: 'LUdnjyzlN2az7Acq',
+//             },
+//         })
+//             .then(() => {
+//                 dataView();
+//             })
+//             .catch((error) => {
+//                 console.log(error);
+//             });
+//     };
+
+//     return (
+//         <>
+//             <Formik
+//                 enableReinitialize
+//                 initialValues={init}
+//                 onSubmit={handleSubmit}
+//             >
+//                 {({ setFieldValue }) => (
+//                     <Form encType='multipart/form-data'>
+//                         <Field name="name" placeholder="Name" /> <br /><br />
+//                         <input
+//                             type="file"
+//                             multiple
+//                             onChange={(event) =>
+//                                 setFieldValue("images", Array.from(event.currentTarget.files))
+//                             }
+//                         />
+//                         <br /><br />
+//                         <button type="submit">Submit</button>
+//                     </Form>
+//                 )}
+//             </Formik>
+
+//             <Box>
+//                 {data.map((e, index) => (
+//                     <div key={e._id || index}>
+//                         <img src={e.images} alt="hello" width="200" />
+//                         <br />
+//                         <button onClick={() => deleteData(e._id)}>Delete</button>
+//                         <br /><br />
+//                     </div>
+//                 ))}
+//             </Box>
+//         </>
+//     );
+// }
+
+// export default Multiimg;
