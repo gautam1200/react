@@ -3,24 +3,26 @@ import { Box } from '@mui/material';
 import axios from 'axios';
 import { Field, Form, Formik } from 'formik'
 import React, { useEffect, useState } from 'react'
+import { array } from 'yup';
 
 function Multiimg() {
-   const [init, setinit] = useState({
+    const [init, setinit] = useState({
         name: "",
         images: []
     })
     const [data, setdata] = useState([])
+    
     const dataView = () => {
         axios.get('https://generateapi.onrender.com/api/multiphoto', {
             headers: {
                 Authorization: 'LUdnjyzlN2az7Acq',
             }
         })
-            .then((res) => {
-                console.log("hyy");
-                setdata(res.data.Data)
-
-            })
+        .then((res) => {
+            console.log("hyy");
+            setdata(res.data.Data)
+            
+        })
             .catch((error) => {
                 console.log(error);
             })
@@ -29,9 +31,17 @@ function Multiimg() {
         dataView()
     }, [])
 
+
     const handlesubmit = (values, { resetForm }) => {
+        const formdata = new FormData()
+        formdata.append("name",values.name)
+
+        values.images.forEach((imgs) =>{
+            formdata.append("images", imgs)
+
+        })
         console.log(values);
-        axios.post(` https://generateapi.onrender.com/api/multiphoto`, values, {
+        axios.post(` https://generateapi.onrender.com/api/multiphoto`, formdata, {
             headers: {
                 Authorization: 'LUdnjyzlN2az7Acq',
                 'Content-Type': 'multipart/form-data'
@@ -74,7 +84,13 @@ function Multiimg() {
                     ({ setFieldValue }) => (
                         <Form encType='multipart/form-data'>
                             <Field name="name" placeholder="Name" ></Field> <br /><br />
-                            <input type="file" multiple onChange={(a) => setFieldValue("images", a.target.files[0])} />
+                            <input type="file" multiple onChange={(e) =>{
+                                const file = e.currentTarget.files
+                                const Array = []
+                                Array.push(...file)
+                                setFieldValue("images" , Array)
+                                
+                            }} />
                             <button type='submit'> submit</button>
                         </Form>
                     )
@@ -85,7 +101,11 @@ function Multiimg() {
                 {
                     data.map((e) => (
                         <>
-                            <img src={e.images} alt="" width={'200'} />
+                            {
+                                e.images.map((a) => (
+                                    <img src={a} alt="" width={'200'} />
+                                ))
+                            }
                             <button onClick={() => deletdata(e._id)}>delete </button>
                         </>
                     ))
@@ -106,6 +126,4 @@ export default Multiimg
 // DELETE : https://generateapi.onrender.com/api/multiphoto/:id
 // PATCH : https://generateapi.onrender.com/api/multiphoto/:id
 // images
-
-
 

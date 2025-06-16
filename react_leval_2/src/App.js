@@ -16,6 +16,9 @@ import Multiimg from './Multiimg';
 import UseRef from './Useref';
 import UseMemo from './UseMemo';
 import UseCallback from './UseCallback';
+import Hooks from './Hooks';
+import MyForm from './Textarea';
+import Textsave from './Textarea';
 
 
 
@@ -34,10 +37,12 @@ function App() {
       {/* <ApiCallingImage/> */}
       {/* <WeatherApi /> */}
       {/* <Nextpage /> */}
-      <Multiimg/>
+      {/* <Multiimg/> */}
       {/* <UseRef/> */}
       {/* <UseMemo/> */}
       {/* <UseCallback/> */}
+      {/* <Hooks/> */}
+      <Textsave/>
 
       {/* api key : = djkzaJWTyAwWJvxU
       
