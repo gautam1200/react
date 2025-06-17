@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
-import { Formik, Form } from 'formik';
+import React, { useEffect, useState } from 'react';
+import { Formik, Form, Field } from 'formik';
+import axios from "axios";
 import {
   TextField,
   Button,
   Box,
   Typography,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
+  colors,
 } from '@mui/material';
 
 const Textsave = () => {
@@ -20,34 +15,92 @@ const Textsave = () => {
   const [showTextarea, setShowTextarea] = useState(false);
   const [records, setRecords] = useState([]);
 
+  const key = 'dDdU5D259s304vcB';
+
+  const getdata = () => {
+    axios.get('https://generateapi.onrender.com/api/Textsave', {
+      headers: {
+        Authorization: key,
+      },
+    })
+      .then((res) => {
+        setRecords(res.data.Data);
+      })
+      .catch((error) => {
+        console.error('GET error:', error);
+      });
+  };
+
+  useEffect(() => {
+    getdata();
+  }, []);
 
   const handleInitialSubmit = (values) => {
+    const matched = records.find(
+      rec => rec.inputText.trim().toLowerCase() === values.inputText.trim().toLowerCase()
+    );
+
     setInputText(values.inputText);
-    // setFullText(values.inputText); 
+    if (matched) {
+  setFullText(matched.fullText);
+} else {
+  setFullText('');
+}
     setShowTextarea(true);
   };
 
+  const handleTextareaSubmit = (values, { resetForm }) => {
+    const matched = records.find(
+      (rec) => rec.inputText.trim().toLowerCase() === values.inputText.trim().toLowerCase()
+    );
 
-  const handleTextareaSubmit = (values) => {
-    const newEntry = {
-      inputText,
-      fullText: values.fullText,
-    };
-    setRecords((prev) => [...prev, newEntry]);
-    setInputText('');
-    setFullText('');
-    setShowTextarea(false);
+    if (matched && matched._id) {
+      axios.delete(`https://generateapi.onrender.com/api/Textsave/${matched._id}`, {
+        headers: {
+          Authorization: key,
+        },
+      })
+        .then((res) => {
+        console.log('success');
+        
+          saveNewRecord(values, resetForm);
+        })
+        .catch((err) => {
+          console.error('error');
+        });
+    } else {
+      saveNewRecord(values, resetForm);
+    }
   };
 
-  // Show full-page textarea
+  const saveNewRecord = (values, resetForm) => {
+    axios.post('https://generateapi.onrender.com/api/Textsave', values, {
+      headers: {
+        Authorization: key,
+      },
+    })
+      .then((res) => {
+        console.log('success');
+        getdata();
+        resetForm();
+        setInputText('');
+        setFullText('');
+        setShowTextarea(false);
+      })
+      .catch((err) => {
+        console.error('POST error:', err);
+      });
+  };
+
   if (showTextarea) {
     return (
       <Formik
-        initialValues={{ fullText }}
+        initialValues={{ inputText, fullText }}
         onSubmit={handleTextareaSubmit}
+        enableReinitialize
       >
-        {({ handleChange, values }) => (
-          <Form>
+        {({ handleChange }) => (
+          <Form >
             <Box
               sx={{
                 height: '100vh',
@@ -57,21 +110,21 @@ const Textsave = () => {
                 flexDirection: 'column',
               }}
             >
-              <Typography variant="h6" gutterBottom>
-                Edit Full Text
+              <Typography variant="h6" sx={{color:'gold',fontStyle:'italic',marginBottom:'5px'}}>
+                Editing for: <strong>{inputText}</strong>
               </Typography>
-              <TextField
+              <Field
                 name="fullText"
+                as={TextField}
                 multiline
                 fullWidth
-                minRows={25}
-               
-                onChange={handleChange}
+                minRows={20}
                 variant="outlined"
                 placeholder="Edit your full text here..."
-                sx={{ mb: 2 }}
+                onChange={handleChange}
+                sx={{ mb: 2 ,color:'gold', }}
               />
-              <Button type="submit" variant="contained" color="primary">
+              <Button type="submit" sx={{background:'gold',}}>
                 Save
               </Button>
             </Box>
@@ -81,7 +134,6 @@ const Textsave = () => {
     );
   }
 
-  // Initial input form and table
   return (
     <Box sx={{ p: 2 }}>
       <Formik
@@ -92,23 +144,22 @@ const Textsave = () => {
           <Form>
             <Box
               sx={{
-                display: 'flex',
+                height: '100%',
+                width: '100%',
                 gap: 2,
-                maxWidth: 500,
-                margin: 'auto',
-                padding: 2,
-                mt: 4,
               }}
             >
               <TextField
                 fullWidth
                 variant="outlined"
+                required
+                placeholder='Entrer your text here...'
                 name="inputText"
                 label="Enter text"
                 value={values.inputText}
                 onChange={handleChange}
               />
-              <Button type="submit" variant="contained" color="primary">
+              <Button type="submit" sx={{background:'gold',margin:'40px 0px'}}>
                 Submit
               </Button>
             </Box>
@@ -116,35 +167,33 @@ const Textsave = () => {
         )}
       </Formik>
 
-      {records.length > 0 && (
-        <Box sx={{ mt: 6, maxWidth: '90%', mx: 'auto' }}>
-          <Typography variant="h6" gutterBottom>
-            Submitted Records
-          </Typography>
-          <TableContainer component={Paper}>
-            <Table>
-              <TableHead sx={{ bgcolor: '#1976d2' }}>
-                <TableRow>
-                  <TableCell sx={{ color: 'white' }}>#</TableCell>
-                  <TableCell sx={{ color: 'white' }}>Input Text</TableCell>
-                  <TableCell sx={{ color: 'white' }}>Full Text</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {records.map((record, index) => (
-                  <TableRow key={index}>
-                    <TableCell>{index + 1}</TableCell>
-                    <TableCell>{record.inputText}</TableCell>
-                    <TableCell>{record.fullText}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </Box>
-      )}
+      <Box sx={{ mt: 6, maxWidth: '90%', mx: 'auto' }}>
+        <Typography variant="h6" gutterBottom>
+          Submitted Records
+        </Typography>
+        <table border={1} width="100%" cellPadding={8} style={{ borderCollapse: 'collapse' }}>
+          <thead style={{ backgroundColor: '#1976d2', color: 'white' }}>
+            <tr>
+              <th>Title</th>
+              <th>Full Text</th>
+            </tr>
+          </thead>
+          <tbody>
+            {records.map((record, index) => (
+              <tr key={index}>
+                <td>{record.inputText}</td>
+                <td>{record.fullText}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </Box>
     </Box>
   );
 };
 
 export default Textsave;
+
+// dDdU5D259s304vcB
+
+// https://generateapi.onrender.com/api/Textsave

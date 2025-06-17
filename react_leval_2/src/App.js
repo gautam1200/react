@@ -19,6 +19,9 @@ import UseCallback from './UseCallback';
 import Hooks from './Hooks';
 import MyForm from './Textarea';
 import Textsave from './Textarea';
+// import Context from './Context';
+import Contexts from './Context';
+import Formcontext from './Formcontext';
 
 
 
@@ -42,8 +45,9 @@ function App() {
       {/* <UseMemo/> */}
       {/* <UseCallback/> */}
       {/* <Hooks/> */}
-      <Textsave/>
-
+      {/* <Textsave/> */}
+{/* <Contexts/> */}
+<Formcontext/>
       {/* api key : = djkzaJWTyAwWJvxU
       
       google link :=   https://generateapi.onrender.com/*/}

@@ -119,16 +119,15 @@
 
 
 /* ===================*****************************============================= */
-/* .box{
+.box{
   width: 109px;
-  height: 109px;
-
+  height: 100px;
   font-size: 78px;
   align-items: center;
   display: flex;
   justify-content: center;
   font-weight: 600;
-  margin-right: 17px;
+  margin-right: 10px;
   
 }
 .row{
@@ -142,7 +141,7 @@
   align-items: center;
   background-image: url(./bg1.jpg);
   height: 100vh;
-} */
+}
 
 
 

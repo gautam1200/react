@@ -1,19 +1,21 @@
-import React, { useMemo, useState } from 'react'
+import React, { useContext, useMemo, useState } from 'react'
+import { AddColor } from './Hooks'
+import NewPage from './Newpages';
 
 function UseMemo() {
 
-    const [count , setCount] = useState(0)
+  const { SetColor } = useContext(AddColor)
+  console.log(SetColor);
 
-    const data = useMemo(()=>{
-       return count * 2
-    },[count])
 
-    return (
-    <div>
-        <h1>{data}</h1>
-        <h1>{count}</h1>
-        <button onClick={()=> setCount(count + 1)}>click me</button>
-    </div>
+  return (
+    <>
+      <div>
+        <h1 style={{ color: SetColor }}>page 2</h1>
+        <NewPage />
+      </div>
+    </>
+
   )
 }
 

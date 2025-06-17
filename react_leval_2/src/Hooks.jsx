@@ -1,5 +1,11 @@
 import { Box, Button } from '@mui/material'
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+// import SetContext from './SetContext';
+import React, { createContext, useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import UseMemo from './UseMemo';
+
+
+export const AddColor = createContext();
+
 
 function Hooks() {
 
@@ -16,16 +22,19 @@ function Hooks() {
     useEffect(() => {
         data.current = num
         console.log("++");
-        
+
     }, [num])
 
 
     const [number, setnumber] = useState(0)
     const datas = useMemo(() => {
         console.log("--");
-        
+
         return number * 4
     }, [number])
+
+
+    const [color, setColor] = useState("red")
 
     return (
         <>
@@ -51,6 +60,16 @@ function Hooks() {
                 <h1>{number}</h1>
                 <Button onClick={() => setnumber(number + 1)} >useMemo</Button>
             </Box>
+
+
+
+            <AddColor.Provider value={{ SetColor: color }}>
+                <Box>
+                    <h1 style={{ color: color }}>page 1</h1>
+                    <UseMemo />
+                </Box>
+            </AddColor.Provider>
+
         </>
     )
 }

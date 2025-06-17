@@ -29,7 +29,7 @@ function App() {
       {/* <About></About> */}
       <Router>
       {/* <Hedings></Hedings> */}
-      <Users></Users>
+      {/* <Users></Users> */}
       {/* <Homepage></Homepage> */}
         <Switch>
           <Route exact path="/">
