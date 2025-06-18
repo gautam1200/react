@@ -11,7 +11,7 @@ function Formcontexts() {
         <>
             <table border={1} cellPadding={5}>
                 <tr>
-                    <th>Name</th>
+                    <th >Name</th>
                     <th>SurName</th>
                     <th>Number</th>
                 </tr>
