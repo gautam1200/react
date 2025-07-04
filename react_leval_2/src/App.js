@@ -8,7 +8,6 @@ import Results from './Results';
 import Apiget  from './Apiget';
 import Apitest from './Apitest';
 import Cardapi from './Cardapi';
-
 import Nextpage from './Nextpage';
 import ApiCallingImage from './Nextpage';
 import WeatherApi from './WeatherApi';
@@ -34,7 +33,7 @@ function App() {
       {/* <Result /> */}
       {/* <FormicResulr /> */}
       {/* <Tictactoy/> */}
-      {/* <Results /> */}
+      <Results />
       {/* <Apiget /> */}
       {/* <Apitest /> */}
       {/* <Cardapi /> */}
@@ -46,12 +45,12 @@ function App() {
       {/* <UseRef/> */}
       {/* <UseMemo/> */}
       {/* <UseCallback/> */}
-      {/* <Hooks/> */}
+      <Hooks/>
       {/* <Textsave/> */}
 {/* <Contexts/> */}
 {/* <Formcontext/>   */}
 
-<Pie/>
+{/* <Pie/> */}
       {/* api key : = djkzaJWTyAwWJvxU
       
       google link :=   https://generateapi.onrender.com/*/}

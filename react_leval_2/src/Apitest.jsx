@@ -20,15 +20,6 @@ const Apitest = () => {
         const { _id, ...rest } = values
 
         if (editId != null) {
-            // axios.patch(`https://generateapi.onrender.com/api/user/${editId}` , {
-            //     username : values.username,
-            //     password : values.password
-            // } , {
-            //     headers : {
-            //         Authorization : token
-            //     }
-            // })
-
             axios.patch(`https://generateapi.onrender.com/api/user/${editId}`, rest, {
                 headers: {
                     Authorization: token
@@ -39,8 +30,10 @@ const Apitest = () => {
                     setIni({
                         username: '',
                         password: ''
+
                     })
                     dataView()
+
                 })
                 .catch((error) => {
                     console.log(error);
@@ -59,6 +52,7 @@ const Apitest = () => {
                 })
                 .catch((error) => {
                     console.log(error);
+                    
                 })
         }
     }

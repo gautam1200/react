@@ -11,18 +11,18 @@ function Multiimg() {
         images: []
     })
     const [data, setdata] = useState([])
-    
+
     const dataView = () => {
         axios.get('https://generateapi.onrender.com/api/multiphoto', {
             headers: {
                 Authorization: 'LUdnjyzlN2az7Acq',
             }
         })
-        .then((res) => {
-            console.log("hyy");
-            setdata(res.data.Data)
-            
-        })
+            .then((res) => {
+                console.log("hyy");
+                setdata(res.data.Data)
+
+            })
             .catch((error) => {
                 console.log(error);
             })
@@ -34,9 +34,9 @@ function Multiimg() {
 
     const handlesubmit = (values, { resetForm }) => {
         const formdata = new FormData()
-        formdata.append("name",values.name)
+        formdata.append("name", values.name)
 
-        values.images.forEach((imgs) =>{
+        values.images.forEach((imgs) => {
             formdata.append("images", imgs)
 
         })
@@ -84,12 +84,12 @@ function Multiimg() {
                     ({ setFieldValue }) => (
                         <Form encType='multipart/form-data'>
                             <Field name="name" placeholder="Name" ></Field> <br /><br />
-                            <input type="file" multiple onChange={(e) =>{
+                            <input type="file" multiple onChange={(e) => {
                                 const file = e.currentTarget.files
                                 const Array = []
                                 Array.push(...file)
-                                setFieldValue("images" , Array)
-                                
+                                setFieldValue("images", Array)
+
                             }} />
                             <button type='submit'> submit</button>
                         </Form>
@@ -97,20 +97,7 @@ function Multiimg() {
                 }
             </Formik>
 
-            <Box >
-                {
-                    data.map((e) => (
-                        <>
-                            {
-                                e.images.map((a) => (
-                                    <img src={a} alt="" width={'200'} />
-                                ))
-                            }
-                            <button onClick={() => deletdata(e._id)}>delete </button>
-                        </>
-                    ))
-                }
-            </Box>
+           
         </>
     )
 }
