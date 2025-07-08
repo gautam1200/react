@@ -23,6 +23,7 @@ import Contexts from './Context';
 import Formcontext from './Formcontext';
 import AreaNegative, { Line } from './Charts';
 import Pie from './Charts';
+import Appi from './Appi';
 
 
 
@@ -33,7 +34,7 @@ function App() {
       {/* <Result /> */}
       {/* <FormicResulr /> */}
       {/* <Tictactoy/> */}
-      <Results />
+      {/* <Results /> */}
       {/* <Apiget /> */}
       {/* <Apitest /> */}
       {/* <Cardapi /> */}
@@ -45,8 +46,10 @@ function App() {
       {/* <UseRef/> */}
       {/* <UseMemo/> */}
       {/* <UseCallback/> */}
-      <Hooks/>
+      {/* <Hooks/> */}
       {/* <Textsave/> */}
+      {/* <Cardapi/> */}
+      <Appi/>
 {/* <Contexts/> */}
 {/* <Formcontext/>   */}
 

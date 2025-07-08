@@ -193,7 +193,3 @@ const Textsave = () => {
 };
 
 export default Textsave;
-
-// dDdU5D259s304vcB
-
-// https://generateapi.onrender.com/api/Textsave

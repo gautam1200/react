@@ -79,9 +79,9 @@ function Cart() {
                 <Accessories></Accessories>
             </div>
             <br /><br />
-            <Footer></Footer>
+            <Footer></Footer> 
 
-        </>
+        </> 
     )
 }
 
