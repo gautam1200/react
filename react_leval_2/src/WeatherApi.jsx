@@ -5,7 +5,7 @@ import { Field, Form, Formik } from "formik";
 const WeatherApi = () => {
   const [data, setData] = useState([]);
  const [loction , setLocation] = useState("");
-  const ini = { city: "Surat", day: "4" };
+  const ini = { city: "Surat", day: "9" };
   const apiKey = "7ab5239082cc47dcbae50635251306 ";
 
   const getWeather = (values) => {

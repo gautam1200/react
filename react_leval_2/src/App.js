@@ -24,6 +24,7 @@ import Formcontext from './Formcontext';
 import AreaNegative, { Line } from './Charts';
 import Pie from './Charts';
 import Appi from './Appi';
+import Newapi from './Newapi';
 
 
 
@@ -42,14 +43,15 @@ function App() {
       {/* <ApiCallingImage/> */}
       {/* <WeatherApi /> */}
       {/* <Nextpage /> */}
-      {/* <Multiimg/> */}
+      <Multiimg/>
       {/* <UseRef/> */}
       {/* <UseMemo/> */}
       {/* <UseCallback/> */}
       {/* <Hooks/> */}
       {/* <Textsave/> */}
       {/* <Cardapi/> */}
-      <Appi/>
+      {/* <Appi/> */}
+      <Newapi/>
 {/* <Contexts/> */}
 {/* <Formcontext/>   */}
 

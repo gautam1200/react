@@ -9,6 +9,7 @@ function Appi() {
         name: '',
         surname: '',
         number: ''
+        
     })
     const [data, setdata] = useState([]);
     const [edit , setedit] = useState(null)
@@ -30,7 +31,8 @@ function Appi() {
                 setinit({
                     name : '',
                     surname : '',
-                    number : ''
+                    number : '',
+              
                 })
                 
             })
