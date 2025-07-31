@@ -1,7 +1,6 @@
 import axios from 'axios'
 import { Field, Form, Formik } from 'formik'
 import React, { useEffect, useState } from 'react'
-
 const Apitest = () => {
 
     const token = 'D0hDHkIZ3RowxrNR'
@@ -130,7 +129,7 @@ const Apitest = () => {
                     <td>Update</td>
                 </tr>
                 {
-                    data.map((i, index) => (
+                        data.map((i, index) => (
                         <tr>
                             <td>{index + 1}</td>
                             <td>{i.username}</td>

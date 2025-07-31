@@ -25,6 +25,7 @@ import AreaNegative, { Line } from './Charts';
 import Pie from './Charts';
 import Appi from './Appi';
 import Newapi from './Newapi';
+import Adminpenal from './Admin';
 
 
 
@@ -37,13 +38,13 @@ function App() {
       {/* <Tictactoy/> */}
       {/* <Results /> */}
       {/* <Apiget /> */}
-      {/* <Apitest /> */}
+      <Apitest />
       {/* <Cardapi /> */}
       {/* <Nextpage/> */}
       {/* <ApiCallingImage/> */}
       {/* <WeatherApi /> */}
       {/* <Nextpage /> */}
-      <Multiimg/>
+      {/* <Multiimg/> */}
       {/* <UseRef/> */}
       {/* <UseMemo/> */}
       {/* <UseCallback/> */}
@@ -51,7 +52,8 @@ function App() {
       {/* <Textsave/> */}
       {/* <Cardapi/> */}
       {/* <Appi/> */}
-      <Newapi/>
+      {/* <Newapi/> */}
+      {/* <Adminpenal /> */}
 {/* <Contexts/> */}
 {/* <Formcontext/>   */}
 

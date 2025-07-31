@@ -94,11 +94,11 @@ function App() {
       {/* <InputExample></InputExample> */}
 
 
-      {/* <UseFormikExample></UseFormikExample> */}
+      <UseFormikExample></UseFormikExample>
 
       {/* <FormikTagExample></FormikTagExample> */}
 
-      <ApiCalling></ApiCalling>
+      {/* <ApiCalling></ApiCalling> */}
 
 
     </>

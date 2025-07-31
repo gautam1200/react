@@ -11,12 +11,12 @@ function App() {
   return (
     <>
 
-      <Inputs></Inputs>
+      {/* <Inputs></Inputs> */}
    {/* <Sliders></Sliders> */}
    <Transfers></Transfers>
-   <Tooltips></Tooltips>
-   <Surfacess></Surfacess>  
-   <Layouts></Layouts>
+   {/* <Tooltips></Tooltips> */}
+   {/* <Surfacess></Surfacess>   */}
+   {/* <Layouts></Layouts> */}
    {/* <Dd></Dd> */}
       <br /><br /><br /><br /><br /><br /><br />
     </>
